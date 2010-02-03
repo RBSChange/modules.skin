@@ -1,0 +1,45 @@
+<rights>
+	<actions>
+		<document name="rootfolder" />
+		<document name="folder" />
+		<document name="skin" />
+	</actions>
+	<roles>
+		<role name="Admin">
+			<permission name="*" />
+			<permission name="LoadPermissions.*" />
+			<permission name="SavePermissions.*" />
+			<permission name="GetPreferencesDocument" />
+		</role>
+		<role name="Writer" extend="User">
+			<permission name="Insert.*" />
+			<permission name="Order" />
+			<permission name="Move.*" />
+			<permission name="Load.*" />
+			<permission name="Rename.*" />
+			<permission name="PutInTrash.*" />
+			<permission name="Delete.*" />
+			<permission name="Insert.*" />
+			<permission name="Update.*" />
+			<permission name="LoadTags" />
+		</role>
+		<role name="Translator" extend="Guest">
+			<permission name="Load.*" />
+			<permission name="LoadForTranslation.*" />
+			<permission name="UpdateTranslation.*" />
+		</role>
+		<role name="Validator" extend="Guest">
+			<permission name="Load.*" />
+			<permission name="Activate.skin" />
+			<permission name="Cancel.skin" />
+			<permission name="Deactivated.*" />
+			<permission name="ReActivate.*" />
+		</role>
+		<role name="Guest" extend="User">
+			<permission name="Enabled" />
+		</role>
+		<role name="User">
+			<permission name="List.*" />
+		</role>
+	</roles>
+</rights>

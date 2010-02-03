@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <entity id="module-name">
+    <locale lang="fr">habillage</locale>
+    <locale lang="en">skin</locale>
+    <locale lang="de">Skin</locale>
+  </entity>
+  <entity id="tree-root-name">
+    <locale lang="fr">habillage</locale>
+    <locale lang="en">skin</locale>
+    <locale lang="de">Skin</locale>
+  </entity>
+  <entity id="system-folder-name">
+    <locale lang="fr">habillage</locale>
+    <locale lang="en">skin</locale>
+    <locale lang="de">Skin</locale>
+  </entity>
+  <entity id="skin">
+    <locale lang="fr">habillage</locale>
+    <locale lang="en">skin</locale>
+    <locale lang="de">Skin</locale>
+  </entity>
+  <entity id="label">
+    <locale lang="fr">label</locale>
+    <locale lang="en">label</locale>
+    <locale lang="de">Name</locale>
+  </entity>
+  <entity id="description">
+    <locale lang="fr">description</locale>
+    <locale lang="en">description</locale>
+    <locale lang="de">Beschreibung</locale>
+  </entity>
+  <entity id="import-title">
+    <locale lang="fr">import d'un Habillage</locale>
+    <locale lang="en">import skin</locale>
+  </entity>
+  <entity id="import-error">
+    <locale lang="fr">une erreur s'est produit, votre Habillage n'a pas pu être importé.</locale>
+    <locale lang="en">an error has occured, your skin was not imported.</locale>
+  </entity>
+  <entity id="import-close">
+    <locale lang="fr">fermer</locale>
+    <locale lang="en">close</locale>
+  </entity>
+  <entity id="import-retry">
+    <locale lang="fr">réessayer</locale>
+    <locale lang="en">retry</locale>
+  </entity>
+  <entity id="import-file">
+    <locale lang="fr">sélectionner votre fichier zip à importer</locale>
+    <locale lang="en">select your zip file to import</locale>
+  </entity>
+  <entity id="import-import">
+    <locale lang="fr">importer !</locale>
+    <locale lang="en">import !</locale>
+  </entity>
+  <entity id="import-other">
+    <locale lang="fr">importer un autre Habillage</locale>
+    <locale lang="en">import another skin</locale>
+  </entity>
+  <entity id="import-success">
+    <locale lang="fr">habillage importé !</locale>
+    <locale lang="en">skin imported!</locale>
+  </entity>
+  <entity id="import-warning">
+    <locale lang="fr">un ou plusieurs médias sont manquants, votre habillage ne sera pas complet.</locale>
+    <locale lang="en">one or many pictures are missing, your skin content won't be full.</locale>
+  </entity>
+  <entity id="import-warning2">
+    <locale lang="fr">votre habillage n'est pas totalement compatible avec cette version du module, il ne sera pas complet.</locale>
+    <locale lang="en">your skin is not fully compatible with this version of the module, it won't be full.</locale>
+  </entity>
+  <entity id="no-preview-title">
+    <locale lang="fr">Veuillez sélectionner une page à prévisualiser</locale>
+    <locale lang="en">Please select a page to preview</locale>
+  </entity>
+  <entity id="no-preview-text">
+    <locale lang="fr">Sélectionnez une page dans l'arbre des ressources et glissez la dans le champ 
+			<strong>Page à prévisualiser</strong> dans la barre d'outils ci-dessus
+			<br/> puis cliquez sur le bouton 
+			<strong>Actualiser</strong> à côté du champ.
+		</locale>
+    <locale lang="en">Select a page in resources tree and drop it in the field 
+			<strong>Page to preview</strong> in the toolbar above
+			<br/>then click on 
+			<strong>Refresh</strong> button next to the field.
+		</locale>
+  </entity>
+  <entity id="page-to-preview">
+    <locale lang="fr">page à prévisualiser</locale>
+    <locale lang="en">page to preview</locale>
+  </entity>
+  <entity id="column.startpublicationdate">
+    <locale lang="fr">début de publication</locale>
+  </entity>
+  <entity id="column.endpublicationdate">
+    <locale lang="fr">fin de publication</locale>
+  </entity>
+</localization>

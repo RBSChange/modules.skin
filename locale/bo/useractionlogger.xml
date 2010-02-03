@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+	<entity id="update-skin">
+		<locale lang="fr">update.skin {documentlabel}</locale>
+	</entity>
+	<entity id="log-update-skin">
+		<locale lang="fr">log-update-skin</locale>
+	</entity>
+	<entity id="insert-skin">
+		<locale lang="fr">insert.skin {documentlabel}</locale>
+	</entity>
+	<entity id="log-insert-skin">
+		<locale lang="fr">log-insert-skin</locale>
+	</entity>
+</localization>

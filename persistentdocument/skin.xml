@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://www.rbs.fr/schema/change-document/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/static/schema/change-document/1.0.xsd" 
+	model-version="2.0" icon="skin" publish-on-day-change="true" 
+	backoffice-indexable="false" indexable="false" has-url="false">
+	<properties>
+		<add name="subskinidof" type="Integer" />
+		<add name="currentsubskinid" type="Integer" />
+		<add name="description" type="LongString"/>
+	</properties>	
+	<statuses default="ACTIVE"/>
+	
+	<serializedproperties>
+		<!-- template -->
+		<add name="bodybgcolor" type="String" />
+		<add name="bodybgimage" type="modules_media/media" />
+		<add name="bodybgposition" type="String" from-list="modules_skin/bposition" />
+		<add name="bodybgrepeat" type="String" from-list="modules_skin/brepetition" />
+
+		<add name="contentbgcolor" type="String" />
+		<add name="contentbgimage" type="modules_media/media" />
+		<add name="contentbgposition" type="String" from-list="modules_skin/bposition" />
+		<add name="contentbgrepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="contentbordercolor" type="String" />
+		<add name="contentborderstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="contentborderwidth" type="String" />
+
+		<add name="searchlabelfgcolor" type="String" />
+
+		<!-- media -->
+		<add name="bannerheight" type="String" />
+		<add name="bannerbgimage" type="modules_media/media" />
+		<add name="bannerbgposition" type="String" from-list="modules_skin/bposition" />
+		<add name="bannerbgrepeat" type="String" from-list="modules_skin/brepetition" />
+
+		<add name="logowidth" type="String" />
+		<add name="logoheight" type="String" />
+		<add name="logoimage" type="modules_media/media" />
+		<add name="logoposition" type="String" from-list="modules_skin/bposition" />
+		<add name="logorepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="logotopposition" type="String" />
+		<add name="logoleftposition" type="String" />
+
+		<add name="imgpadding" type="String" />
+		<add name="imgmargin" type="String" />
+		<add name="imgbordercolor" type="String" />
+		<add name="imgborderstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="imgborderwidth" type="String" />
+
+		<!-- breadcrumb -->
+		<add name="threadafgcolor" type="String" />
+		<add name="threadatextdecoration" type="String" from-list="modules_skin/textdecoration" />
+		<add name="threadahoverfgcolor" type="String" />
+		<add name="threadahovertextdecoration" type="String" from-list="modules_skin/textdecoration" />
+		<add name="threadcurrentfgcolor" type="String" />
+		<add name="threadbottombordercolor" type="String" />
+		<add name="threadbottomborderstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="threadbottomborderwidth" type="String" />
+		<add name="threadseparatorcolor" type="String" />
+
+		<!-- header -->
+		<add name="headerbgcolor" type="String" />
+		<add name="headerfgcolor" type="String" />
+		<add name="headerbordercolor" type="String" />
+		<add name="headerborderstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="headerborderwidth" type="String" />
+		<add name="headerbgimage" type="modules_media/media" />
+		<add name="headerbgposition" type="String" from-list="modules_skin/bposition" />
+		<add name="headerbgrepeat" type="String" from-list="modules_skin/brepetition" />
+
+		<!-- footer -->
+		<add name="footerbgcolor" type="String" />
+		<add name="footerfgcolor" type="String" />
+		<add name="footerbordercolor" type="String" />
+		<add name="footerborderstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="footerborderwidth" type="String" />
+		<add name="footerbgimage" type="modules_media/media" />
+		<add name="footerbgposition" type="String" from-list="modules_skin/bposition" />
+		<add name="footerbgrepeat" type="String" from-list="modules_skin/brepetition" />
+
+		<!-- menus -->
+		<add name="menuheaderfgcolor" type="String" />
+		<add name="menuheadertextdecoration" type="String" from-list="modules_skin/textdecoration" />
+		<add name="menuheadercurrentfgcolor" type="String" />
+		<add name="menuheaderhoverfgcolor" type="String" />
+		<add name="menuheaderhovertextdecoration" type="String" from-list="modules_skin/textdecoration" />
+		<add name="menuheaderseparator" type="String" />
+
+		<add name="menumaintopbgcolor" type="String" />
+		<add name="menumaintopbgimage" type="modules_media/media" />
+		<add name="menumaintopbgposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menumaintopbgrepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="menumaintopbordertopcolor" type="String" />
+		<add name="menumaintopbordertopstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="menumaintopbordertopwidth" type="String" />
+		<add name="menumaintopborderbottomcolor" type="String" />
+		<add name="menumaintopborderbottomstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="menumaintopborderbottomwidth" type="String" />
+		<add name="menumaintopfontfamily" type="String" from-list="modules_skin/fontfamily" />
+		<add name="menumaintopfgcolor" type="String" />
+		<add name="menumaintoptextdecoration" type="String" from-list="modules_skin/textdecoration" />
+		<add name="menumaintoplibgcolor" type="String" />
+		<add name="menumaintopimage" type="modules_media/media" />
+		<add name="menumaintopimageposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menumaintopimagerepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="menumaintopcurrentfgcolor" type="String" />
+		<add name="menumaintopcurrentlibgcolor" type="String" />
+		<add name="menumaintopcurrentimage" type="modules_media/media" />
+		<add name="menumaintopcurrentimageposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menumaintopcurrentimagerepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="menumaintophoverfgcolor" type="String" />
+		<add name="menumaintophovertextdecoration" type="String" from-list="modules_skin/textdecoration" />
+		<add name="menumaintophoverlibgcolor" type="String" />
+		<add name="menumaintophoverimage" type="modules_media/media" />
+		<add name="menumaintophoverimageposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menumaintophoverimagerepeat" type="String" from-list="modules_skin/brepetition" />
+
+		<add name="menumainleftbgcolor" type="String" />
+		<add name="menumainleftbgimage" type="modules_media/media" />
+		<add name="menumainleftbgposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menumainleftbgrepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="menumainleftbordercolor" type="String" />
+		<add name="menumainleftborderstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="menumainleftborderwidth" type="String" />
+		<add name="menumainleftfontfamily" type="String" from-list="modules_skin/fontfamily" />
+		<add name="menumainleftonefgcolor" type="String" />
+		<add name="menumainleftonetextdecoration" type="String" from-list="modules_skin/textdecoration" />
+		<add name="menumainleftoneliststyletype" type="String" from-list="modules_skin/liststyletype" />
+		<add name="menumainleftonebgcolor" type="String" />
+		<add name="menumainleftoneimage" type="modules_media/media" />
+		<add name="menumainleftoneimageposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menumainleftoneimagerepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="menumainleftonecurrentfgcolor" type="String" />
+		<add name="menumainleftonecurrentliststyletype" type="String" from-list="modules_skin/liststyletype" />
+		<add name="menumainleftonecurrentbgcolor" type="String" />
+		<add name="menumainleftonecurrentimage" type="modules_media/media" />
+		<add name="menumainleftonecurrentimageposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menumainleftonecurrentimagerepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="menumainleftonehoverfgcolor" type="String" />
+		<add name="menumainleftonehovertextdecoration" type="String" from-list="modules_skin/textdecoration" />
+		<add name="menumainleftonehoverbgcolor" type="String" />
+		<add name="menumainleftonehoverimage" type="modules_media/media" />
+		<add name="menumainleftonehoverimageposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menumainleftonehoverimagerepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="menumainlefttwofgcolor" type="String" />
+		<add name="menumainlefttwofontsize" type="String" />
+		<add name="menumainlefttwotextdecoration" type="String" from-list="modules_skin/textdecoration" />
+		<add name="menumainlefttwoliststyletype" type="String" from-list="modules_skin/liststyletype" />
+		<add name="menumainlefttwobgcolor" type="String" />
+		<add name="menumainlefttwoimage" type="modules_media/media" />
+		<add name="menumainlefttwoimageposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menumainlefttwoimagerepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="menumainlefttwocurrentfgcolor" type="String" />
+		<add name="menumainlefttwocurrentfontsize" type="String" />
+		<add name="menumainlefttwocurrentliststyletype" type="String" from-list="modules_skin/liststyletype" />
+		<add name="menumainlefttwocurrentbgcolor" type="String" />
+		<add name="menumainlefttwocurrentimage" type="modules_media/media" />
+		<add name="menumainlefttwocurrentimageposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menumainlefttwocurrentimagerepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="menumainlefttwohoverfgcolor" type="String" />
+		<add name="menumainlefttwohoverfontsize" type="String" />
+		<add name="menumainlefttwohovertextdecoration" type="String" from-list="modules_skin/textdecoration" />
+		<add name="menumainlefttwohoverbgcolor" type="String" />
+		<add name="menumainlefttwohoverimage" type="modules_media/media" />
+		<add name="menumainlefttwohoverimageposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menumainlefttwohoverimagerepeat" type="String" from-list="modules_skin/brepetition" />
+
+		<add name="menucontextualtopbgcolor" type="String" />
+		<add name="menucontextualtopbgimage" type="modules_media/media" />
+		<add name="menucontextualtopbgposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menucontextualtopbgrepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="menucontextualtopbordertopcolor" type="String" />
+		<add name="menucontextualtopbordertopstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="menucontextualtopbordertopwidth" type="String" />
+		<add name="menucontextualtopborderbottomcolor" type="String" />
+		<add name="menucontextualtopborderbottomstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="menucontextualtopborderbottomwidth" type="String" />
+		<add name="menucontextualtopfontfamily" type="String" from-list="modules_skin/fontfamily" />
+		<add name="menucontextualtopfgcolor" type="String" />
+		<add name="menucontextualtoptextdecoration" type="String" from-list="modules_skin/textdecoration" />
+		<add name="menucontextualtoplibgcolor" type="String" />
+		<add name="menucontextualtopimage" type="modules_media/media" />
+		<add name="menucontextualtopimageposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menucontextualtopimagerepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="menucontextualtopcurrentfgcolor" type="String" />
+		<add name="menucontextualtopcurrentlibgcolor" type="String" />
+		<add name="menucontextualtopcurrentimage" type="modules_media/media" />
+		<add name="menucontextualtopcurrentimageposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menucontextualtopcurrentimagerepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="menucontextualtophoverfgcolor" type="String" />
+		<add name="menucontextualtophovertextdecoration" type="String" from-list="modules_skin/textdecoration" />
+		<add name="menucontextualtophoverlibgcolor" type="String" />
+		<add name="menucontextualtophoverimage" type="modules_media/media" />
+		<add name="menucontextualtophoverimageposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menucontextualtophoverimagerepeat" type="String" from-list="modules_skin/brepetition" />
+
+		<add name="menucontextualleftbgcolor" type="String" />
+		<add name="menucontextualleftbgimage" type="modules_media/media" />
+		<add name="menucontextualleftbgposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menucontextualleftbgrepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="menucontextualleftbordercolor" type="String" />
+		<add name="menucontextualleftborderstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="menucontextualleftborderwidth" type="String" />
+		<add name="menucontextualleftfontfamily" type="String" from-list="modules_skin/fontfamily" />
+		<add name="menucontextualleftonefgcolor" type="String" />
+		<add name="menucontextualleftonetextdecoration" type="String" from-list="modules_skin/textdecoration" />
+		<add name="menucontextualleftoneliststyletype" type="String" from-list="modules_skin/liststyletype" />
+		<add name="menucontextualleftonebgcolor" type="String" />
+		<add name="menucontextualleftoneimage" type="modules_media/media" />
+		<add name="menucontextualleftoneimageposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menucontextualleftoneimagerepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="menucontextualleftonecurrentfgcolor" type="String" />
+		<add name="menucontextualleftonecurrentliststyletype" type="String" from-list="modules_skin/liststyletype" />
+		<add name="menucontextualleftonecurrentbgcolor" type="String" />
+		<add name="menucontextualleftonecurrentimage" type="modules_media/media" />
+		<add name="menucontextualleftonecurrentimageposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menucontextualleftonecurrentimagerepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="menucontextualleftonehoverfgcolor" type="String" />
+		<add name="menucontextualleftonehovertextdecoration" type="String" from-list="modules_skin/textdecoration" />
+		<add name="menucontextualleftonehoverbgcolor" type="String" />
+		<add name="menucontextualleftonehoverimage" type="modules_media/media" />
+		<add name="menucontextualleftonehoverimageposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menucontextualleftonehoverimagerepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="menucontextuallefttwofgcolor" type="String" />
+		<add name="menucontextuallefttwofontsize" type="String" />
+		<add name="menucontextuallefttwotextdecoration" type="String" from-list="modules_skin/textdecoration" />
+		<add name="menucontextuallefttwoliststyletype" type="String" from-list="modules_skin/liststyletype" />
+		<add name="menucontextuallefttwobgcolor" type="String" />
+		<add name="menucontextuallefttwoimage" type="modules_media/media" />
+		<add name="menucontextuallefttwoimageposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menucontextuallefttwoimagerepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="menucontextuallefttwocurrentfgcolor" type="String" />
+		<add name="menucontextuallefttwocurrentfontsize" type="String" />
+		<add name="menucontextuallefttwocurrentliststyletype" type="String" from-list="modules_skin/liststyletype" />
+		<add name="menucontextuallefttwocurrentbgcolor" type="String" />
+		<add name="menucontextuallefttwocurrentimage" type="modules_media/media" />
+		<add name="menucontextuallefttwocurrentimageposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menucontextuallefttwocurrentimagerepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="menucontextuallefttwohoverfgcolor" type="String" />
+		<add name="menucontextuallefttwohoverfontsize" type="String" />
+		<add name="menucontextuallefttwohovertextdecoration" type="String" from-list="modules_skin/textdecoration" />
+		<add name="menucontextuallefttwohoverbgcolor" type="String" />
+		<add name="menucontextuallefttwohoverimage" type="modules_media/media" />
+		<add name="menucontextuallefttwohoverimageposition" type="String" from-list="modules_skin/bposition" />
+		<add name="menucontextuallefttwohoverimagerepeat" type="String" from-list="modules_skin/brepetition" />
+
+		<add name="menufooterfgcolor" type="String" />
+		<add name="menufootertextdecoration" type="String" from-list="modules_skin/textdecoration" />
+		<add name="menufootercurrentfgcolor" type="String" />
+		<add name="menufooterhoverfgcolor" type="String" />
+		<add name="menufooterhovertextdecoration" type="String" from-list="modules_skin/textdecoration" />
+		<add name="menufooterseparator" type="String" />
+
+
+		<!-- text -->
+		<add name="bodyfgcolor" type="String" />
+		<add name="textbgcolor" type="String" />
+		<add name="bodyfontfamily" type="String" from-list="modules_skin/fontfamily" />
+		<add name="textsize" type="String" />
+
+		<add name="blockquotebordercolor" type="String" />
+		<add name="blockquoteborderstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="blockquoteborderwidth" type="String" />
+		<add name="blockquotefontstyle" type="String" from-list="modules_skin/fontstyle" />
+		<add name="blockquotefontweight" type="String" from-list="modules_skin/fontweight" />
+		<add name="blockquotefontfamily" type="String" from-list="modules_skin/fontfamily" />
+
+		<!-- heading -->
+		<add name="headingonefgcolor" type="String" />
+		<add name="headingonebgcolor" type="String" />
+		<add name="headingonebgimage" type="modules_media/media" />
+		<add name="headingonebgposition" type="String" from-list="modules_skin/bposition" />
+		<add name="headingonebgrepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="headingonebordercolor" type="String" />
+		<add name="headingoneborderstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="headingoneborderwidth" type="String" />
+		<add name="headingonemarginbottom" type="String" />
+		<add name="headingonepaddingleft" type="String" />
+		<add name="headingonefontstyle" type="String" from-list="modules_skin/fontstyle" />
+		<add name="headingonefontweight" type="String" from-list="modules_skin/fontweight" />
+		<add name="headingonesize" type="String" />
+		<add name="headingonefontfamily" type="String" from-list="modules_skin/fontfamily" />
+
+		<add name="headingtwofgcolor" type="String" />
+		<add name="headingtwobgcolor" type="String" />
+		<add name="headingtwobgimage" type="modules_media/media" />
+		<add name="headingtwobgposition" type="String" from-list="modules_skin/bposition" />
+		<add name="headingtwobgrepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="headingtwobordercolor" type="String" />
+		<add name="headingtwoborderstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="headingtwoborderwidth" type="String" />
+		<add name="headingtwomarginbottom" type="String" />
+		<add name="headingtwopaddingleft" type="String" />
+		<add name="headingtwofontstyle" type="String" from-list="modules_skin/fontstyle" />
+		<add name="headingtwofontweight" type="String" from-list="modules_skin/fontweight" />
+		<add name="headingtwosize" type="String" />
+		<add name="headingtwofontfamily" type="String" from-list="modules_skin/fontfamily" />
+
+		<add name="headingthreefgcolor" type="String" />
+		<add name="headingthreebgcolor" type="String" />
+		<add name="headingthreebgimage" type="modules_media/media" />
+		<add name="headingthreebgposition" type="String" from-list="modules_skin/bposition" />
+		<add name="headingthreebgrepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="headingthreebordercolor" type="String" />
+		<add name="headingthreeborderstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="headingthreeborderwidth" type="String" />
+		<add name="headingthreemarginbottom" type="String" />
+		<add name="headingthreepaddingleft" type="String" />
+		<add name="headingthreefontstyle" type="String" from-list="modules_skin/fontstyle" />
+		<add name="headingthreefontweight" type="String" from-list="modules_skin/fontweight" />
+		<add name="headingthreesize" type="String" />
+		<add name="headingthreefontfamily" type="String" from-list="modules_skin/fontfamily" />
+
+		<add name="headingfourfgcolor" type="String" />
+		<add name="headingfourbgcolor" type="String" />
+		<add name="headingfourbgimage" type="modules_media/media" />
+		<add name="headingfourbgposition" type="String" from-list="modules_skin/bposition" />
+		<add name="headingfourbgrepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="headingfourbordercolor" type="String" />
+		<add name="headingfourborderstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="headingfourborderwidth" type="String" />
+		<add name="headingfourmarginbottom" type="String" />
+		<add name="headingfourpaddingleft" type="String" />
+		<add name="headingfourfontstyle" type="String" from-list="modules_skin/fontstyle" />
+		<add name="headingfourfontweight" type="String" from-list="modules_skin/fontweight" />
+		<add name="headingfoursize" type="String" />
+		<add name="headingfourfontfamily" type="String" from-list="modules_skin/fontfamily" />
+
+		<add name="headingfivefgcolor" type="String" />
+		<add name="headingfivebgcolor" type="String" />
+		<add name="headingfivebgimage" type="modules_media/media" />
+		<add name="headingfivebgposition" type="String" from-list="modules_skin/bposition" />
+		<add name="headingfivebgrepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="headingfivebordercolor" type="String" />
+		<add name="headingfiveborderstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="headingfiveborderwidth" type="String" />
+		<add name="headingfivemarginbottom" type="String" />
+		<add name="headingfivepaddingleft" type="String" />
+		<add name="headingfivefontstyle" type="String" from-list="modules_skin/fontstyle" />
+		<add name="headingfivefontweight" type="String" from-list="modules_skin/fontweight" />
+		<add name="headingfivesize" type="String" />
+		<add name="headingfivefontfamily" type="String" from-list="modules_skin/fontfamily" />
+
+		<add name="headingsixfgcolor" type="String" />
+		<add name="headingsixbgcolor" type="String" />
+		<add name="headingsixbgimage" type="modules_media/media" />
+		<add name="headingsixbgposition" type="String" from-list="modules_skin/bposition" />
+		<add name="headingsixbgrepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="headingsixbordercolor" type="String" />
+		<add name="headingsixborderstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="headingsixborderwidth" type="String" />
+		<add name="headingsixmarginbottom" type="String" />
+		<add name="headingsixpaddingleft" type="String" />
+		<add name="headingsixfontstyle" type="String" from-list="modules_skin/fontstyle" />
+		<add name="headingsixfontweight" type="String" from-list="modules_skin/fontweight" />
+		<add name="headingsixsize" type="String" />
+		<add name="headingsixfontfamily" type="String" from-list="modules_skin/fontfamily" />
+
+		<!-- links -->
+		<add name="linkfgcolor" type="String" />
+		<add name="linkdecoration" type="String" from-list="modules_skin/textdecoration" />
+		<add name="linkhoverfgcolor" type="String" />
+		<add name="linkhoverdecoration" type="String" from-list="modules_skin/textdecoration" />
+
+		<!-- list -->
+		<add name="ulmarginbottom" type="String" />
+		<add name="ultype" type="String" from-list="modules_skin/liststyletype" />
+		<add name="ulpaddingtop" type="String" />
+		<add name="ulpaddingright" type="String" />
+		<add name="ulpaddingbottom" type="String" />
+		<add name="ulpaddingleft" type="String" />
+		<add name="ulbullet" type="modules_media/media" />
+		<add name="ulbgposition" type="String" from-list="modules_skin/bposition" />
+		<add name="ulbgrepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="ululmarginbottom" type="String" />
+
+		<add name="olmarginbottom" type="String" />
+		<add name="oltype" type="String" from-list="modules_skin/liststyletype" />
+		<add name="olpaddingtop" type="String" />
+		<add name="olpaddingright" type="String" />
+		<add name="olpaddingbottom" type="String" />
+		<add name="olpaddingleft" type="String" />
+		<add name="olbullet" type="modules_media/media" />
+		<add name="olbgposition" type="String" from-list="modules_skin/bposition" />
+		<add name="olbgrepeat" type="String" from-list="modules_skin/brepetition" />
+		<add name="ololmarginbottom" type="String" />
+
+		<!-- table -->
+		<add name="tablemarginbottom" type="String" />
+		<add name="trevenbgcolor" type="String" />
+		<add name="troddbgcolor" type="String" />
+		<add name="thtextalign" type="String" from-list="modules_skin/halignment" />
+		<add name="thfgcolor" type="String" />
+		<add name="thbgcolor" type="String" />
+		<add name="tdtextalign" type="String" from-list="modules_skin/halignment" />
+
+		<!-- form -->
+		<add name="fieldsetmarginbottom" type="String" />
+		<add name="fieldsetpadding" type="String" />
+		<add name="fieldsetbordercolor" type="String" />
+		<add name="fieldsetborderstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="fieldsetborderwidth" type="String" />
+
+		<add name="legendpaddingleft" type="String" />
+		<add name="legendpaddingright" type="String" />
+		<add name="legendfontsize" type="String" />
+		<add name="legendfontstyle" type="String" from-list="modules_skin/fontstyle" />
+		<add name="legendfontweight" type="String" from-list="modules_skin/fontweight" />
+		<add name="legendcolor" type="String" />
+		<add name="legendfontfamily" type="String" from-list="modules_skin/fontfamily" />
+
+		<add name="labellineheight" type="String" />
+		<add name="labeltextalign" type="String" from-list="modules_skin/halignment" />
+		<add name="labelpaddingright" type="String" />
+		<add name="labelwidth" type="String" />
+
+		<add name="emfontweight" type="String" from-list="modules_skin/fontweight" />
+		<add name="emfontstyle" type="String" from-list="modules_skin/fontstyle" />
+		<add name="emcolor" type="String" />
+
+		<add name="fieldsfontsize" type="String" />
+		<add name="fieldsborderwidth" type="String" />
+		<add name="fieldsborderstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="fieldsbordercolor" type="String" />
+		<add name="fieldsbgcolor" type="String" />
+		<add name="fieldshoverbgcolor" type="String" />
+
+		<add name="optionfgcolor" type="String" />
+		<add name="optionbgcolor" type="String" />
+
+		<add name="buttonsfgcolor" type="String" />
+		<add name="buttonsbgcolor" type="String" />
+		<add name="buttonsbordercolor" type="String" />
+		<add name="buttonsborderstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="buttonsborderwidth" type="String" />
+		<add name="buttonsfontweight" type="String" from-list="modules_skin/fontweight" />
+		<add name="buttonsbgimage" type="modules_media/media" />
+		<add name="buttonsbgposition" type="String" from-list="modules_skin/bposition" />
+		<add name="buttonsbgrepeat" type="String" from-list="modules_skin/brepetition" />
+
+		<add name="linkbuttonfontsize" type="String" />
+		<add name="linkbuttonfontweight" type="String" from-list="modules_skin/fontweight" />
+		<add name="linkbuttonpaddingleft" type="String" />
+		<add name="linkbuttonpaddingright" type="String" />
+		<add name="linkbuttonbgcolor" type="String" />
+		<add name="linkbuttonfgcolor" type="String" />
+		<add name="linkbuttonbordercolor" type="String" />
+		<add name="linkbuttonborderstyle" type="String" from-list="modules_skin/borderstyle" />
+		<add name="linkbuttonborderwidth" type="String" />
+		<add name="linkbuttonbgimage" type="modules_media/media" />
+		<add name="linkbuttonbgposition" type="String" from-list="modules_skin/bposition" />
+		<add name="linkbuttonbgrepeat" type="String" from-list="modules_skin/brepetition" />
+
+		<add name="successcolor" type="String" />
+		<add name="errorscolor" type="String" />
+		<add name="errorsliststyletype" type="String" from-list="modules_skin/liststyletype" />
+		<add name="errorspaddingleft" type="String" />
+
+		<add name="desclineheight" type="String" />
+		<add name="descmarginbottom" type="String" />
+
+		<!-- print -->
+		<add name="printfgcolor" type="String" />
+		<add name="printfontfamily" type="String" from-list="modules_skin/fontfamily" />
+		<add name="printfontsize" type="String" />
+		<add name="printlineheight" type="String" />
+		<add name="printwordspacing" type="String" />
+		<add name="printletterspacing" type="String" />
+
+		<add name="printheadingonefgcolor" type="String" />
+		<add name="printheadingonefontsize" type="String" />
+		<add name="printheadingonefontfamily" type="String" from-list="modules_skin/fontfamily" />
+		<add name="printheadingonefontstyle" type="String" from-list="modules_skin/fontstyle" />
+		<add name="printheadingonefontweight" type="String" from-list="modules_skin/fontweight" />
+
+		<add name="printheadingtwofgcolor" type="String" />
+		<add name="printheadingtwofontsize" type="String" />
+		<add name="printheadingtwofontfamily" type="String" from-list="modules_skin/fontfamily" />
+		<add name="printheadingtwofontstyle" type="String" from-list="modules_skin/fontstyle" />
+		<add name="printheadingtwofontweight" type="String" from-list="modules_skin/fontweight" />
+
+		<add name="printheadingthreefgcolor" type="String" />
+		<add name="printheadingthreefontsize" type="String" />
+		<add name="printheadingthreefontfamily" type="String" from-list="modules_skin/fontfamily" />
+		<add name="printheadingthreefontstyle" type="String" from-list="modules_skin/fontstyle" />
+		<add name="printheadingthreefontweight" type="String" from-list="modules_skin/fontweight" />
+
+		<add name="printheadingfourfgcolor" type="String" />
+		<add name="printheadingfourfontsize" type="String" />
+		<add name="printheadingfourfontfamily" type="String" from-list="modules_skin/fontfamily" />
+		<add name="printheadingfourfontstyle" type="String" from-list="modules_skin/fontstyle" />
+		<add name="printheadingfourfontweight" type="String" from-list="modules_skin/fontweight" />
+
+		<add name="printheadingfivefgcolor" type="String" />
+		<add name="printheadingfivefontsize" type="String" />
+		<add name="printheadingfivefontfamily" type="String" from-list="modules_skin/fontfamily" />
+		<add name="printheadingfivefontstyle" type="String" from-list="modules_skin/fontstyle" />
+		<add name="printheadingfivefontweight" type="String" from-list="modules_skin/fontweight" />
+
+		<add name="printheadingsixfgcolor" type="String" />
+		<add name="printheadingsixfontsize" type="String" />
+		<add name="printheadingsixfontfamily" type="String" from-list="modules_skin/fontfamily" />
+		<add name="printheadingsixfontstyle" type="String" from-list="modules_skin/fontstyle" />
+		<add name="printheadingsixfontweight" type="String" from-list="modules_skin/fontweight" />
+
+		<add name="printlinkfgcolor" type="String" />
+		<add name="printlinkdecoration" type="String" from-list="modules_skin/textdecoration" />
+		<add name="printlinkfontweight" type="String" from-list="modules_skin/fontweight" />
+		<add name="printlinkurl" type="String" from-list="modules_skin/linkurl" />
+	</serializedproperties>
+</document>

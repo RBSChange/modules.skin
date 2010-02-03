@@ -1,0 +1,48 @@
+<hbox flex="1">
+	<stack width="250">
+		<vbox flex="1" style="opacity:0.99">
+			<cnavigationtree flex="1" id="navigationTree"/>
+		</vbox>
+		<chelppanel hidden="true" flex="1" />
+	</stack>
+	<splitter collapse="before">
+		<wsplitterbutton />
+	</splitter>
+	<deck anonid="mainViewDeck" flex="1">
+		<vbox anonid="documentlistmode" flex="1" >
+			<cmoduletoolbar id="moduletoolbar" />
+			<cmodulelist id="documentlist" flex="1" />		
+		</vbox>
+		<vbox anonid="boxPreview" flex="1">
+			<toolbox>
+				<toolbar class="change-toolbar">
+					<hbox>
+						<toolbarbutton change:icon="arrow_left_green/command shadow" 
+							i18n:attributes="label &amp;modules.skin.bo.actions.Backtoform;" oncommand="showForm()" />
+						<toolbarseparator/>
+					</hbox>
+					<spacer flex="1" />
+					<hbox>
+						<vbox flex="1" pack="center">
+							<label i18n:attributes="label &amp;modules.skin.bo.general.Page-to-previewLabel;"/>
+						</vbox>
+						<cfield fieldtype="document" width="220" moduleselector="website" allow="modules_website_page" 
+								name="templatePreview" anonid="templatePreview" label="Template" hidehelp="true"/>
+						<toolbarbutton change:icon="refresh/command shadow" 
+							i18n:attributes="label &amp;modules.uixul.bo.actions.Refresh;" oncommand="refreshPreview()" />
+					</hbox>
+					<spacer flex="1" />
+					<hbox>
+						<toolbarseparator/>
+						<toolbarbutton change:icon="printer/command shadow" 
+							i18n:attributes="label &amp;modules.uixul.bo.layout.Print;" oncommand="printPreview()" />
+					</hbox>
+				</toolbar>
+			</toolbox>
+			<vbox width="250" style="background-color: #fff;" flex="1">
+				<iframe anonid="previewFrame" src="about:blank" flex="1" />
+			</vbox>
+		</vbox>
+		<tal:block change:documenteditors="module skin" />				
+	</deck>		
+</hbox>

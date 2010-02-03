@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:change="http://www.rbs.fr/change/1.0/schema">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title i18n:translate="&modules.skin.bo.general.Import-title;"/>
+<style>
+body { background: #fefefe; }
+body, h3, h2 { margin: 0; padding: 0; font-family: Arial; }
+img { vertical-align:text-bottom; }
+h3 { color: #333; }
+#top{
+	background: url(<p tal:replace="php: MediaHelper::getBackofficeStaticImage('bg_main_menu.jpg')"/>) top left no-repeat;
+	height: 25px;
+	margin-bottom: 20px;
+}
+p, h2 { margin: 10px 10px 20px; }
+a { color: blue; }
+a#back { float: left; }
+a#close { float: right; }
+</style>
+</head>
+<body>
+<div id="top">
+	<h3><img change:icon="palette/command"/> <p tal:omit-tag="" i18n:translate="&modules.skin.bo.general.Import-title;">Import d'un Habillage</p></h3>
+</div>
+<h2><img change:icon="check/normal"/> <p tal:omit-tag="" i18n:translate="&modules.skin.bo.general.Import-success;">Habillage importé !</p></h2>
+<p tal:condition="php: warning || warning2">
+<img change:icon="warning/small"/>
+<p tal:condition="warning" tal:omit-tag="" i18n:translate="&modules.skin.bo.general.Import-warning;">Un ou plusieurs médias sont manquants, votre habillage ne sera pas complet.</p>
+<p tal:condition="warning2" tal:omit-tag="" i18n:translate="&modules.skin.bo.general.Import-warning2;">Votre habillage a été réalisé dans une autre version du module, il ne sera pas complet.</p>
+</p>
+<p tal:condition="php: !warning && !warning2"><br/><br/></p>
+<p><a change:link="back" id="back" i18n:translate="&modules.skin.bo.general.Import-other;">Importer un autre Habillage</a><a href="javascript:self.close()" id="close" i18n:translate="&modules.skin.bo.general.Import-close;">Fermer</a></p>
+</body>
+</html>

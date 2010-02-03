@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:change="http://www.rbs.fr/change/1.0/schema">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title i18n:translate="&modules.skin.bo.general.Import-title;"/>
+<style>
+body { background: #fefefe; }
+body, h3, h4 { margin: 0; padding: 0; font-family: Arial; }
+img { vertical-align:text-bottom; }
+h3 { color: #333; }
+h4 { margin-bottom: 10px; }
+#top{
+	background: url(<p tal:replace="php: MediaHelper::getBackofficeStaticImage('bg_main_menu.jpg')"/>) top left no-repeat;
+	height: 25px;
+	margin-bottom: 20px;
+}
+p { text-align: center; }
+#load { display: none; }
+form { margin-left: 20px; margin-bottom: 40px; }
+</style>
+</head>
+<body>
+<div id="top">
+	<h3><img change:icon="palette/command"/> <p tal:omit-tag="" i18n:translate="&modules.skin.bo.general.Import-title;">Import d'un Habillage</p></h3>
+</div>
+<form enctype="multipart/form-data" action="" method="post" onsubmit="document.getElementById('load').style.display = 'inline'">
+	<h4 i18n:translate="&modules.skin.bo.general.Import-fileLabel;">Sélectionner votre fichier zip à importer :</h4>
+	<input type="file" name="skinfile"/>
+	<input type="submit" class="bt" i18n:attributes="value &modules.skin.bo.general.Import-import;" />
+</form>
+<p><img id="load" change:image="loading_40.gif"/></p>
+</body>
+</html>

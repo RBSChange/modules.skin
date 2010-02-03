@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding
+		fileName="modules/list/persistentdocument/import/list_binding.xml" />
+	<binding
+		fileName="modules/generic/persistentdocument/import/generic_binding.xml" />
+
+	<systemfolder module="list" relatedmodule="skin">
+
+		<staticlist listid="modules_skin/halignment"
+			label="Alignement horizontal pour Habillage" description="Alignement horizontal pour Habillage">
+			<staticitem label="&amp;modules.skin.list.halignment.Left;" value="left"/>
+			<staticitem label="&amp;modules.skin.list.halignment.Center;" value="center"/>
+			<staticitem label="&amp;modules.skin.list.halignment.Right;" value="right"/>
+			<staticitem label="&amp;modules.skin.list.halignment.Justify;" value="justify"/>
+		</staticlist>
+
+		<staticlist listid="modules_skin/valignment"
+			label="Alignement vertical pour Habillage" description="Alignement vertical pour Habillage">
+			<staticitem label="&amp;modules.skin.list.valignment.Baseline;" value="baseline"/>
+			<staticitem label="&amp;modules.skin.list.valignment.Sub;" value="sub"/>
+			<staticitem label="&amp;modules.skin.list.valignment.Super;" value="super"/>
+			<staticitem label="&amp;modules.skin.list.valignment.Texttop;" value="text-top"/>
+			<staticitem label="&amp;modules.skin.list.valignment.Textbottom;" value="text-bottom"/>
+			<staticitem label="&amp;modules.skin.list.valignment.Middle;" value="middle"/>
+			<staticitem label="&amp;modules.skin.list.valignment.Top;" value="top"/>
+			<staticitem label="&amp;modules.skin.list.valignment.Bottom;" value="bottom"/>
+
+		</staticlist>
+
+		<staticlist listid="modules_skin/bposition"
+			label="Positionnement pour Habillage" description="Positionnement pour Habillage">
+			<staticitem label="&amp;modules.skin.list.bposition.Topleft;" value="top left"/>
+			<staticitem label="&amp;modules.skin.list.bposition.Top;" value="top"/>
+			<staticitem label="&amp;modules.skin.list.bposition.Topcenter;" value="top center"/>
+			<staticitem label="&amp;modules.skin.list.bposition.Topright;" value="top right"/>
+			<staticitem label="&amp;modules.skin.list.bposition.Left;" value="left"/>
+			<staticitem label="&amp;modules.skin.list.bposition.Leftcenter;" value="left center"/>
+			<staticitem label="&amp;modules.skin.list.bposition.Center;" value="center"/>
+			<staticitem label="&amp;modules.skin.list.bposition.Right;" value="right"/>
+			<staticitem label="&amp;modules.skin.list.bposition.Rightcenter;" value="right center"/>
+			<staticitem label="&amp;modules.skin.list.bposition.Bottomleft;" value="bottom left"/>
+			<staticitem label="&amp;modules.skin.list.bposition.Bottom;" value="bottom"/>
+			<staticitem label="&amp;modules.skin.list.bposition.Bottomcenter;" value="bottom center"/>
+			<staticitem label="&amp;modules.skin.list.bposition.Bottomright;" value="bottom right"/>
+		</staticlist>
+
+		<staticlist listid="modules_skin/brepetition"
+			label="Répétition pour Habillage" description="Répétition pour Habillage">
+			<staticitem label="&amp;modules.skin.list.brepetition.Repeat;" value="repeat"/>
+			<staticitem label="&amp;modules.skin.list.brepetition.Repeatx;" value="repeat-x"/>
+			<staticitem label="&amp;modules.skin.list.brepetition.Repeaty;" value="repeat-y"/>
+			<staticitem label="&amp;modules.skin.list.brepetition.Norepeat;" value="no-repeat"/>
+		</staticlist>
+
+		<staticlist listid="modules_skin/fontfamily"
+			label="Police de caractères pour Habillage" description="Police de caractères pour Habillage">
+			<staticitem label="&amp;modules.skin.list.fontfamily.Serif;" value="'Times New Roman', Times, serif"/>
+			<staticitem label="&amp;modules.skin.list.fontfamily.Serif2;" value="Georgia, serif"/>
+			<staticitem label="&amp;modules.skin.list.fontfamily.Serif3;" value="Garamond, serif"/>
+			<staticitem label="&amp;modules.skin.list.fontfamily.Sansserif;" value="Arial, Helvetica, sans-serif"/>
+			<staticitem label="&amp;modules.skin.list.fontfamily.Sansserif2;" value="Verdana, Geneva, sans-serif"/>
+			<staticitem label="&amp;modules.skin.list.fontfamily.Sansserif3;" value="Impact, 'Arial Black', sans-serif"/>
+			<staticitem label="&amp;modules.skin.list.fontfamily.Sansserif4;" value="'Trebuchet MS', Helvetica, sans-serif"/>
+			<staticitem label="&amp;modules.skin.list.fontfamily.Monospace;" value="'Courier New', Courier, monospace"/>
+			<staticitem label="&amp;modules.skin.list.fontfamily.Cursive;" value="'Comic Sans MS', cursive"/>
+			<staticitem label="&amp;modules.skin.list.fontfamily.Fantasy;" value="Webdings, fantasy"/>
+		</staticlist>
+
+		<staticlist listid="modules_skin/fontstyle"
+			label="Style de police pour Habillage" description="Style de police pour Habillage">
+			<staticitem label="&amp;modules.skin.list.fontstyle.Normal;" value="normal"/>
+			<staticitem label="&amp;modules.skin.list.fontstyle.Italic;" value="italic"/>
+		</staticlist>
+
+		<staticlist listid="modules_skin/fontweight"
+			label="Graisse de police pour Habillage" description="Graisse de police pour Habillage">
+			<staticitem label="&amp;modules.skin.list.fontweight.Normal;" value="normal"/>
+			<staticitem label="&amp;modules.skin.list.fontweight.Bold;" value="bold"/>
+			<staticitem label="&amp;modules.skin.list.fontweight.Bolder;" value="bolder"/>
+			<staticitem label="&amp;modules.skin.list.fontweight.Lighter;" value="lighter"/>
+		</staticlist>
+
+		<staticlist listid="modules_skin/borderstyle"
+			label="Style de bordure pour Habillage" description="Style de bordure pour Habillage">
+			<staticitem label="&amp;modules.skin.list.borderstyle.None;" value="none"/>
+			<staticitem label="&amp;modules.skin.list.borderstyle.Dotted;" value="dotted"/>
+			<staticitem label="&amp;modules.skin.list.borderstyle.Dashed;" value="dashed"/>
+			<staticitem label="&amp;modules.skin.list.borderstyle.Solid;" value="solid"/>
+			<staticitem label="&amp;modules.skin.list.borderstyle.Double;" value="double"/>
+			<staticitem label="&amp;modules.skin.list.borderstyle.Groove;" value="groove"/>
+			<staticitem label="&amp;modules.skin.list.borderstyle.Inset;" value="inset"/>
+			<staticitem label="&amp;modules.skin.list.borderstyle.Outset;" value="outset"/>
+		</staticlist>
+
+		<staticlist listid="modules_skin/textdecoration"
+			label="Style de soulignement des liens pour Habillage" description="Style de soulignement des liens pour Habillage">
+			<staticitem label="&amp;modules.skin.list.textdecoration.None;" value="none"/>
+			<staticitem label="&amp;modules.skin.list.textdecoration.Underline;" value="underline"/>
+			<staticitem label="&amp;modules.skin.list.textdecoration.Overline;" value="overline"/>
+			<staticitem label="&amp;modules.skin.list.textdecoration.Strike;" value="line-through"/>
+		</staticlist>
+
+		<staticlist listid="modules_skin/liststyletype"
+			label="Puce pour les listes pour Habillage" description="Puce pour les listes pour Habillage">
+			<staticitem label="&amp;modules.skin.list.liststyletype.None;" value="none"/>
+			<staticitem label="&amp;modules.skin.list.liststyletype.Disc;" value="disc"/>
+			<staticitem label="&amp;modules.skin.list.liststyletype.Circle;" value="circle"/>
+			<staticitem label="&amp;modules.skin.list.liststyletype.Square;" value="square"/>
+			<staticitem label="&amp;modules.skin.list.liststyletype.Decimal;" value="decimal"/>
+			<staticitem label="&amp;modules.skin.list.liststyletype.Lower-roman;" value="lower-roman"/>
+			<staticitem label="&amp;modules.skin.list.liststyletype.Upper-roman;" value="upper-roman"/>
+			<staticitem label="&amp;modules.skin.list.liststyletype.Lower-alpha;" value="lower-alpha"/>
+			<staticitem label="&amp;modules.skin.list.liststyletype.Upper-alpha;" value="upper-alpha"/>
+		</staticlist>
+
+		<staticlist listid="modules_skin/linkurl"
+			label="Impression des liens pour Habillage" description="Impression des liens pour Habillage">
+			<staticitem label="&amp;modules.skin.list.linkurl.Yes;" value='" (" attr(href) ") "'/>
+			<staticitem label="&amp;modules.skin.list.linkurl.No;" value=""/>
+		</staticlist>
+	</systemfolder>
+</script>

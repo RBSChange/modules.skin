@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<actions>
+
+	<action name="createSkin">
+		<parameter name="listWidget" />
+		<body><![CDATA[
+			this.createDocumentEditor('modules_skin_skin', listWidget.getSelectedItems()[0].id);
+		]]></body>
+	</action>
+
+	<action name="createFolder">
+		<parameter name="listWidget" />
+		<body><![CDATA[
+			this.createDocumentEditor('modules_skin_folder', listWidget.getSelectedItems()[0].id);
+		]]></body>
+	</action>	
+	
+	<action name="exportSkin">
+		<parameter name="listWidget" />
+		<body><![CDATA[
+			url = wCore.buildeServerUrl('skin', 'Export', {cmpref: listWidget.getSelectedIds() });
+			window.open(url);
+		]]></body>
+	</action>
+	<action name="importSkin">
+		<parameter name="listWidget" />
+		<body><![CDATA[
+			wToolkit.dialog('skin', 'Import', {cmpref: listWidget.getSelectedIds() }, {width: 400, height: 200}, false);
+		]]></body>
+	</action>
+
+	<action name="createSubSkin">
+		<parameter name="listWidget" />
+		<body><![CDATA[
+			var ids = listWidget.getSelectedIds();
+			this.executeJSON("CreateSubSkin", {cmpref: ids, lang : this.getContextLang()});
+		]]></body>
+	</action>
+	<action name="createSubSkinIsActive">
+		<parameter name="itemData"/>
+		<body><![CDATA[
+			try
+			{
+				return (itemData.subskinidof == null);
+			}
+			catch (e)
+			{
+				wCore.error('createSubSkinIsActive', [itemData], e);
+				return false;
+			}
+		]]></body>
+	</action>
+	
+	<action name="onCreateSubSkinSuccess">
+		<parameter name="result" />
+		<body><![CDATA[	
+			var item = 	result.contents;
+			var type = 'modules_skin_skin';
+			this.getModuleHeader().setEditedItem(item);
+			this.refresh();
+			var editor = this.getDocumentEditor(type);
+			if (editor)
+			{
+				this.closeCurrentEditor();				
+				this.setAttribute("documenteditor", type);
+				this.setAttribute("openid", item.id);
+				editor.parentNode.selectedPanel = editor;
+				if ('open' in editor) 
+				{
+					editor.open(item.id, "properties");
+				}
+				else
+				{
+					editor.setAttribute("openid", item.id);	
+				}
+				return editor;
+			}
+			return null;
+		]]></body>
+	</action>
+
+	<action name="initPreview">
+		<body><![CDATA[
+			var templatePreview = this.getElementByAnonId('templatePreview');
+			var me = this;
+			templatePreview.addEventListener('fieldChanged', function(event) {me.showPreview(null);}, true);
+		]]></body>
+	</action>
+
+	<action name="showPreview">
+		<parameter name="md5" />
+		<body><![CDATA[
+			var boxPreview = this.getElementByAnonId('boxPreview');	
+			if (md5)
+			{
+				boxPreview.setAttribute("md5", md5);
+			}
+			else
+			{
+				md5 = boxPreview.getAttribute("md5");
+			}
+			boxPreview.parentNode.selectedPanel = boxPreview;
+			var previewFrame = this.getElementByAnonId("previewFrame");	
+						
+			try
+			{
+				var pageId = this.getElementByAnonId('templatePreview').value;
+				if (pageId != '')
+				{
+					var refreshUrl = wCore.buildeServerUrl('skin', 'Preview', {md5: md5, pageid: pageId, rand: Math.random()}, 'html');
+					previewFrame.setAttribute("src", refreshUrl);
+				}
+				else
+				{
+					var emptyUrl = wCore.buildeServerUrl('skin', 'NoPreview', {});
+					previewFrame.setAttribute("src", emptyUrl);
+				}
+			}
+			catch (e)
+			{
+				wCore.error('showPreview', [md5], e);
+				var emptyUrl = wCore.buildeServerUrl('skin', 'NoPreview', {error: e.toString()});
+				previewFrame.setAttribute("src", emptyUrl);
+			}
+		]]></body>
+	</action>
+	
+	<action name="refreshPreview">
+		<body><![CDATA[	
+			this.showPreview(null);
+		]]></body>
+	</action>	
+	
+	<action name="showForm">
+		<parameter name="listWidget" />
+		<body><![CDATA[
+			var editor = this.getDocumentEditor('modules_skin_skin');
+			editor.parentNode.selectedPanel = editor;
+		]]></body>
+	</action>
+
+	<action name="printPreview">
+		<body><![CDATA[
+			   wToolkit.printFrame(this.getElementByAnonId("previewFrame"));
+		]]></body>
+	</action>
+</actions>
