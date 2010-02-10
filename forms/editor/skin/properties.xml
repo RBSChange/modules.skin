@@ -322,6 +322,7 @@
 	<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.ContentTab;" image="{HttpHost}/icons/small/pencil2.png">
 		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.TextTab;" image="{HttpHost}/icons/small/paragraph.png">
 			<section label="&amp;modules.skin.document.skin.PageTextCaption;">
+				<field name="richtextmargin" type="size" allowunits="em px %"/>
 				<field name="bodyfgcolor" type="color"/>
 				<field name="textbgcolor" type="color"/>
 				<field name="bodyfontfamily"/>
@@ -448,7 +449,7 @@
 				<field name="ulpaddingright" type="size" allowunits="em px %"/>
 				<field name="ulpaddingbottom" type="size" allowunits="em px %"/>
 				<field name="ulpaddingleft" type="size" allowunits="em px %"/>
-				<field name="ulbullet"/>
+				<field name="ulbullet" allowfile="true" mediafoldername="Inbox"/>
 				<field name="ulbgposition"/>
 				<field name="ulbgrepeat"/>
 				<field name="ululmarginbottom" type="size" allowunits="em px %"/>
@@ -460,7 +461,7 @@
 				<field name="olpaddingright" type="size" allowunits="em px %"/>
 				<field name="olpaddingbottom" type="size" allowunits="em px %"/>
 				<field name="olpaddingleft" type="size" allowunits="em px %"/>
-				<field name="olbullet"/>
+				<field name="olbullet" allowfile="true" mediafoldername="Inbox"/>
 				<field name="olbgposition"/>
 				<field name="olbgrepeat"/>
 				<field name="ololmarginbottom" type="size" allowunits="em px %"/>

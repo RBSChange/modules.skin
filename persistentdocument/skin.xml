@@ -253,6 +253,7 @@
 
 
 		<!-- text -->
+		<add name="richtextmargin" type="String" />
 		<add name="bodyfgcolor" type="String" />
 		<add name="textbgcolor" type="String" />
 		<add name="bodyfontfamily" type="String" from-list="modules_skin/fontfamily" />
