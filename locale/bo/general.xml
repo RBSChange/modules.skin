@@ -75,16 +75,8 @@
     <locale lang="en">Please select a page to preview</locale>
   </entity>
   <entity id="no-preview-text">
-    <locale lang="fr">Sélectionnez une page dans l'arbre des ressources et glissez la dans le champ 
-			<strong>Page à prévisualiser</strong> dans la barre d'outils ci-dessus
-			<br/> puis cliquez sur le bouton 
-			<strong>Actualiser</strong> à côté du champ.
-		</locale>
-    <locale lang="en">Select a page in resources tree and drop it in the field 
-			<strong>Page to preview</strong> in the toolbar above
-			<br/>then click on 
-			<strong>Refresh</strong> button next to the field.
-		</locale>
+    <locale lang="fr">Sélectionnez une page dans le sélecteur des ressources du champ situé dans la barre d'outils ci-dessus.&lt;br /&gt;Puis cliquez sur le bouton "Actualiser" à côté du champ.</locale>
+    <locale lang="en">Select a page in the resources selector of the field in the toolbar above.&lt;br/&gt;Then click on the "Refresh" button next to the field.</locale>
   </entity>
   <entity id="page-to-preview">
     <locale lang="fr">page à prévisualiser</locale>

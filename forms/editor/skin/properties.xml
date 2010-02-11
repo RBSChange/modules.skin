@@ -6,8 +6,8 @@
 		<field name="startpublicationdate"/>
 		<field name="endpublicationdate"/>
 	</section>
-	<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.TemplateTab;" image="{HttpHost}/icons/small/window.png">
-		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.PageTab;" image="{HttpHost}/icons/small/document.png">
+	<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.TemplateTab;" image="{HttpHost}/icons/small/template.png">
+		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.PageTab;" image="{HttpHost}/icons/small/page.png">
 			<section label="&amp;modules.skin.document.skin.PageBackgroundCaption;">
 				<field name="bodybgcolor" type="color"/>
 				<field name="bodybgimage" allowfile="true" mediafoldername="Inbox"/>
@@ -27,7 +27,7 @@
 				<field name="searchlabelfgcolor" type="color"/>
 			</section>
 		</section>
-		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.MediaTab;" image="{HttpHost}/icons/small/photo_scenery.png">
+		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.MediaTab;" image="{HttpHost}/icons/small/pictures.png">
 			<section label="&amp;modules.skin.document.skin.PageBandeauCaption;">
 				<field name="bannerheight" type="size" allowunits="em px"/>
 				<field name="bannerbgimage" allowfile="true" mediafoldername="Inbox"/>
@@ -51,7 +51,7 @@
 				<field name="imgborderwidth" type="size" allowunits="px"/>
 			</section>
 		</section>
-		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.ThreadTab;" image="{HttpHost}/icons/small/thread.png">
+		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.ThreadTab;" image="{HttpHost}/icons/small/breadcrumb.png">
 			<field name="threadafgcolor" type="color"/>
 			<field name="threadatextdecoration"/>
 			<field name="threadahoverfgcolor" type="color"/>
@@ -62,7 +62,7 @@
 			<field name="threadbottomborderwidth" type="size" allowunits="px"/>
 			<field name="threadseparatorcolor" type="color"/>
 		</section>
-		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.HeaderTab;" image="{HttpHost}/icons/small/document_up.png">
+		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.HeaderTab;" image="{HttpHost}/icons/small/header.png">
 			<field name="headerbgcolor" type="color"/>
 			<field name="headerfgcolor" type="color"/>
 			<field name="headerbordercolor" type="color"/>
@@ -72,7 +72,7 @@
 			<field name="headerbgposition"/>
 			<field name="headerbgrepeat"/>
 		</section>
-		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.FooterTab;" image="{HttpHost}/icons/small/document_down.png">
+		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.FooterTab;" image="{HttpHost}/icons/small/footer.png">
 			<field name="footerbgcolor" type="color"/>
 			<field name="footerfgcolor" type="color"/>
 			<field name="footerbordercolor" type="color"/>
@@ -83,8 +83,8 @@
 			<field name="footerbgrepeat"/>
 		</section>
 	</section>
-	<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.MenuTab;" image="{HttpHost}/icons/small/window_sidebar.png">
-		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.HeaderMenuTab;" image="{HttpHost}/icons/small/element_up.png">
+	<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.MenuTab;" image="{HttpHost}/icons/small/menu.png">
+		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.HeaderMenuTab;" image="{HttpHost}/icons/small/menu.png">
 			<field name="menuheaderfgcolor" type="color"/>
 			<field name="menuheadertextdecoration"/>
 			<field name="menuheadercurrentfgcolor" type="color"/>
@@ -92,8 +92,8 @@
 			<field name="menuheaderhovertextdecoration"/>
 			<field name="menuheaderseparator" type="color"/>
 		</section>
-		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.MainMenuTab;" image="{HttpHost}/icons/small/element_new.png">
-			<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.TopMenuPositionTab;" image="{HttpHost}/icons/small/layout_north.png">
+		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.MainMenuTab;" image="{HttpHost}/icons/small/menu.png">
+			<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.TopMenuPositionTab;" image="{HttpHost}/icons/small/header.png">
 				<section label="&amp;modules.skin.document.skin.MenuLayoutCaption;">
 					<field name="menumaintopbgcolor" type="color"/>
 					<field name="menumaintopbgimage" allowfile="true" mediafoldername="Inbox"/>
@@ -131,7 +131,7 @@
 					<field name="menumaintophoverimagerepeat"/>
 				</section>
 			</section>
-			<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.SideMenuPositionTab;" image="{HttpHost}/icons/small/layout_west.png">
+			<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.SideMenuPositionTab;" image="{HttpHost}/icons/small/sidebar.png">
 				<section label="&amp;modules.skin.document.skin.MenuLayoutCaption;">
 					<field name="menumainleftbgcolor" type="color"/>
 					<field name="menumainleftbgimage" allowfile="true" mediafoldername="Inbox"/>
@@ -201,8 +201,8 @@
 				</section>
 			</section>
 		</section>
-		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.ContextualMenuTab;" image="{HttpHost}/icons/small/element.png">
-			<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.TopMenuPositionTab;" image="{HttpHost}/icons/small/layout_north.png">
+		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.ContextualMenuTab;" image="{HttpHost}/icons/small/menu.png">
+			<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.TopMenuPositionTab;" image="{HttpHost}/icons/small/header.png">
 				<section label="&amp;modules.skin.document.skin.MenuLayoutCaption;">
 					<field name="menucontextualtopbgcolor" type="color"/>
 					<field name="menucontextualtopbgimage" allowfile="true" mediafoldername="Inbox"/>
@@ -240,7 +240,7 @@
 					<field name="menucontextualtophoverimagerepeat"/>
 				</section>
 			</section>
-			<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.SideMenuPositionTab;" image="{HttpHost}/icons/small/layout_west.png">
+			<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.SideMenuPositionTab;" image="{HttpHost}/icons/small/sidebar.png">
 				<section label="&amp;modules.skin.document.skin.MenuLayoutCaption;">
 					<field name="menucontextualleftbgcolor" type="color"/>
 					<field name="menucontextualleftbgimage" allowfile="true" mediafoldername="Inbox"/>
@@ -310,7 +310,7 @@
 				</section>
 			</section>
 		</section>
-		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.FooterMenuTab;" image="{HttpHost}/icons/small/element_down.png">
+		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.FooterMenuTab;" image="{HttpHost}/icons/small/menu.png">
 			<field name="menufooterfgcolor" type="color"/>
 			<field name="menufootertextdecoration"/>
 			<field name="menufootercurrentfgcolor" type="color"/>
@@ -319,8 +319,8 @@
 			<field name="menufooterseparator" type="color"/>
 		</section>
 	</section>
-	<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.ContentTab;" image="{HttpHost}/icons/small/pencil2.png">
-		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.TextTab;" image="{HttpHost}/icons/small/paragraph.png">
+	<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.ContentTab;" image="{HttpHost}/icons/small/edit-page-content.png">
+		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.TextTab;" image="{HttpHost}/icons/small/text.png">
 			<section label="&amp;modules.skin.document.skin.PageTextCaption;">
 				<field name="richtextmargin" type="size" allowunits="em px %"/>
 				<field name="bodyfgcolor" type="color"/>
@@ -337,7 +337,7 @@
 				<field name="blockquotefontfamily"/>
 			</section>
 		</section>
-		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.HeadingTab;" image="{HttpHost}/icons/small/wheading.png">
+		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.HeadingTab;" image="{HttpHost}/icons/small/richtext/heading.png">
 			<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.TextHeadingOne;">
 				<field name="headingonefgcolor" type="color"/>
 				<field name="headingonebgcolor" type="color"/>
@@ -435,13 +435,13 @@
 				<field name="headingsixfontfamily"/>
 			</section>
 		</section>
-		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.LinkTab;" image="{HttpHost}/icons/small/link.png">
+		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.LinkTab;" image="{HttpHost}/icons/small/richtext/link.png">
 			<field name="linkfgcolor" type="color"/>
 			<field name="linkdecoration"/>
 			<field name="linkhoverfgcolor" type="color"/>
 			<field name="linkhoverdecoration"/>
 		</section>
-		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.ListTab;" image="{HttpHost}/icons/small/branch.png">
+		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.ListTab;" image="{HttpHost}/icons/small/richtext/unordered-list.png">
 			<section label="&amp;modules.skin.document.skin.PageListUlCaption;">
 				<field name="ulmarginbottom" type="size" allowunits="em px %"/>
 				<field name="ultype"/>
@@ -467,7 +467,7 @@
 				<field name="ololmarginbottom" type="size" allowunits="em px %"/>
 			</section>
 		</section>
-		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.TableTab;" image="{HttpHost}/icons/small/table.png">
+		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.TableTab;" image="{HttpHost}/icons/small/richtext/table.png">
 			<section label="&amp;modules.skin.document.skin.TableTableCaption;">
 				<field name="tablemarginbottom" type="size" allowunits="em px %"/>
 			</section>
@@ -485,8 +485,8 @@
 			</section>
 		</section>
 	</section>
-	<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.FormTab;" image="{HttpHost}/icons/small/form_blue.png">
-		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.FormLayoutTab;" image="{HttpHost}/icons/small/cube_molecule.png">
+	<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.FormTab;" image="{HttpHost}/icons/small/form.png">
+		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.FormLayoutTab;" image="{HttpHost}/icons/small/ui-group-box.png">
 			<section label="&amp;modules.skin.document.skin.FormFieldsetCaption;">
 				<field name="fieldsetmarginbottom" type="size" allowunits="em px %"/>
 				<field name="fieldsetpadding" type="size" allowunits="em px %"/>
@@ -504,7 +504,7 @@
 				<field name="legendfontfamily"/>
 			</section>
 		</section>
-		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.FormInputsTab;" image="{HttpHost}/icons/small/wlistmultiple.png">
+		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.FormInputsTab;" image="{HttpHost}/icons/small/ui-fields.png">
 			<section label="&amp;modules.skin.document.skin.FormLabelCaption;">
 				<field name="labellineheight" type="size" allowunits="em px %"/>
 				<field name="labeltextalign"/>
@@ -529,7 +529,7 @@
 				<field name="optionbgcolor" type="color"/>
 			</section>
 		</section>
-		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.FormButtonsTab;" image="{HttpHost}/icons/small/keyboard_key.png">
+		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.FormButtonsTab;" image="{HttpHost}/icons/small/ui-buttons.png">
 			<section label="&amp;modules.skin.document.skin.FormButtonsCaption;">
 				<field name="buttonsfgcolor" type="color"/>
 				<field name="buttonsbgcolor" type="color"/>
@@ -572,7 +572,7 @@
 		</section>
 	</section>
 	<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.PrintTab;" image="{HttpHost}/icons/small/printer.png">
-		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.TextTab;" image="{HttpHost}/icons/small/paragraph.png">
+		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.TextTab;" image="{HttpHost}/icons/small/text.png">
 			<field name="printfgcolor" type="color"/>
 			<field name="printfontfamily"/>
 			<field name="printfontsize" type="size" allowunits="em px pt %"/>
@@ -580,7 +580,7 @@
 			<field name="printwordspacing" type="size" allowunits="em px pt %"/>
 			<field name="printletterspacing" type="size" allowunits="em px pt %"/>
 		</section>
-		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.HeadingTab;" image="{HttpHost}/icons/small/wheading.png">
+		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.HeadingTab;" image="{HttpHost}/icons/small/richtext/heading.png">
 			<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.TextHeadingOne;">
 				<field name="printheadingonefgcolor" type="color"/>
 				<field name="printheadingonefontsize" type="size" allowunits="em px pt %"/>
@@ -624,7 +624,7 @@
 				<field name="printheadingsixfontweight"/>
 			</section>
 		</section>
-		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.LinkTab;" image="{HttpHost}/icons/small/link.png">
+		<section class="toggle" hidden="true" label="&amp;modules.skin.document.skin.LinkTab;" image="{HttpHost}/icons/small/richtext/link.png">
 			<field name="printlinkfgcolor" type="color"/>
 			<field name="printlinkdecoration"/>
 			<field name="printlinkfontweight"/>

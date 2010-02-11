@@ -17,7 +17,7 @@
 			<toolbox>
 				<toolbar class="change-toolbar">
 					<hbox>
-						<toolbarbutton change:icon="arrow_left_green/command shadow" 
+						<toolbarbutton change:icon="arrow_left_blue/small" 
 							i18n:attributes="label &amp;modules.skin.bo.actions.Backtoform;" oncommand="showForm()" />
 						<toolbarseparator/>
 					</hbox>
@@ -28,13 +28,13 @@
 						</vbox>
 						<cfield fieldtype="document" width="220" moduleselector="website" allow="modules_website_page" 
 								name="templatePreview" anonid="templatePreview" label="Template" hidehelp="true"/>
-						<toolbarbutton change:icon="refresh/command shadow" 
+						<toolbarbutton change:icon="refresh/small" 
 							i18n:attributes="label &amp;modules.uixul.bo.actions.Refresh;" oncommand="refreshPreview()" />
 					</hbox>
 					<spacer flex="1" />
 					<hbox>
 						<toolbarseparator/>
-						<toolbarbutton change:icon="printer/command shadow" 
+						<toolbarbutton change:icon="printer/small" 
 							i18n:attributes="label &amp;modules.uixul.bo.layout.Print;" oncommand="printPreview()" />
 					</hbox>
 				</toolbar>
