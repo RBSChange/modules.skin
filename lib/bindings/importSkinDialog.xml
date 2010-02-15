@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bindings xmlns="http://www.mozilla.org/xbl" xmlns:xbl="http://www.mozilla.org/xbl" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<binding id="importSkinDialog" extends="core.wDialog#wDialog">
+		<implementation>
+			<field name="nsIFile">null</field>
+			
+			<constructor><![CDATA[
+				wCore.debug('importSkinDialog.constructor');	
+			]]></constructor>
+
+			<method name="onInitialize">
+				<body><![CDATA[
+					this.resizeTo(400, 150);
+				]]></body>
+			</method>
+
+			<method name="onCancel">
+				<body><![CDATA[
+					this.parameters.module.refresh();
+					this.controller.closeModalDialog();
+				]]></body>
+			</method>
+
+			<method name="dragEnter">
+				<parameter name="event" />
+				<body><![CDATA[
+					if (event.dataTransfer.types.contains('application/x-moz-file'))
+					{
+						event.preventDefault();					
+					}
+				]]></body>
+			</method>
+
+			<method name="dragOver">
+				<parameter name="event" />
+				<body><![CDATA[
+					if (event.dataTransfer.types.contains('application/x-moz-file'))
+					{
+						event.preventDefault();					
+					}
+				]]></body>
+			</method>
+
+			<method name="drop">
+				<parameter name="event" />
+				<body><![CDATA[
+					if (event.dataTransfer.types.contains('application/x-moz-file'))
+					{
+						//wCore.debug('DROP');
+						var file = event.dataTransfer.mozGetDataAt("application/x-moz-file", 0);
+						if (file instanceof Components.interfaces.nsIFile)
+						{
+							this.doDropFile(file);
+						}
+					}
+					event.preventDefault();
+				]]></body>
+			</method>
+
+			<method name="openFilePicker">
+				<body><![CDATA[	
+					var filePicker = Components.classes["@mozilla.org/filepicker;1"].createInstance(Components.interfaces.nsIFilePicker);
+					filePicker.init(window, "Selectionner un fichier", filePicker.modeOpen);
+					if(filePicker.show() == filePicker.returnOK)
+					{
+						this.setFile(filePicker.file);
+					}
+				]]></body>
+			</method>
+			
+			<method name="setFile">
+				<parameter name="nsIFile" />
+				<body><![CDATA[
+					var field = document.getAnonymousElementByAttribute(this, 'anonid', 'file');
+					field.setAttribute('value', nsIFile.leafName);
+					this.nsIFile = nsIFile;
+					
+					var button = document.getAnonymousElementByAttribute(this, 'anonid', 'ok');
+					button.removeAttribute('disabled');
+				]]></body>
+			</method>
+			
+			<method name="onOk">
+				<body><![CDATA[
+					try
+					{
+						document.getAnonymousElementByAttribute(this, 'anonid', 'form-panel').setAttribute('hidden', 'true');
+						document.getAnonymousElementByAttribute(this, 'anonid', 'importing-panel').removeAttribute('hidden');
+						document.getAnonymousElementByAttribute(this, 'anonid', 'message-panel').setAttribute('hidden', 'true');
+						var me = this;
+						var callbackComplete = function(result) {me.onUploadedSkin(result);};
+						var parameters = {module: 'skin', action: 'Import', folderId: this.parameters.folderId};
+						wCore.uploadFile(this.nsIFile, parameters, callbackComplete);
+					}
+					catch (e)
+					{
+						wCore.error("onOk", [nsIFile], e);
+						document.getAnonymousElementByAttribute(this, 'anonid', 'form-panel').removeAttribute('hidden');
+						document.getAnonymousElementByAttribute(this, 'anonid', 'importing-panel').setAttribute('hidden', 'true');
+						document.getAnonymousElementByAttribute(this, 'anonid', 'message-panel').setAttribute('hidden', 'true');
+					}
+				]]></body>
+			</method>
+			
+			<method name="onUploadedSkin">
+				<parameter name="result" />
+				<body><![CDATA[
+					document.getAnonymousElementByAttribute(this, 'anonid', 'form-panel').setAttribute('hidden', 'true');
+					document.getAnonymousElementByAttribute(this, 'anonid', 'importing-panel').setAttribute('hidden', 'true');
+					document.getAnonymousElementByAttribute(this, 'anonid', 'message-panel').removeAttribute('hidden');
+					
+					if (result.status == 'OK')
+					{
+						if (result.contents.warnings.length > 0)
+						{
+							this.appendMessage("&modules.skin.bo.general.Skin-imported-with-warningsLabel;");
+							for (var i in result.contents.warnings)
+							{
+								this.appendMessage(result.contents.warnings[i]);
+							}
+						}
+						else
+						{
+							this.appendMessage("&modules.skin.bo.general.Skin-imported;");
+						}
+					}
+					else
+					{
+						wCore.warn('cDocumentField.onUplodedFile: ' + wCore.dump(result));
+						this.appendMessage(result.contents.errorMessage);
+					}
+				]]></body>
+			</method>
+			
+			<method name="appendMessage">
+				<parameter name="msg" />
+				<body><![CDATA[
+					var messageBox = document.getAnonymousElementByAttribute(this, 'anonid', 'messageBox');
+					var txts = msg.split("\n");
+					for (var i = 0; i < txts.length; i++)
+					{
+						var node = messageBox.appendChild(document.createElement('description'));
+						node.setAttribute('style', 'max-width: 370px');
+						node.textContent = txts[i];
+					}
+				]]></body>
+			</method>
+
+			<method name="importOtherSkin">
+				<body><![CDATA[
+					var field = document.getAnonymousElementByAttribute(this, 'anonid', 'file');
+					field.setAttribute('value', '');
+					this.nsIFile = null;
+					
+					var button = document.getAnonymousElementByAttribute(this, 'anonid', 'ok');
+					button.setAttribute('disabled', 'true');
+					
+					var deck = document.getAnonymousElementByAttribute(this, 'anonid', 'deck');
+					
+					document.getAnonymousElementByAttribute(this, 'anonid', 'form-panel').removeAttribute('hidden');
+					document.getAnonymousElementByAttribute(this, 'anonid', 'importing-panel').setAttribute('hidden', 'true');
+					document.getAnonymousElementByAttribute(this, 'anonid', 'message-panel').setAttribute('hidden', 'true');
+					
+					var messageBox = document.getAnonymousElementByAttribute(this, 'anonid', 'messageBox');
+					while(messageBox.firstChild)
+					{
+						messageBox.removeChild(messageBox.firstChild);
+					}
+				]]></body>
+			</method>
+		</implementation>
+		<xbl:content>
+			<xul:vbox flex="1">
+				<xul:hbox class="dialog-header">
+					<xul:label value="&amp;modules.skin.bo.general.Import-title;" class="dialog-title" />
+					<xul:spacer flex="1" />
+					<xul:vbox pack="center">
+						<xul:toolbarbutton height="16" width="16" image="{HttpHost}/icons/small/delete.png" oncommand="onCancel();" tooltiptexts="&amp;modules.uixul.bo.dialog.Cancel;" />
+					</xul:vbox>
+				</xul:hbox>
+				<xul:deck anonid="deck">
+					<xul:vbox anonid="form-panel" flex="1">
+						<xul:hbox align="center" pack="start" style="margin-top: 5px">
+							<xul:label value="&amp;modules.skin.bo.general.Import-fileLabel;" />
+							<xul:textbox readonly="true" anonid="file" size="30" />
+							<xul:toolbarbutton anonid="uploadbutton" image="{HttpHost}/icons/small/upload.png" oncommand="openFilePicker()" tooltiptext="&amp;modules.uixul.bo.doceditor.Upload-file-from-disk;" />
+						</xul:hbox>
+						<xul:hbox flex="1" align="start" pack="center" style="margin-top: 20px">
+							<xul:button image="{HttpHost}/icons/small/check.png" disabled="true" anonid="ok" oncommand="onOk()"	label="&amp;modules.skin.bo.general.Import-import;" />
+							<xul:button image="{HttpHost}/icons/small/delete.png" oncommand="onCancel()" label="&amp;modules.uixul.bo.dialog.Cancel;" />
+						</xul:hbox>
+					</xul:vbox>
+					<xul:vbox anonid="importing-panel" flex="1" style="opacity:0.7">
+						<xul:spacer height="15px" />
+						<xul:hbox pack="center">
+							<xul:image src="{HttpHost}/media/backoffice/loading_40.gif" height="40px" width="40px" />
+						</xul:hbox>
+						<xul:spacer height="16px" />
+						<xul:hbox pack="center">
+							<xul:description style="font-size:18px" value="&amp;modules.skin.bo.general.ImportingEllipsis;" />
+						</xul:hbox>
+					</xul:vbox>
+					<xul:vbox anonid="message-panel" flex="1">
+						<xul:vbox anonid="messageBox" style="min-height: 90px"/>
+						<xul:hbox>
+							<xul:button image="{HttpHost}/icons/small/upload.png" oncommand="importOtherSkin()"	label="&amp;modules.skin.bo.general.Import-other-skin;" />
+						</xul:hbox>
+					</xul:vbox>
+				</xul:deck>
+			</xul:vbox>
+		</xbl:content>
+	</binding>
+	
+</bindings>

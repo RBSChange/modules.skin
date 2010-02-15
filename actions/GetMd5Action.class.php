@@ -1,7 +1,10 @@
 <?php
+/**
+ * skin_GetMd5Action
+ * @package modules.skin.actions
+ */
 class skin_GetMd5Action extends f_action_BaseJSONAction
 {
-	
 	/**
 	 * @param Context $context
 	 * @param Request $request

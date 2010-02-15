@@ -1,341 +1,341 @@
 <?xml version="1.0" encoding="utf-8"?>
 <localization>
-  <entity id="rcenable.Enable">
-    <locale lang="fr">activé</locale>
-    <locale lang="en">enabled</locale>
-    <locale lang="de">akitviert</locale>
-  </entity>
-  <entity id="rcenable.Disable">
-    <locale lang="fr">désactivé</locale>
-    <locale lang="en">disabled</locale>
-    <locale lang="de">deaktiviert</locale>
-  </entity>
-<!-- HORIZONTAL ALIGNMENT -->
-  <entity id="halignment.Left">
-    <locale lang="fr">à gauche</locale>
-    <locale lang="en">left</locale>
-    <locale lang="de">links</locale>
-  </entity>
-  <entity id="halignment.Center">
-    <locale lang="fr">centré</locale>
-    <locale lang="en">center</locale>
-    <locale lang="de">zentriert</locale>
-  </entity>
-  <entity id="halignment.Right">
-    <locale lang="fr">à droite</locale>
-    <locale lang="en">right</locale>
-    <locale lang="de">rechts</locale>
-  </entity>
-  <entity id="halignment.Justify">
-    <locale lang="fr">justifié</locale>
-    <locale lang="en">justify</locale>
-    <locale lang="de">Blocksatz</locale>
-  </entity>
-<!-- VERTICAL ALIGNMENT -->
-  <entity id="valignment.Baseline">
-    <locale lang="fr">base de l'élément alignée avec celle de son parent</locale>
-    <locale lang="en">baseline of the element aligned with the baseline of its parent</locale>
-    <locale lang="de">Elementenbasis mit der seiner Mutter abgeglichen</locale>
-  </entity>
-  <entity id="valignment.Sub">
-    <locale lang="fr">base de l'élément alignée avec la ligne de base indice de son parent</locale>
-    <locale lang="en">baseline of the element aligned with the subscript-baseline of its parent</locale>
-    <locale lang="de">Elementenbasis mit der Tiefsatz Basiszeile seiner Mutter abgeglichen</locale>
-  </entity>
-  <entity id="valignment.Super">
-    <locale lang="fr">base de l'élément alignée avec la ligne de base exposant de son parent</locale>
-    <locale lang="en">baseline of the element aligned with the superscript-baseline of its parent</locale>
-    <locale lang="de">Elementenbasis mit der Exponenten Basiszeile seiner Mutter abgeglichen</locale>
-  </entity>
-  <entity id="valignment.Texttop">
-    <locale lang="fr">haut de l'élément aligné avec le haut de fonte de l'élément parent</locale>
-    <locale lang="en">top of the element aligned with the top of the parent element's font</locale>
-    <locale lang="de">Elementoberteil mit dem Fontoberteil des Mutterelements abgeglichen</locale>
-  </entity>
-  <entity id="valignment.Textbottom">
-    <locale lang="fr">bas de l'élément aligné avec le bas de fonte de l'élément parent</locale>
-    <locale lang="en">bottom of the element aligned with the bottom of the parent element's font</locale>
-    <locale lang="de">Elementunterteil mit dem Fontunterteil des Mutterelements abgeglichen</locale>
-  </entity>
-  <entity id="valignment.Middle">
-    <locale lang="fr">milieu de l'élément aligné avec le milieu de bas de casse de son parent</locale>
-    <locale lang="en">middle of the element aligned with the middle of lowercase letters in the parent</locale>
-    <locale lang="de">Elementmitte mit der Mitte des unteren Bruchs seiner Mutter abgeglichen</locale>
-  </entity>
-  <entity id="valignment.Top">
-    <locale lang="fr">haut de l'élément aligné avec le haut de la ligne entière</locale>
-    <locale lang="en">top of the element aligned with the top of the entire line</locale>
-    <locale lang="de">Elementoberteil mit dem Oberteil der kompletten Zeile abgeglichen</locale>
-  </entity>
-  <entity id="valignment.Bottom">
-    <locale lang="fr">bas de l'élément aligné avec le bas de la ligne entière</locale>
-    <locale lang="en">bottom of the element aligned with the bottom of the entire line</locale>
-    <locale lang="de">Elementunterteil mit dem Unterteil der kompletten Zeile abgeglichen</locale>
-  </entity>
-<!-- BACKGROUND POSITION -->
-  <entity id="bposition.Topleft">
-    <locale lang="fr">en haut à gauche</locale>
-    <locale lang="en">top left</locale>
-    <locale lang="de">oben links</locale>
-  </entity>
-  <entity id="bposition.Top">
-    <locale lang="fr">en haut</locale>
-    <locale lang="en">top</locale>
-    <locale lang="de">oben</locale>
-  </entity>
-  <entity id="bposition.Topcenter">
-    <locale lang="fr">en haut au centre</locale>
-    <locale lang="en">top center</locale>
-    <locale lang="de">oben mitte</locale>
-  </entity>
-  <entity id="bposition.Topright">
-    <locale lang="fr">en haut à droite</locale>
-    <locale lang="en">top right</locale>
-    <locale lang="de">oben rechts</locale>
-  </entity>
-  <entity id="bposition.Left">
-    <locale lang="fr">à gauche</locale>
-    <locale lang="en">left</locale>
-    <locale lang="de">links</locale>
-  </entity>
-  <entity id="bposition.Leftcenter">
-    <locale lang="fr">à gauche au centre</locale>
-    <locale lang="en">left center</locale>
-    <locale lang="de">links mitte</locale>
-  </entity>
-  <entity id="bposition.Center">
-    <locale lang="fr">au centre</locale>
-    <locale lang="en">center</locale>
-    <locale lang="de">mitte</locale>
-  </entity>
-  <entity id="bposition.Right">
-    <locale lang="fr">à droite</locale>
-    <locale lang="en">right</locale>
-    <locale lang="de">rechts</locale>
-  </entity>
-  <entity id="bposition.Rightcenter">
-    <locale lang="fr">à droite au centre</locale>
-    <locale lang="en">right center</locale>
-    <locale lang="de">rechts mitte</locale>
-  </entity>
-  <entity id="bposition.Bottomleft">
-    <locale lang="fr">en bas à gauche</locale>
-    <locale lang="en">bottom left</locale>
-    <locale lang="de">unten links</locale>
-  </entity>
-  <entity id="bposition.Bottom">
-    <locale lang="fr">en bas</locale>
-    <locale lang="en">bottom</locale>
-    <locale lang="de">unten</locale>
-  </entity>
-  <entity id="bposition.Bottomcenter">
-    <locale lang="fr">en bas au centre</locale>
-    <locale lang="en">bottom center</locale>
-    <locale lang="de">unten mitte</locale>
-  </entity>
-  <entity id="bposition.Bottomright">
-    <locale lang="fr">en bas à droite</locale>
-    <locale lang="en">bottom right</locale>
-    <locale lang="de">unten rechts</locale>
-  </entity>
-<!-- BACKGROUND REPETITION -->
-  <entity id="brepetition.Repeat">
-    <locale lang="fr">répétition horizontale et verticale</locale>
-    <locale lang="en">repeat horizontally and vertically</locale>
-    <locale lang="de">horizontale und vertikale Wiederholung</locale>
-  </entity>
-  <entity id="brepetition.Repeatx">
-    <locale lang="fr">répétition horizontale</locale>
-    <locale lang="en">repeat horizontally</locale>
-    <locale lang="de">horizontale Wiederholung</locale>
-  </entity>
-  <entity id="brepetition.Repeaty">
-    <locale lang="fr">répétition verticale</locale>
-    <locale lang="en">repeat vertically</locale>
-    <locale lang="de">vertikale Wiederholung</locale>
-  </entity>
-  <entity id="brepetition.Norepeat">
-    <locale lang="fr">pas de répétition</locale>
-    <locale lang="en">no repeat</locale>
-    <locale lang="de">keine Wiederholung</locale>
-  </entity>
-<!-- FONT FAMILY -->
-  <entity id="fontfamily.Serif">
-    <locale lang="fr">Times New Roman (serif)</locale>
-    <locale lang="en">Times New Roman (serif)</locale>
-    <locale lang="de">Police mit Achsabstand (serif)</locale>
-  </entity>
-  <entity id="fontfamily.Serif2">
-    <locale lang="fr">Georgia (serif)</locale>
-    <locale lang="en">Georgia (serif)</locale>
-  </entity>
-  <entity id="fontfamily.Serif3">
-    <locale lang="fr">Garamond (serif)</locale>
-    <locale lang="en">Garamond (serif)</locale>
-  </entity>
-  <entity id="fontfamily.Sansserif">
-    <locale lang="fr">Arial (sans serif)</locale>
-    <locale lang="en">Arial (sans serif)</locale>
-    <locale lang="de">Balkenpolice (sans serif)</locale>
-  </entity>
-  <entity id="fontfamily.Sansserif2">
-    <locale lang="fr">Verdana (sans serif)</locale>
-    <locale lang="en">Verdana (sans serif)</locale>
-  </entity>
-  <entity id="fontfamily.Sansserif3">
-    <locale lang="fr">Impact (sans serif)</locale>
-    <locale lang="en">Impact (sans serif)</locale>
-  </entity>
-  <entity id="fontfamily.Sansserif4">
-    <locale lang="fr">Trebuchet MS (sans serif)</locale>
-    <locale lang="en">Trebuchet MS (sans serif)</locale>
-  </entity>
-  <entity id="fontfamily.Monospace">
-    <locale lang="fr">Courier New (monospace)</locale>
-    <locale lang="en">Courier New (monospace)</locale>
-    <locale lang="de">Police mit fixem Abstand (monospace)</locale>
-  </entity>
-  <entity id="fontfamily.Cursive">
-    <locale lang="fr">Comic Sans MS (cursive)</locale>
-    <locale lang="en">Comic Sans MS (cursive)</locale>
-    <locale lang="de">Kursivpolice</locale>
-  </entity>
-  <entity id="fontfamily.Fantasy">
-    <locale lang="fr">Webdings (fantaisie)</locale>
-    <locale lang="en">Webdings (fantasy)</locale>
-    <locale lang="de">Phantasiepolice</locale>
-  </entity>
-<!-- FONT STYLE -->
-  <entity id="fontstyle.Normal">
-    <locale lang="fr">normal</locale>
-    <locale lang="en">normal</locale>
-    <locale lang="de">normal</locale>
-  </entity>
-  <entity id="fontstyle.Italic">
-    <locale lang="fr">italique</locale>
-    <locale lang="en">italic</locale>
-    <locale lang="de">kursiv</locale>
-  </entity>
-<!-- FONT WEIGHT -->
-  <entity id="fontweight.Normal">
-    <locale lang="fr">normal</locale>
-    <locale lang="en">normal</locale>
-    <locale lang="de">normal</locale>
-  </entity>
-  <entity id="fontweight.Bold">
-    <locale lang="fr">gras</locale>
-    <locale lang="en">bold</locale>
-    <locale lang="de">fett</locale>
-  </entity>
-  <entity id="fontweight.Bolder">
-    <locale lang="fr">plus gras</locale>
-    <locale lang="en">bolder</locale>
-    <locale lang="de">fetter</locale>
-  </entity>
-  <entity id="fontweight.Lighter">
-    <locale lang="fr">plus léger</locale>
-    <locale lang="en">lighter</locale>
-    <locale lang="de">leichter</locale>
-  </entity>
-<!-- BORDER STYLE -->
-  <entity id="borderstyle.None">
-    <locale lang="fr">aucun</locale>
-    <locale lang="en">none</locale>
-    <locale lang="de">kein</locale>
-  </entity>
-  <entity id="borderstyle.Dotted">
-    <locale lang="fr">pointillés</locale>
-    <locale lang="en">dotted</locale>
-    <locale lang="de">Pünktchen</locale>
-  </entity>
-  <entity id="borderstyle.Dashed">
-    <locale lang="fr">traits</locale>
-    <locale lang="en">dashed</locale>
-    <locale lang="de">Striche</locale>
-  </entity>
-  <entity id="borderstyle.Solid">
-    <locale lang="fr">plein</locale>
-    <locale lang="en">solid</locale>
-    <locale lang="de">voll</locale>
-  </entity>
-  <entity id="borderstyle.Double">
-    <locale lang="fr">double</locale>
-    <locale lang="en">double</locale>
-    <locale lang="de">doppel</locale>
-  </entity>
-  <entity id="borderstyle.Groove">
-    <locale lang="fr">rainure</locale>
-    <locale lang="en">groove</locale>
-    <locale lang="de">groove</locale>
-  </entity>
-  <entity id="borderstyle.Inset">
-    <locale lang="fr">intérieur</locale>
-    <locale lang="en">inset</locale>
-    <locale lang="de">inset</locale>
-  </entity>
-  <entity id="borderstyle.Outset">
-    <locale lang="fr">extérieur</locale>
-    <locale lang="en">outset</locale>
-    <locale lang="de">outset</locale>
-  </entity>
-  <entity id="textdecoration.none">
-    <locale lang="fr">aucun</locale>
-    <locale lang="en">none</locale>
-  </entity>
-  <entity id="textdecoration.underline">
-    <locale lang="fr">sousligné</locale>
-    <locale lang="en">underline</locale>
-  </entity>
-  <entity id="textdecoration.overline">
-    <locale lang="fr">surligné</locale>
-    <locale lang="en">overline</locale>
-  </entity>
-  <entity id="textdecoration.strike">
-    <locale lang="fr">barré</locale>
-    <locale lang="en">strike</locale>
-  </entity>
-  <entity id="liststyletype.none">
-    <locale lang="fr">aucune</locale>
-    <locale lang="en">none</locale>
-  </entity>
-  <entity id="liststyletype.disc">
-    <locale lang="fr">disque</locale>
-    <locale lang="en">disc</locale>
-  </entity>
-  <entity id="liststyletype.circle">
-    <locale lang="fr">cercle</locale>
-    <locale lang="en">circle</locale>
-  </entity>
-  <entity id="liststyletype.square">
-    <locale lang="fr">carré</locale>
-    <locale lang="en">square</locale>
-  </entity>
-  <entity id="liststyletype.decimal">
-    <locale lang="fr">décimal</locale>
-    <locale lang="en">decimal</locale>
-  </entity>
-  <entity id="liststyletype.lower-roman">
-    <locale lang="fr">chiffre romain minuscule</locale>
-    <locale lang="en">lower roman number</locale>
-  </entity>
-  <entity id="liststyletype.upper-roman">
-    <locale lang="fr">chiffre romain majuscule</locale>
-    <locale lang="en">upper roman number</locale>
-  </entity>
-  <entity id="liststyletype.lower-alpha">
-    <locale lang="fr">lettre minuscule</locale>
-    <locale lang="en">lower letter</locale>
-  </entity>
-  <entity id="liststyletype.upper-alpha">
-    <locale lang="fr">lettre majuscule</locale>
-    <locale lang="en">upper letter</locale>
-  </entity>
-  <entity id="linkurl.yes">
-    <locale lang="fr">oui</locale>
-    <locale lang="en">yes</locale>
-  </entity>
-  <entity id="linkurl.no">
-    <locale lang="fr">non</locale>
-    <locale lang="en">no</locale>
-  </entity>
+	<entity id="rcenable.Enable">
+		<locale lang="fr">activé</locale>
+		<locale lang="en">enabled</locale>
+		<locale lang="de">akitviert</locale>
+	</entity>
+	<entity id="rcenable.Disable">
+		<locale lang="fr">désactivé</locale>
+		<locale lang="en">disabled</locale>
+		<locale lang="de">deaktiviert</locale>
+	</entity>
+	<!-- HORIZONTAL ALIGNMENT -->
+	<entity id="halignment.Left">
+		<locale lang="fr">à gauche</locale>
+		<locale lang="en">left</locale>
+		<locale lang="de">links</locale>
+	</entity>
+	<entity id="halignment.Center">
+		<locale lang="fr">centré</locale>
+		<locale lang="en">center</locale>
+		<locale lang="de">zentriert</locale>
+	</entity>
+	<entity id="halignment.Right">
+		<locale lang="fr">à droite</locale>
+		<locale lang="en">right</locale>
+		<locale lang="de">rechts</locale>
+	</entity>
+	<entity id="halignment.Justify">
+		<locale lang="fr">justifié</locale>
+		<locale lang="en">justify</locale>
+		<locale lang="de">Blocksatz</locale>
+	</entity>
+	<!-- VERTICAL ALIGNMENT -->
+	<entity id="valignment.Baseline">
+		<locale lang="fr">base de l'élément alignée avec celle de son parent</locale>
+		<locale lang="en">baseline of the element aligned with the baseline of its parent</locale>
+		<locale lang="de">Elementenbasis mit der seiner Mutter abgeglichen</locale>
+	</entity>
+	<entity id="valignment.Sub">
+		<locale lang="fr">base de l'élément alignée avec la ligne de base indice de son parent</locale>
+		<locale lang="en">baseline of the element aligned with the subscript-baseline of its parent</locale>
+		<locale lang="de">Elementenbasis mit der Tiefsatz Basiszeile seiner Mutter abgeglichen</locale>
+	</entity>
+	<entity id="valignment.Super">
+		<locale lang="fr">base de l'élément alignée avec la ligne de base exposant de son parent</locale>
+		<locale lang="en">baseline of the element aligned with the superscript-baseline of its parent</locale>
+		<locale lang="de">Elementenbasis mit der Exponenten Basiszeile seiner Mutter abgeglichen</locale>
+	</entity>
+	<entity id="valignment.Texttop">
+		<locale lang="fr">haut de l'élément aligné avec le haut de fonte de l'élément parent</locale>
+		<locale lang="en">top of the element aligned with the top of the parent element's font</locale>
+		<locale lang="de">Elementoberteil mit dem Fontoberteil des Mutterelements abgeglichen</locale>
+	</entity>
+	<entity id="valignment.Textbottom">
+		<locale lang="fr">bas de l'élément aligné avec le bas de fonte de l'élément parent</locale>
+		<locale lang="en">bottom of the element aligned with the bottom of the parent element's font</locale>
+		<locale lang="de">Elementunterteil mit dem Fontunterteil des Mutterelements abgeglichen</locale>
+	</entity>
+	<entity id="valignment.Middle">
+		<locale lang="fr">milieu de l'élément aligné avec le milieu de bas de casse de son parent</locale>
+		<locale lang="en">middle of the element aligned with the middle of lowercase letters in the parent</locale>
+		<locale lang="de">Elementmitte mit der Mitte des unteren Bruchs seiner Mutter abgeglichen</locale>
+	</entity>
+	<entity id="valignment.Top">
+		<locale lang="fr">haut de l'élément aligné avec le haut de la ligne entière</locale>
+		<locale lang="en">top of the element aligned with the top of the entire line</locale>
+		<locale lang="de">Elementoberteil mit dem Oberteil der kompletten Zeile abgeglichen</locale>
+	</entity>
+	<entity id="valignment.Bottom">
+		<locale lang="fr">bas de l'élément aligné avec le bas de la ligne entière</locale>
+		<locale lang="en">bottom of the element aligned with the bottom of the entire line</locale>
+		<locale lang="de">Elementunterteil mit dem Unterteil der kompletten Zeile abgeglichen</locale>
+	</entity>
+	<!-- BACKGROUND POSITION -->
+	<entity id="bposition.Topleft">
+		<locale lang="fr">en haut à gauche</locale>
+		<locale lang="en">top left</locale>
+		<locale lang="de">oben links</locale>
+	</entity>
+	<entity id="bposition.Top">
+		<locale lang="fr">en haut</locale>
+		<locale lang="en">top</locale>
+		<locale lang="de">oben</locale>
+	</entity>
+	<entity id="bposition.Topcenter">
+		<locale lang="fr">en haut au centre</locale>
+		<locale lang="en">top center</locale>
+		<locale lang="de">oben mitte</locale>
+	</entity>
+	<entity id="bposition.Topright">
+		<locale lang="fr">en haut à droite</locale>
+		<locale lang="en">top right</locale>
+		<locale lang="de">oben rechts</locale>
+	</entity>
+	<entity id="bposition.Left">
+		<locale lang="fr">à gauche</locale>
+		<locale lang="en">left</locale>
+		<locale lang="de">links</locale>
+	</entity>
+	<entity id="bposition.Leftcenter">
+		<locale lang="fr">à gauche au centre</locale>
+		<locale lang="en">left center</locale>
+		<locale lang="de">links mitte</locale>
+	</entity>
+	<entity id="bposition.Center">
+		<locale lang="fr">au centre</locale>
+		<locale lang="en">center</locale>
+		<locale lang="de">mitte</locale>
+	</entity>
+	<entity id="bposition.Right">
+		<locale lang="fr">à droite</locale>
+		<locale lang="en">right</locale>
+		<locale lang="de">rechts</locale>
+	</entity>
+	<entity id="bposition.Rightcenter">
+		<locale lang="fr">à droite au centre</locale>
+		<locale lang="en">right center</locale>
+		<locale lang="de">rechts mitte</locale>
+	</entity>
+	<entity id="bposition.Bottomleft">
+		<locale lang="fr">en bas à gauche</locale>
+		<locale lang="en">bottom left</locale>
+		<locale lang="de">unten links</locale>
+	</entity>
+	<entity id="bposition.Bottom">
+		<locale lang="fr">en bas</locale>
+		<locale lang="en">bottom</locale>
+		<locale lang="de">unten</locale>
+	</entity>
+	<entity id="bposition.Bottomcenter">
+		<locale lang="fr">en bas au centre</locale>
+		<locale lang="en">bottom center</locale>
+		<locale lang="de">unten mitte</locale>
+	</entity>
+	<entity id="bposition.Bottomright">
+		<locale lang="fr">en bas à droite</locale>
+		<locale lang="en">bottom right</locale>
+		<locale lang="de">unten rechts</locale>
+	</entity>
+	<!-- BACKGROUND REPETITION -->
+	<entity id="brepetition.Repeat">
+		<locale lang="fr">répétition horizontale et verticale</locale>
+		<locale lang="en">repeat horizontally and vertically</locale>
+		<locale lang="de">horizontale und vertikale Wiederholung</locale>
+	</entity>
+	<entity id="brepetition.Repeatx">
+		<locale lang="fr">répétition horizontale</locale>
+		<locale lang="en">repeat horizontally</locale>
+		<locale lang="de">horizontale Wiederholung</locale>
+	</entity>
+	<entity id="brepetition.Repeaty">
+		<locale lang="fr">répétition verticale</locale>
+		<locale lang="en">repeat vertically</locale>
+		<locale lang="de">vertikale Wiederholung</locale>
+	</entity>
+	<entity id="brepetition.Norepeat">
+		<locale lang="fr">pas de répétition</locale>
+		<locale lang="en">no repeat</locale>
+		<locale lang="de">keine Wiederholung</locale>
+	</entity>
+	<!-- FONT FAMILY -->
+	<entity id="fontfamily.Serif">
+		<locale lang="fr">Times New Roman (serif)</locale>
+		<locale lang="en">Times New Roman (serif)</locale>
+		<locale lang="de">Police mit Achsabstand (serif)</locale>
+	</entity>
+	<entity id="fontfamily.Serif2">
+		<locale lang="fr">Georgia (serif)</locale>
+		<locale lang="en">Georgia (serif)</locale>
+	</entity>
+	<entity id="fontfamily.Serif3">
+		<locale lang="fr">Garamond (serif)</locale>
+		<locale lang="en">Garamond (serif)</locale>
+	</entity>
+	<entity id="fontfamily.Sansserif">
+		<locale lang="fr">Arial (sans serif)</locale>
+		<locale lang="en">Arial (sans serif)</locale>
+		<locale lang="de">Balkenpolice (sans serif)</locale>
+	</entity>
+	<entity id="fontfamily.Sansserif2">
+		<locale lang="fr">Verdana (sans serif)</locale>
+		<locale lang="en">Verdana (sans serif)</locale>
+	</entity>
+	<entity id="fontfamily.Sansserif3">
+		<locale lang="fr">Impact (sans serif)</locale>
+		<locale lang="en">Impact (sans serif)</locale>
+	</entity>
+	<entity id="fontfamily.Sansserif4">
+		<locale lang="fr">Trebuchet MS (sans serif)</locale>
+		<locale lang="en">Trebuchet MS (sans serif)</locale>
+	</entity>
+	<entity id="fontfamily.Monospace">
+		<locale lang="fr">Courier New (monospace)</locale>
+		<locale lang="en">Courier New (monospace)</locale>
+		<locale lang="de">Police mit fixem Abstand (monospace)</locale>
+	</entity>
+	<entity id="fontfamily.Cursive">
+		<locale lang="fr">Comic Sans MS (cursive)</locale>
+		<locale lang="en">Comic Sans MS (cursive)</locale>
+		<locale lang="de">Kursivpolice</locale>
+	</entity>
+	<entity id="fontfamily.Fantasy">
+		<locale lang="fr">Webdings (fantaisie)</locale>
+		<locale lang="en">Webdings (fantasy)</locale>
+		<locale lang="de">Phantasiepolice</locale>
+	</entity>
+	<!-- FONT STYLE -->
+	<entity id="fontstyle.Normal">
+		<locale lang="fr">normal</locale>
+		<locale lang="en">normal</locale>
+		<locale lang="de">normal</locale>
+	</entity>
+	<entity id="fontstyle.Italic">
+		<locale lang="fr">italique</locale>
+		<locale lang="en">italic</locale>
+		<locale lang="de">kursiv</locale>
+	</entity>
+	<!-- FONT WEIGHT -->
+	<entity id="fontweight.Normal">
+		<locale lang="fr">normal</locale>
+		<locale lang="en">normal</locale>
+		<locale lang="de">normal</locale>
+	</entity>
+	<entity id="fontweight.Bold">
+		<locale lang="fr">gras</locale>
+		<locale lang="en">bold</locale>
+		<locale lang="de">fett</locale>
+	</entity>
+	<entity id="fontweight.Bolder">
+		<locale lang="fr">plus gras</locale>
+		<locale lang="en">bolder</locale>
+		<locale lang="de">fetter</locale>
+	</entity>
+	<entity id="fontweight.Lighter">
+		<locale lang="fr">plus léger</locale>
+		<locale lang="en">lighter</locale>
+		<locale lang="de">leichter</locale>
+	</entity>
+	<!-- BORDER STYLE -->
+	<entity id="borderstyle.None">
+		<locale lang="fr">aucun</locale>
+		<locale lang="en">none</locale>
+		<locale lang="de">kein</locale>
+	</entity>
+	<entity id="borderstyle.Dotted">
+		<locale lang="fr">pointillés</locale>
+		<locale lang="en">dotted</locale>
+		<locale lang="de">Pünktchen</locale>
+	</entity>
+	<entity id="borderstyle.Dashed">
+		<locale lang="fr">traits</locale>
+		<locale lang="en">dashed</locale>
+		<locale lang="de">Striche</locale>
+	</entity>
+	<entity id="borderstyle.Solid">
+		<locale lang="fr">plein</locale>
+		<locale lang="en">solid</locale>
+		<locale lang="de">voll</locale>
+	</entity>
+	<entity id="borderstyle.Double">
+		<locale lang="fr">double</locale>
+		<locale lang="en">double</locale>
+		<locale lang="de">doppel</locale>
+	</entity>
+	<entity id="borderstyle.Groove">
+		<locale lang="fr">rainure</locale>
+		<locale lang="en">groove</locale>
+		<locale lang="de">groove</locale>
+	</entity>
+	<entity id="borderstyle.Inset">
+		<locale lang="fr">intérieur</locale>
+		<locale lang="en">inset</locale>
+		<locale lang="de">inset</locale>
+	</entity>
+	<entity id="borderstyle.Outset">
+		<locale lang="fr">extérieur</locale>
+		<locale lang="en">outset</locale>
+		<locale lang="de">outset</locale>
+	</entity>
+	<entity id="textdecoration.none">
+		<locale lang="fr">aucun</locale>
+		<locale lang="en">none</locale>
+	</entity>
+	<entity id="textdecoration.underline">
+		<locale lang="fr">sousligné</locale>
+		<locale lang="en">underline</locale>
+	</entity>
+	<entity id="textdecoration.overline">
+		<locale lang="fr">surligné</locale>
+		<locale lang="en">overline</locale>
+	</entity>
+	<entity id="textdecoration.strike">
+		<locale lang="fr">barré</locale>
+		<locale lang="en">strike</locale>
+	</entity>
+	<entity id="liststyletype.none">
+		<locale lang="fr">aucune</locale>
+		<locale lang="en">none</locale>
+	</entity>
+	<entity id="liststyletype.disc">
+		<locale lang="fr">disque</locale>
+		<locale lang="en">disc</locale>
+	</entity>
+	<entity id="liststyletype.circle">
+		<locale lang="fr">cercle</locale>
+		<locale lang="en">circle</locale>
+	</entity>
+	<entity id="liststyletype.square">
+		<locale lang="fr">carré</locale>
+		<locale lang="en">square</locale>
+	</entity>
+	<entity id="liststyletype.decimal">
+		<locale lang="fr">décimal</locale>
+		<locale lang="en">decimal</locale>
+	</entity>
+	<entity id="liststyletype.lower-roman">
+		<locale lang="fr">chiffre romain minuscule</locale>
+		<locale lang="en">lower roman number</locale>
+	</entity>
+	<entity id="liststyletype.upper-roman">
+		<locale lang="fr">chiffre romain majuscule</locale>
+		<locale lang="en">upper roman number</locale>
+	</entity>
+	<entity id="liststyletype.lower-alpha">
+		<locale lang="fr">lettre minuscule</locale>
+		<locale lang="en">lower letter</locale>
+	</entity>
+	<entity id="liststyletype.upper-alpha">
+		<locale lang="fr">lettre majuscule</locale>
+		<locale lang="en">upper letter</locale>
+	</entity>
+	<entity id="linkurl.yes">
+		<locale lang="fr">oui</locale>
+		<locale lang="en">yes</locale>
+	</entity>
+	<entity id="linkurl.no">
+		<locale lang="fr">non</locale>
+		<locale lang="en">no</locale>
+	</entity>
 </localization>

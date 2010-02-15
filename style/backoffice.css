@@ -1,3 +1,6 @@
 treechildren::-moz-tree-image(modules_skin_skin){
 	list-style-image: url(/icons/small/skin.png) ;
 }
+wdialog[template="ImportSkin"] .dialog-header{
+	background: url(/icons/small/upload.png) transparent center  left no-repeat!important;
+}

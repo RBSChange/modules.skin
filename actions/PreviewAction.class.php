@@ -1,8 +1,10 @@
 <?php
-
-class skin_PreviewAction extends skin_Action
+/**
+ * skin_PreviewAction
+ * @package modules.skin.actions
+ */
+class skin_PreviewAction extends f_action_BaseAction
 {
-	
 	/**
 	 * @param Context $context
 	 * @param Request $request

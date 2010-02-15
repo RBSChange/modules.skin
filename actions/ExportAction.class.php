@@ -1,6 +1,9 @@
 <?php
-
-class skin_ExportAction extends skin_Action
+/**
+ * skin_ExportAction
+ * @package modules.skin.actions
+ */
+class skin_ExportAction extends f_action_BaseAction
 {
 	/**
 	 * @param Context $context

@@ -25,7 +25,14 @@
 	<action name="importSkin">
 		<parameter name="listWidget" />
 		<body><![CDATA[
-			wToolkit.dialog('skin', 'Import', {cmpref: listWidget.getSelectedIds() }, {width: 400, height: 200}, false);
+			try
+			{
+				this.getController().openModalDialog(this, 'ImportSkin', {folderId: listWidget.getSelectedItems()[0].id, module: this});
+			}
+			catch (e)
+			{
+				wCore.error('importSkin', [], e);
+			}
 		]]></body>
 	</action>
 

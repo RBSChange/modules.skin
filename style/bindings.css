@@ -1,0 +1,3 @@
+wdialog[template="ImportSkin"]{
+	-moz-binding: url(binding:modules.skin.importSkinDialog#importSkinDialog);
+}

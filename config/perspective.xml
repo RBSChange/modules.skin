@@ -80,9 +80,9 @@
 		<action name="exportSkin" single="true" icon="download" label="&amp;modules.skin.bo.actions.Export-skin;"/>
 		<action name="createFolder" single="true" permission="Insert_folder" icon="folder" label="&amp;modules.uixul.bo.actions.Create-folder;"/>
 		<action name="openTreeNodeOrder" single="true" permission="Order" icon="sort" label="&amp;modules.uixul.bo.actions.Set-children-order;"/>
-		<action name="create_" actions="createSkin,createFolder" icon="add"/>
+		<action name="create_" actions="createSkin,createFolder,importSkin" icon="add"/>
 		<action name="createSkin" permission="Insert_skin" group="create_" icon="add" label="&amp;modules.skin.bo.actions.Create-skin;"/>
-		<action name="importSkin" single="true" icon="upload" label="&amp;modules.skin.bo.actions.Import-skin;"/>
+		<action name="importSkin" permission="Insert_skin" group="create_" icon="upload" label="&amp;modules.skin.bo.actions.Import-skin;"/>
 		<action name="move" permission="Move" icon="up_down" label="&amp;modules.uixul.bo.actions.Move;"/>
 		<action name="openFolder" icon="open-folder" label="&amp;modules.uixul.bo.actions.OpenFolder;"/>
 	</actions>
