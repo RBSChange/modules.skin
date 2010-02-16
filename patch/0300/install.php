@@ -7,28 +7,7 @@ class skin_patch_0300 extends patch_BasePatch
 	public function execute()
 	{
 		parent::execute();
-
-		$ignoredProperties = array('document_id','document_model','document_version','document_metas');
-		$objectProperties = array(	'bodybgimage','contentbgimage',
-									'bannerbgimage','logoimage',
-									'footerbgimage','menumaintopbgimage',
-									'menumaintopimage','menumaintopcurrentimage',
-									'menumaintophoverimage','menumainleftbgimage',
-									'menumainleftoneimage','menumainleftonecurrentimage',
-									'menumainleftonehoverimage','menumainlefttwoimage',
-									'menumainlefttwocurrentimage','menumainlefttwohoverimage',
-									'menucontextualtopbgimage','menucontextualtopimage',
-									'menucontextualtopcurrentimage','menucontextualtophoverimage',
-									'menucontextualleftbgimage','menucontextualleftoneimage',
-									'menucontextualleftonecurrentimage','menucontextualleftonehoverimage',
-									'menucontextuallefttwoimage','menucontextuallefttwocurrentimage',
-									'menucontextuallefttwohoverimage','headingonebgimage',
-									'headingtwobgimage','headingthreebgimage',
-									'headingfourbgimage','headingfivebgimage',
-									'headingsixbgimage','ulbullet',
-									'olbullet','buttonsbgimage',
-									'linkbuttonbgimage');
-		
+		$ignoredProperties = array('document_id','document_model','document_version','document_metas');		
 		$skinRootFolderId = ModuleService::getInstance()->getRootFolderId('skin');
 		
 		$pp = $this->getPersistentProvider();
@@ -75,17 +54,25 @@ PRIMARY KEY  (`document_id`)
 				{
 					continue;
 				}
-				
+
 				if(ereg('^document_',$property))
 				{					
 					$property = str_replace('document_','',$property);
 				}
 				
 				$method = "set$property";
-				
-				if(in_array($property, $objectProperties))
+				$propInfo = $skinModel->getEditableProperty($property);
+				if ($propInfo && $propInfo->isDocument())
 				{
-					$value = DocumentHelper::getDocumentInstance($value);
+					try 
+					{
+						$value = DocumentHelper::getDocumentInstance($value);
+					}
+					catch (Exception $e)
+					{
+						Framework::exception($e);
+						$this->logError('Unable to instanciate #' . $value . ' document instance');
+					}
 				}
 				
 				if (is_string($value) && preg_match("/\|#([a-f0-9]{6})/i", $value, $matches))
