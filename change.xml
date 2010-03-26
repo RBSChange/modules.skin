@@ -25,7 +25,7 @@
         <version>3.0.1</version>
       </versions>
     </dependency>
-    <dependency>
+    <dependency optionnal="true">
       <name>extension/zip</name>
       <versions>
         <version>1.8.10</version>
