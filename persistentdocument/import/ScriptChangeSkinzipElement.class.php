@@ -19,7 +19,8 @@ class skin_ScriptChangeSkinzipElement extends import_ScriptObjectElement
 		$mediaFolder = $this->getComputedAttribute('mediaFolder');
 		try 
 		{
-			skin_SkinService::getInstance()->importSkinZip($zipPath, $zipName, $skinFolderId, $mediaFolder);
+			$result = skin_SkinService::getInstance()->importSkinZip($zipPath, $zipName, $skinFolderId, $mediaFolder);
+			$this->document = $result['skin'];
 		}
 		catch (Exception $e)
 		{
