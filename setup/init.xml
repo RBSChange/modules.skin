@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-	<binding
-		fileName="modules/list/persistentdocument/import/list_binding.xml" />
-	<binding
-		fileName="modules/generic/persistentdocument/import/generic_binding.xml" />
+	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
+	<binding fileName="modules/generic/persistentdocument/import/generic_binding.xml" />
 
 	<systemfolder module="list" relatedmodule="skin">
-
 		<staticlist listid="modules_skin/halignment"
 			label="Alignement horizontal pour Habillage" description="Alignement horizontal pour Habillage">
 			<staticitem label="&amp;modules.skin.list.halignment.Left;" value="left"/>
@@ -117,7 +114,7 @@
 		<staticlist listid="modules_skin/linkurl"
 			label="Impression des liens pour Habillage" description="Impression des liens pour Habillage">
 			<staticitem label="&amp;modules.skin.list.linkurl.Yes;" value='" (" attr(href) ") "'/>
-			<staticitem label="&amp;modules.skin.list.linkurl.No;" value=""/>
+			<staticitem label="&amp;modules.skin.list.linkurl.No;" value='""'/>
 		</staticlist>
 	</systemfolder>
 </script>
