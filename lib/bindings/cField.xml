@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<bindings xmlns="http://www.mozilla.org/xbl" xmlns:xbl="http://www.mozilla.org/xbl"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<binding id="cBorderField" extends="form.cField#cTextField">
+		<resources>
+			<stylesheet src="modules.skin.cBorderField" />
+		</resources>
+		<content>
+			<children/>
+			<xul:vbox>
+				<xul:hbox xbl:inherits="context" flex="1">
+					<xul:cfield fieldtype="color" anonid="colorfield" xbl:inherits="disabled,tabindex,accesskey,palettename" hidehelp="true"/>
+					<xul:cfield fieldtype="dropdownlist" anonid="stylefield" editwidth="50px" xbl:inherits="disabled,listid" listid="modules_skin/borderstyle" hidehelp="true"/>
+					<xul:cfield fieldtype="size" anonid="widthfield" xbl:inherits="disabled,allowunits" hidehelp="true"/>
+	            
+					<xul:toolbar>
+						<xul:toolbarbutton anonid="helpbutton" image="chrome://global/skin/icons/question-16.png"
+							tooltiptext="&amp;modules.uixul.bo.doceditor.Show-help;" xbl:inherits="hidden=hidehelp" 
+							oncommand="dispatchFieldEvent('fieldHelp');"/>
+					</xul:toolbar>
+				</xul:hbox>
+				<xul:box anonid="inputPreview" xbl:inherits="hidden=disabled" class="borderInputPreview" flex="1">
+					<xul:box anonid="inputPreviewContent" flex="1"/>
+				</xul:box>
+			</xul:vbox>
+		</content>
+		<implementation>
+			<field name="mColorfield">null</field>
+			<field name="mStylefield">null</field>
+			<field name="mWidthfield">null</field>
+
+			<field name="mPreview">null</field>
+			<field name="mPreviewcontent">null</field>
+
+			<property name="colorfield" readonly="true">
+				<getter>
+					if(this.mColorfield == null)
+					{
+						this.mColorfield = this.getElementByAnonId('colorfield');
+					}
+					return this.mColorfield;
+				</getter>
+			</property>
+			
+			<property name="stylefield" readonly="true">
+				<getter>
+					if(this.mStylefield == null)
+					{
+						this.mStylefield = this.getElementByAnonId('stylefield');
+					}
+					return this.mStylefield;
+				</getter>
+			</property>
+
+			<property name="widthfield" readonly="true">
+				<getter>
+					if(this.mWidthfield == null)
+					{
+						this.mWidthfield = this.getElementByAnonId('widthfield');
+					}
+					return this.mWidthfield;
+				</getter>
+			</property>
+
+			<property name="preview" readonly="true">
+				<getter><![CDATA[
+					if (this.mPreview == null)
+					{
+						this.mPreview = this.getElementByAnonId('inputPreview');
+					}
+					return this.mPreview;
+				]]></getter>
+			</property>
+			
+			<property name="previewcontent" readonly="true">
+				<getter><![CDATA[
+					if (this.mPreviewcontent == null)
+					{
+						this.mPreviewcontent = this.getElementByAnonId('inputPreviewContent');
+					}
+					return this.mPreviewcontent;
+				]]></getter>
+			</property>
+
+			<constructor><![CDATA[
+				myLabel = this.label;
+				this.colorfield.setAttribute('label', myLabel);
+				this.stylefield.setAttribute('label', myLabel);
+				this.widthfield.setAttribute('label', myLabel);
+
+				this.setInitialValue(this.initialvalue);
+			]]></constructor>
+			
+			<destructor><![CDATA[
+				this.mColorfield = null;
+				this.mStylefield = null;
+				this.mWidthfield = null;
+			]]></destructor>
+			
+			<method name="focus">
+				<body><![CDATA[
+					if (!this.focused)
+					{
+						this.colorfield.focus();
+					}
+				]]></body>
+			</method>
+			
+			<method name="checkFormat">
+				<parameter name="val" />
+				<body><![CDATA[
+					if (this.disabled) {return null;}
+					var errorMessage = null;
+					if ((errorMessage = this.colorfield.checkFormat(this.colorfield.internalControl.value)) !== null) {return errorMessage;}
+					if ((errorMessage = this.stylefield.checkFormat(this.stylefield.internalControl.value)) !== null) {return errorMessage;}
+					if ((errorMessage = this.widthfield.checkFormat(this.widthfield.internalControl.value)) !== null) {return errorMessage;}
+
+					return null;
+				]]></body>
+			</method>
+			
+			<method name="setInitialValue">
+				<parameter name="val" />
+				<body><![CDATA[
+					var fval = this.fixString(val);
+					this.setAttribute("initialvalue", fval);
+					var values = this.explodeValue(fval);
+					this.colorfield.setInitialValue(values.color);
+					this.stylefield.setInitialValue(values.style);
+					this.widthfield.setInitialValue(values.width);
+	          		this.updatePreview();
+					
+					if (this.modified)
+					{
+						this.removeAttribute("modified");
+						this.dispatchFieldEvent('fieldRestored');						
+					}
+					var errorMessage = this.checkRequired(fval);
+					this.setValidity(errorMessage);
+				]]></body>
+			</method>
+			
+			<property name="value" >
+				<getter><![CDATA[
+					var color = this.colorfield.value;
+					var style = this.stylefield.value;
+					var width = this.widthfield.value;
+					
+					var val = color;
+					if(style.length > 0)
+					{
+						val += ((val.length > 0) ? ' ' : '') + style;
+					}
+					if(width.length > 0)
+					{
+						val += ((val.length > 0) ? ' ' : '') + width;
+					}
+					return val;
+				]]></getter>
+				<setter><![CDATA[
+					var fval = this.fixString(val);
+					values = this.explodeValues(fval);
+					this.colorfield.value = values.color;
+					this.stylefield.value = values.style;
+					this.widthfield.value = values.width;
+					this.valueChanged();
+				]]></setter>
+			</property>
+			
+			<method name="explodeValue">
+				<parameter name="value"/>
+				<body><![CDATA[
+					var match = value.match(/([^ ]+)/g);
+					
+					var width = '';
+					var color = '';
+					var style = '';
+					var value = '';
+					if(match != null)
+					{
+						for (var idx = 0; idx < match.length; idx++)
+						{
+							value = match[idx];
+							if(width == '' && value.match(/^([0-9\.]+)(em|ex|px|in|cm|mm|pt|pc|%)?$/))
+							{
+								width = value;
+							}
+							else if(color == '' && (this.colorfield.checkFormat(value) == null))
+							{
+								color = value;
+							}
+							else if(style == '')
+							{
+								style = value;
+							}
+						}
+					}
+					
+					return {color: color, style: style, width: width};
+				]]></body>
+			</method>			
+
+			<method name="fireValidate">
+				<parameter name="me"/>
+				<body><![CDATA[
+					var errorMessage = me.checkValidity(me.value);
+					
+					if (me.mErrorMessage !== errorMessage)
+					{
+						me.setValidity(errorMessage);
+					}
+					
+					if (me.valid) {me.dispatchFieldEvent('fieldChanged');}
+					
+					if (me.checkIsModified())
+					{
+						if (!me.modified) 
+						{
+							me.setAttribute("modified", "true");
+							me.dispatchFieldEvent('fieldModified');
+						}
+					}
+					else
+					{
+						if (me.modified) 
+						{
+							me.removeAttribute("modified");
+							me.dispatchFieldEvent('fieldRestored');
+						}			
+					}
+				]]></body>
+			</method>
+								
+			<method name="valueChanged">
+				<body><![CDATA[
+					this.fireValidate(this);
+	          		this.updatePreview();
+				]]></body>
+			</method>
+			
+			<method name="updatePreview">
+				<body><![CDATA[
+					var colors = this.colorfield.getCurrentRGB();
+					var y = 0.299*colors.r + 0.587*colors.g + 0.114*colors.b;
+					this.preview.className = (y > 127) ? 'borderInputPreviewDark' : 'borderInputPreview';
+	          		this.previewcontent.style.borderTop = this.value;
+				]]></body>
+			</method>
+			
+		</implementation>
+		<handlers>
+			<handler event="fieldFocus" phase="capturing"><![CDATA[
+				if (this.hasAttribute("focused")) {return;}
+				this.setAttribute("focused", "true");
+				this.dispatchFieldEvent('fieldFocus');
+			]]></handler>
+			<handler event="fieldBlur" phase="capturing"><![CDATA[
+				  if (!this.hasAttribute("focused")) {return;}
+				  this.removeAttribute('focused');
+				  this.dispatchFieldEvent('fieldBlur');
+			]]></handler>
+			<handler event="fieldChanged" phase="capturing"><![CDATA[
+				if(event.originalTarget == this)
+				{
+					return null;
+				}
+				this.valueChanged();
+			]]></handler>
+		</handlers>
+	</binding>
+</bindings>

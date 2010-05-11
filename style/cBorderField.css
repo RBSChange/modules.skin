@@ -1,0 +1,29 @@
+box.borderInputPreview{
+	margin: 2px 30px 2px 4px;
+	height: 22px;
+	border: none;
+	background-color: #aaaaaa;
+}
+
+box.borderInputPreviewDark{
+	margin: 2px 30px 2px 4px;
+	height: 22px;
+	border: none;
+	background-color: #555555;
+}
+
+box.borderInputPreview box{
+	margin: 10px 1px 1px 1px;
+	height: 10px;
+	border: none;
+	border-top: 2px solid #000000;
+	background-color: #eeeeee;
+}
+
+box.borderInputPreviewDark box{
+	margin: 10px 1px 1px 1px;
+	height: 10px;
+	border: none;
+	border-top: 2px solid #000000;
+	background-color: #111111;
+}

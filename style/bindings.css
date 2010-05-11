@@ -1,3 +1,6 @@
 wdialog[template="ImportSkin"]{
 	-moz-binding: url(binding:modules.skin.importSkinDialog#importSkinDialog);
 }
+cfield[fieldtype="border"]{
+	-moz-binding: url(binding:modules.skin.cField#cBorderField);
+}
