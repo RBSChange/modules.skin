@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sections>
+  <section class="toggle" hidden="true" name="TemplateTab" image="{IconsBase}/small/template.png">
+    <section class="toggle" hidden="true" name="PageTab" image="{IconsBase}/small/page.png">
+      <section name="PageBackgroundCaption">
+        <field name="bodybgcolor" type="color" initialvalue="transparent"/>
+        <field name="bodybgimage" allowfile="true" mediafoldername="Inbox_webfactory" initialvalue="none" type="imagecss"/>
+        <field name="bodybgposition" initialvalue="top left" type="dropdownlist" listid="modules_skin/bposition"/>
+        <field name="bodybgrepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+      </section>
+      <section name="PageForegroundCaption">
+        <field name="contentbgcolor" type="color" initialvalue="transparent"/>
+        <field name="contentbgimage" allowfile="true" mediafoldername="Inbox_webfactory" type="imagecss"/>
+        <field name="contentbgposition" initialvalue="top left" type="dropdownlist" listid="modules_skin/bposition"/>
+        <field name="contentbgrepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+        <field name="contentbordercolor" type="color" initialvalue="transparent"/>
+        <field name="contentborderstyle" initialvalue="none" type="dropdownlist" listid="modules_skin/borderstyle"/>
+        <field name="contentborderwidth" type="size" allowunits="px" initialvalue="0px"/>
+      </section>
+      <section name="PageMiscCaption">
+        <field name="searchlabelfgcolor" type="color" initialvalue="#000"/>
+      </section>
+    </section>
+    <section class="toggle" hidden="true" name="MediaTab" image="{IconsBase}/small/pictures.png">
+      <section name="PageBandeauCaption">
+        <field name="bannerheight" type="size" allowunits="em px" initialvalue="220px"/>
+        <field name="bannerbgimage" allowfile="true" mediafoldername="Inbox_webfactory" initialvalue="url(/media/themes/webfactory/back_banner_04.jpg)" type="imagecss"/>
+        <field name="bannerbgposition" initialvalue="top left" type="dropdownlist" listid="modules_skin/bposition"/>
+        <field name="bannerbgrepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+      </section>
+      <section name="PageLogoCaption">
+        <field name="logowidth" type="size" allowunits="em px" initialvalue="350px"/>
+        <field name="logoheight" type="size" allowunits="em px" initialvalue="150px"/>
+        <field name="logoimage" allowfile="true" mediafoldername="Inbox_webfactory" initialvalue="url(/media/frontoffice/logo_express.png)" type="imagecss"/>
+        <field name="logoposition" initialvalue="top left" type="dropdownlist" listid="modules_skin/bposition"/>
+        <field name="logorepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+        <field name="logoleftposition" type="size" allowunits="em px %" initialvalue="120px"/>
+        <field name="logotopposition" type="size" allowunits="em px %" initialvalue="40px"/>
+      </section>
+      <section name="PageImageCaption">
+        <field name="imgpadding" type="size" allowunits="em px %" initialvalue="0"/>
+        <field name="imgmargin" type="size" allowunits="em px %" initialvalue="10px"/>
+        <field name="imgbordercolor" type="color" initialvalue="transparent"/>
+        <field name="imgborderstyle" initialvalue="solid" type="dropdownlist" listid="modules_skin/borderstyle"/>
+        <field name="imgborderwidth" type="size" allowunits="px" initialvalue="0"/>
+      </section>
+    </section>
+    <section class="toggle" hidden="true" name="ThreadTab" image="{IconsBase}/small/breadcrumb.png">
+      <field name="threadafgcolor" type="color" initialvalue="#205d97"/>
+      <field name="threadatextdecoration" initialvalue="none" type="dropdownlist" listid="modules_skin/textdecoration"/>
+      <field name="threadahoverfgcolor" type="color" initialvalue="#000"/>
+      <field name="threadahovertextdecoration" initialvalue="none" type="dropdownlist" listid="modules_skin/textdecoration"/>
+      <field name="threadcurrentfgcolor" type="color" initialvalue="#000"/>
+      <field name="threadbottombordercolor" type="color" initialvalue="#ccc"/>
+      <field name="threadbottomborderstyle" initialvalue="solid" type="dropdownlist" listid="modules_skin/borderstyle"/>
+      <field name="threadbottomborderwidth" type="size" allowunits="px" initialvalue="1px"/>
+      <field name="threadseparatorcolor" type="color" initialvalue="#205D97"/>
+    </section>
+    <section class="toggle" hidden="true" name="HeaderTab" image="{IconsBase}/small/header.png">
+      <field name="headerbgcolor" type="color" initialvalue="transparent"/>
+      <field name="headerfgcolor" type="color" initialvalue="#205d97"/>
+      <field name="headerbordercolor" type="color" initialvalue="#ccc"/>
+      <field name="headerborderstyle" initialvalue="solid" type="dropdownlist" listid="modules_skin/borderstyle"/>
+      <field name="headerborderwidth" type="size" allowunits="px" initialvalue="0"/>
+      <field name="headerbgimage" allowfile="true" mediafoldername="Inbox_webfactory" type="imagecss"/>
+      <field name="headerbgposition" initialvalue="top left" type="dropdownlist" listid="modules_skin/bposition"/>
+      <field name="headerbgrepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+    </section>
+    <section class="toggle" hidden="true" name="FooterTab" image="{IconsBase}/small/footer.png">
+      <field name="footerbgcolor" type="color" initialvalue="transparent"/>
+      <field name="footerfgcolor" type="color" initialvalue="#205d97"/>
+      <field name="footerbordercolor" type="color" initialvalue="#ccc"/>
+      <field name="footerborderstyle" initialvalue="solid" type="dropdownlist" listid="modules_skin/borderstyle"/>
+      <field name="footerborderwidth" type="size" allowunits="px" initialvalue="1px"/>
+      <field name="footerbgimage" allowfile="true" mediafoldername="Inbox_webfactory" type="imagecss"/>
+      <field name="footerbgposition" initialvalue="top left" type="dropdownlist" listid="modules_skin/bposition"/>
+      <field name="footerbgrepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+    </section>
+  </section>
+  <section class="toggle" hidden="true" name="MenuTab" image="{IconsBase}/small/menu.png">
+    <section class="toggle" hidden="true" name="HeaderMenuTab" image="{IconsBase}/small/menu.png">
+      <field name="menuheaderfgcolor" type="color" initialvalue="#205d97"/>
+      <field name="menuheadertextdecoration" initialvalue="none" type="dropdownlist" listid="modules_skin/textdecoration"/>
+      <field name="menuheadercurrentfgcolor" type="color" initialvalue="#000"/>
+      <field name="menuheaderhoverfgcolor" type="color" initialvalue="#000"/>
+      <field name="menuheaderhovertextdecoration" initialvalue="none" type="dropdownlist" listid="modules_skin/textdecoration"/>
+      <field name="menuheaderseparator" type="color" initialvalue="#000"/>
+    </section>
+    <section class="toggle" hidden="true" name="MainMenuTab" image="{IconsBase}/small/menu.png">
+      <section class="toggle" hidden="true" name="TopMenuPositionTab" image="{IconsBase}/small/header.png">
+        <section name="MenuLayoutCaption">
+          <field name="menumaintopbgcolor" type="color" initialvalue="none"/>
+          <field name="menumaintopbgimage" allowfile="true" mediafoldername="Inbox_webfactory" initialvalue="url(/media/themes/webfactory/back_navigation.gif)" type="imagecss"/>
+          <field name="menumaintopbgposition" initialvalue="top left" type="dropdownlist" listid="modules_skin/bposition"/>
+          <field name="menumaintopbgrepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+          <field name="menumaintopbordertopcolor" type="color" initialvalue="transparent"/>
+          <field name="menumaintopbordertopstyle" initialvalue="none" type="dropdownlist" listid="modules_skin/borderstyle"/>
+          <field name="menumaintopbordertopwidth" type="size" allowunits="px" initialvalue="0px"/>
+          <field name="menumaintopborderbottomcolor" type="color" initialvalue="transparent"/>
+          <field name="menumaintopborderbottomstyle" initialvalue="none" type="dropdownlist" listid="modules_skin/borderstyle"/>
+          <field name="menumaintopborderbottomwidth" type="size" allowunits="px" initialvalue="0px"/>
+          <field name="menumaintopfontfamily" initialvalue="&quot;Trebuchet MS&quot;, verdana, arial, helvetica, sans-serif" type="dropdownlist" listid="modules_skin/fontfamily"/>
+        </section>
+        <section name="MenuElementCaption">
+          <field name="menumaintopfgcolor" type="color" initialvalue="#205d97"/>
+          <field name="menumaintoptextdecoration" initialvalue="none" type="dropdownlist" listid="modules_skin/textdecoration"/>
+          <field name="menumaintoplibgcolor" type="color" initialvalue="transparent"/>
+          <field name="menumaintopimage" allowfile="true" mediafoldername="Inbox_webfactory" initialvalue="url(/media/frontoffice/back_navigation_separator.gif)" type="imagecss"/>
+          <field name="menumaintopimageposition" initialvalue="right top" type="dropdownlist" listid="modules_skin/bposition"/>
+          <field name="menumaintopimagerepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+        </section>
+        <section name="MenuElementCurrentCaption">
+          <field name="menumaintopcurrentfgcolor" type="color" initialvalue="#000"/>
+          <field name="menumaintopcurrentlibgcolor" type="color" initialvalue="transparent"/>
+          <field name="menumaintopcurrentimage" allowfile="true" mediafoldername="Inbox_webfactory" initialvalue="url(/media/frontoffice/back_navigation_up.gif)" type="imagecss"/>
+          <field name="menumaintopcurrentimageposition" initialvalue="top left" type="dropdownlist" listid="modules_skin/bposition"/>
+          <field name="menumaintopcurrentimagerepeat" initialvalue="repeat-x" type="dropdownlist" listid="modules_skin/brepetition"/>
+        </section>
+        <section name="MenuElementHoverCaption">
+          <field name="menumaintophoverfgcolor" type="color" initialvalue="#000"/>
+          <field name="menumaintophovertextdecoration" initialvalue="none" type="dropdownlist" listid="modules_skin/textdecoration"/>
+          <field name="menumaintophoverlibgcolor" type="color" initialvalue="transparent"/>
+          <field name="menumaintophoverimage" allowfile="true" mediafoldername="Inbox_webfactory" type="imagecss"/>
+          <field name="menumaintophoverimageposition" initialvalue="top left" type="dropdownlist" listid="modules_skin/bposition"/>
+          <field name="menumaintophoverimagerepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+        </section>
+      </section>
+      <section class="toggle" hidden="true" name="SideMenuPositionTab" image="{IconsBase}/small/sidebar.png">
+        <section name="MenuLayoutCaption">
+          <field name="menumainleftbgcolor" type="color" initialvalue="none"/>
+          <field name="menumainleftbgimage" allowfile="true" mediafoldername="Inbox_webfactory" initialvalue="none" type="imagecss"/>
+          <field name="menumainleftbgposition" initialvalue="top left" type="dropdownlist" listid="modules_skin/bposition"/>
+          <field name="menumainleftbgrepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+          <field name="menumainleftbordercolor" type="color" initialvalue="transparent"/>
+          <field name="menumainleftborderstyle" initialvalue="none" type="dropdownlist" listid="modules_skin/borderstyle"/>
+          <field name="menumainleftborderwidth" type="size" allowunits="px" initialvalue="0px"/>
+          <field name="menumainleftfontfamily" initialvalue="&quot;Trebuchet MS&quot;, verdana, arial, helvetica, sans-serif" type="dropdownlist" listid="modules_skin/fontfamily"/>
+        </section>
+        <section class="toggle" hidden="true" name="MenuFirstLevelTab">
+          <section name="MenuElementCaption">
+            <field name="menumainleftonefgcolor" type="color" initialvalue="#205d97"/>
+            <field name="menumainleftonetextdecoration" initialvalue="none" type="dropdownlist" listid="modules_skin/textdecoration"/>
+            <field name="menumainleftoneliststyletype" initialvalue="disc" type="dropdownlist" listid="modules_skin/liststyletype"/>
+            <field name="menumainleftonebgcolor" type="color" initialvalue="none"/>
+            <field name="menumainleftoneimage" allowfile="true" mediafoldername="Inbox_webfactory" initialvalue="none" type="imagecss"/>
+            <field name="menumainleftoneimageposition" initialvalue="top left" type="dropdownlist" listid="modules_skin/bposition"/>
+            <field name="menumainleftoneimagerepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+          </section>
+          <section name="MenuElementCurrentCaption">
+            <field name="menumainleftonecurrentfgcolor" type="color" initialvalue="#000"/>
+            <field name="menumainleftonecurrentliststyletype" initialvalue="square" type="dropdownlist" listid="modules_skin/liststyletype"/>
+            <field name="menumainleftonecurrentbgcolor" type="color" initialvalue="none"/>
+            <field name="menumainleftonecurrentimage" allowfile="true" mediafoldername="Inbox_webfactory" initialvalue="none" type="imagecss"/>
+            <field name="menumainleftonecurrentimageposition" initialvalue="top left" type="dropdownlist" listid="modules_skin/bposition"/>
+            <field name="menumainleftonecurrentimagerepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+          </section>
+          <section name="MenuElementHoverCaption">
+            <field name="menumainleftonehoverfgcolor" type="color" initialvalue="#000"/>
+            <field name="menumainleftonehovertextdecoration" initialvalue="none" type="dropdownlist" listid="modules_skin/textdecoration"/>
+            <field name="menumainleftonehoverbgcolor" type="color" initialvalue="none"/>
+            <field name="menumainleftonehoverimage" allowfile="true" mediafoldername="Inbox_webfactory" initialvalue="none" type="imagecss"/>
+            <field name="menumainleftonehoverimageposition" initialvalue="top left" type="dropdownlist" listid="modules_skin/bposition"/>
+            <field name="menumainleftonehoverimagerepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+          </section>
+        </section>
+        <section class="toggle" hidden="true" name="MenuSecondLevelTab">
+          <section name="MenuElementCaption">
+            <field name="menumainlefttwofgcolor" type="color"/>
+            <field name="menumainlefttwofontsize" type="size" allowunits="em px %"/>
+            <field name="menumainlefttwotextdecoration" listid="modules_skin/textdecoration" type="dropdownlist"/>
+            <field name="menumainlefttwoliststyletype" listid="modules_skin/liststyletype" type="dropdownlist"/>
+            <field name="menumainlefttwobgcolor" type="color"/>
+            <field name="menumainlefttwoimage" allowfile="true" mediafoldername="Inbox"/>
+            <field name="menumainlefttwoimageposition" listid="modules_skin/bposition" type="dropdownlist"/>
+            <field name="menumainlefttwoimagerepeat" listid="modules_skin/brepetition" type="dropdownlist"/>
+          </section>
+          <section name="MenuElementCurrentCaption">
+            <field name="menumainlefttwocurrentfgcolor" type="color"/>
+            <field name="menumainlefttwocurrentfontsize" type="size" allowunits="em px %"/>
+            <field name="menumainlefttwocurrentliststyletype" listid="modules_skin/liststyletype" type="dropdownlist"/>
+            <field name="menumainlefttwocurrentbgcolor" type="color"/>
+            <field name="menumainlefttwocurrentimage" allowfile="true" mediafoldername="Inbox"/>
+            <field name="menumainlefttwocurrentimageposition" listid="modules_skin/bposition" type="dropdownlist"/>
+            <field name="menumainlefttwocurrentimagerepeat" listid="modules_skin/brepetition" type="dropdownlist"/>
+          </section>
+          <section name="MenuElementHoverCaption">
+            <field name="menumainlefttwohoverfgcolor" type="color"/>
+            <field name="menumainlefttwohoverfontsize" type="size" allowunits="em px %"/>
+            <field name="menumainlefttwohovertextdecoration" listid="modules_skin/textdecoration" type="dropdownlist"/>
+            <field name="menumainlefttwohoverbgcolor" type="color"/>
+            <field name="menumainlefttwohoverimage" allowfile="true" mediafoldername="Inbox"/>
+            <field name="menumainlefttwohoverimageposition" listid="modules_skin/bposition" type="dropdownlist"/>
+            <field name="menumainlefttwohoverimagerepeat" listid="modules_skin/brepetition" type="dropdownlist"/>
+          </section>
+        </section>
+      </section>
+    </section>
+    <section class="toggle" hidden="true" name="ContextualMenuTab" image="{IconsBase}/small/menu.png">
+      <section class="toggle" hidden="true" name="TopMenuPositionTab" image="{IconsBase}/small/header.png">
+        <section name="MenuLayoutCaption">
+          <field name="menucontextualtopbgcolor" type="color" initialvalue="none"/>
+          <field name="menucontextualtopbgimage" allowfile="true" mediafoldername="Inbox_webfactory" initialvalue="url(/media/themes/webfactory/back_navigation-contextual.gif)" type="imagecss"/>
+          <field name="menucontextualtopbgposition" initialvalue="top left" type="dropdownlist" listid="modules_skin/bposition"/>
+          <field name="menucontextualtopbgrepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+          <field name="menucontextualtopbordertopcolor" type="color" initialvalue="transparent"/>
+          <field name="menucontextualtopbordertopstyle" initialvalue="none" type="dropdownlist" listid="modules_skin/borderstyle"/>
+          <field name="menucontextualtopbordertopwidth" type="size" allowunits="px" initialvalue="0px"/>
+          <field name="menucontextualtopborderbottomcolor" initialvalue="transparent" type="text"/>
+          <field name="menucontextualtopborderbottomstyle" initialvalue="none" type="dropdownlist" listid="modules_skin/borderstyle"/>
+          <field name="menucontextualtopborderbottomwidth" type="size" allowunits="px" initialvalue="0px"/>
+          <field name="menucontextualtopfontfamily" initialvalue="&quot;Trebuchet MS&quot;, verdana, arial, helvetica, sans-serif" type="dropdownlist" listid="modules_skin/fontfamily"/>
+        </section>
+        <section name="MenuElementCaption">
+          <field name="menucontextualtopfgcolor" type="color" initialvalue="#205d97"/>
+          <field name="menucontextualtoptextdecoration" initialvalue="none" type="dropdownlist" listid="modules_skin/textdecoration"/>
+          <field name="menucontextualtoplibgcolor" type="color" initialvalue="transparent"/>
+          <field name="menucontextualtopimage" allowfile="true" mediafoldername="Inbox_webfactory" initialvalue="url(/media/themes/webfactory/back_navigation_separator.gif)" type="imagecss"/>
+          <field name="menucontextualtopimageposition" initialvalue="right top" type="dropdownlist" listid="modules_skin/bposition"/>
+          <field name="menucontextualtopimagerepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+        </section>
+        <section name="MenuElementCurrentCaption">
+          <field name="menucontextualtopcurrentfgcolor" type="color" initialvalue="#000"/>
+          <field name="menucontextualtopcurrentlibgcolor" type="color" initialvalue="transparent"/>
+          <field name="menucontextualtopcurrentimage" allowfile="true" mediafoldername="Inbox_webfactory" initialvalue="url(/media/themes/webfactory/back_navigation_up.gif)" type="imagecss"/>
+          <field name="menucontextualtopcurrentimageposition" initialvalue="top left" type="dropdownlist" listid="modules_skin/bposition"/>
+          <field name="menucontextualtopcurrentimagerepeat" initialvalue="repeat-x" type="dropdownlist" listid="modules_skin/brepetition"/>
+        </section>
+        <section name="MenuElementHoverCaption">
+          <field name="menucontextualtophoverfgcolor" type="color" initialvalue="#000"/>
+          <field name="menucontextualtophovertextdecoration" initialvalue="none" type="dropdownlist" listid="modules_skin/textdecoration"/>
+          <field name="menucontextualtophoverlibgcolor" type="color" initialvalue="transparent"/>
+          <field name="menucontextualtophoverimage" allowfile="true" mediafoldername="Inbox_webfactory" type="imagecss"/>
+          <field name="menucontextualtophoverimageposition" initialvalue="top left" type="dropdownlist" listid="modules_skin/bposition"/>
+          <field name="menucontextualtophoverimagerepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+        </section>
+      </section>
+      <section class="toggle" hidden="true" name="SideMenuPositionTab" image="{IconsBase}/small/sidebar.png">
+        <section name="MenuLayoutCaption">
+          <field name="menucontextualleftbgcolor" type="color" initialvalue="none"/>
+          <field name="menucontextualleftbgimage" allowfile="true" mediafoldername="Inbox_webfactory" type="imagecss"/>
+          <field name="menucontextualleftbgposition" initialvalue="top left" type="dropdownlist" listid="modules_skin/bposition"/>
+          <field name="menucontextualleftbgrepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+          <field name="menucontextualleftbordercolor" type="color" initialvalue="transparent"/>
+          <field name="menucontextualleftborderstyle" initialvalue="none" type="dropdownlist" listid="modules_skin/borderstyle"/>
+          <field name="menucontextualleftborderwidth" type="size" allowunits="px" initialvalue="0px"/>
+          <field name="menucontextualleftfontfamily" initialvalue="&quot;Trebuchet MS&quot;, verdana, arial, helvetica, sans-serif" type="dropdownlist" listid="modules_skin/fontfamily"/>
+        </section>
+        <section class="toggle" hidden="true" name="MenuFirstLevelTab">
+          <section name="MenuElementCaption">
+            <field name="menucontextualleftonefgcolor" type="color" initialvalue="#205d97"/>
+            <field name="menucontextualleftonetextdecoration" initialvalue="none" type="dropdownlist" listid="modules_skin/textdecoration"/>
+            <field name="menucontextualleftoneliststyletype" initialvalue="disc" type="dropdownlist" listid="modules_skin/liststyletype"/>
+            <field name="menucontextualleftonebgcolor" type="color" initialvalue="none"/>
+            <field name="menucontextualleftoneimage" allowfile="true" mediafoldername="Inbox_webfactory" type="imagecss"/>
+            <field name="menucontextualleftoneimageposition" initialvalue="top left" type="dropdownlist" listid="modules_skin/bposition"/>
+            <field name="menucontextualleftoneimagerepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+          </section>
+          <section name="MenuElementCurrentCaption">
+            <field name="menucontextualleftonecurrentfgcolor" type="color" initialvalue="#000"/>
+            <field name="menucontextualleftonecurrentliststyletype" initialvalue="square" type="dropdownlist" listid="modules_skin/liststyletype"/>
+            <field name="menucontextualleftonecurrentbgcolor" type="color" initialvalue="none"/>
+            <field name="menucontextualleftonecurrentimage" allowfile="true" mediafoldername="Inbox_webfactory" type="imagecss"/>
+            <field name="menucontextualleftonecurrentimageposition" initialvalue="top left" type="dropdownlist" listid="modules_skin/bposition"/>
+            <field name="menucontextualleftonecurrentimagerepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+          </section>
+          <section name="MenuElementHoverCaption">
+            <field name="menucontextualleftonehoverfgcolor" type="color" initialvalue="#000"/>
+            <field name="menucontextualleftonehovertextdecoration" initialvalue="none" type="dropdownlist" listid="modules_skin/textdecoration"/>
+            <field name="menucontextualleftonehoverbgcolor" type="color" initialvalue="none"/>
+            <field name="menucontextualleftonehoverimage" allowfile="true" mediafoldername="Inbox_webfactory" type="imagecss"/>
+            <field name="menucontextualleftonehoverimageposition" initialvalue="top left" type="dropdownlist" listid="modules_skin/bposition"/>
+            <field name="menucontextualleftonehoverimagerepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+          </section>
+        </section>
+        <section class="toggle" hidden="true" name="MenuSecondLevelTab">
+          <section name="MenuElementCaption">
+            <field name="menucontextuallefttwofgcolor" type="color"/>
+            <field name="menucontextuallefttwofontsize" type="size" allowunits="em px %"/>
+            <field name="menucontextuallefttwotextdecoration" listid="modules_skin/textdecoration" type="dropdownlist"/>
+            <field name="menucontextuallefttwoliststyletype" listid="modules_skin/liststyletype" type="dropdownlist"/>
+            <field name="menucontextuallefttwobgcolor" type="color"/>
+            <field name="menucontextuallefttwoimage" allowfile="true" mediafoldername="Inbox"/>
+            <field name="menucontextuallefttwoimageposition" listid="modules_skin/bposition" type="dropdownlist"/>
+            <field name="menucontextuallefttwoimagerepeat" listid="modules_skin/brepetition" type="dropdownlist"/>
+          </section>
+          <section name="MenuElementCurrentCaption">
+            <field name="menucontextuallefttwocurrentfgcolor" type="color"/>
+            <field name="menucontextuallefttwocurrentfontsize" type="size" allowunits="em px %"/>
+            <field name="menucontextuallefttwocurrentliststyletype" listid="modules_skin/liststyletype" type="dropdownlist"/>
+            <field name="menucontextuallefttwocurrentbgcolor" type="color"/>
+            <field name="menucontextuallefttwocurrentimage" allowfile="true" mediafoldername="Inbox"/>
+            <field name="menucontextuallefttwocurrentimageposition" listid="modules_skin/bposition" type="dropdownlist"/>
+            <field name="menucontextuallefttwocurrentimagerepeat" listid="modules_skin/brepetition" type="dropdownlist"/>
+          </section>
+          <section name="MenuElementHoverCaption">
+            <field name="menucontextuallefttwohoverfgcolor" type="color"/>
+            <field name="menucontextuallefttwohoverfontsize" type="size" allowunits="em px %"/>
+            <field name="menucontextuallefttwohovertextdecoration" listid="modules_skin/textdecoration" type="dropdownlist"/>
+            <field name="menucontextuallefttwohoverbgcolor" type="color"/>
+            <field name="menucontextuallefttwohoverimage" allowfile="true" mediafoldername="Inbox"/>
+            <field name="menucontextuallefttwohoverimageposition" listid="modules_skin/bposition" type="dropdownlist"/>
+            <field name="menucontextuallefttwohoverimagerepeat" listid="modules_skin/brepetition" type="dropdownlist"/>
+          </section>
+        </section>
+      </section>
+    </section>
+    <section class="toggle" hidden="true" name="FooterMenuTab" image="{IconsBase}/small/menu.png">
+      <field name="menufooterfgcolor" type="color" initialvalue="#205d97"/>
+      <field name="menufootertextdecoration" initialvalue="none" type="dropdownlist" listid="modules_skin/textdecoration"/>
+      <field name="menufootercurrentfgcolor" type="color" initialvalue="#000"/>
+      <field name="menufooterhoverfgcolor" type="color" initialvalue="#000"/>
+      <field name="menufooterhovertextdecoration" initialvalue="none" type="dropdownlist" listid="modules_skin/textdecoration"/>
+      <field name="menufooterseparator" type="color" initialvalue="#000"/>
+    </section>
+  </section>
+  <section class="toggle" hidden="true" name="ContentTab" image="{IconsBase}/small/edit-page-content.png">
+    <section class="toggle" hidden="true" name="TextTab" image="{IconsBase}/small/text.png">
+      <section name="PageTextCaption">
+        <field name="richtextmargin" type="size" allowunits="em px %" initialvalue="0"/>
+        <field name="bodyfgcolor" type="color" initialvalue="#000"/>
+        <field name="textbgcolor" type="color" initialvalue="transparent"/>
+        <field name="bodyfontfamily" initialvalue="&quot;Trebuchet MS&quot;, verdana, arial, helvetica, sans-serif" type="dropdownlist" listid="modules_skin/fontfamily"/>
+        <field name="textsize" type="size" allowunits="em px %" initialvalue="80%"/>
+      </section>
+      <section name="PageBlockquoteCaption">
+        <field name="blockquotebordercolor" type="color" initialvalue="#696a12"/>
+        <field name="blockquoteborderstyle" initialvalue="solid" type="dropdownlist" listid="modules_skin/borderstyle"/>
+        <field name="blockquoteborderwidth" type="size" allowunits="px" initialvalue="1px"/>
+        <field name="blockquotefontstyle" initialvalue="italic" type="dropdownlist" listid="modules_skin/fontstyle"/>
+        <field name="blockquotefontweight" initialvalue="normal" type="dropdownlist" listid="modules_skin/fontweight"/>
+        <field name="blockquotefontfamily" initialvalue="&quot;Trebuchet MS&quot;, verdana, arial, helvetica, sans-serif" type="dropdownlist" listid="modules_skin/fontfamily"/>
+      </section>
+    </section>
+    <section class="toggle" hidden="true" name="HeadingTab" image="{IconsBase}/small/richtext/heading.png">
+      <section class="toggle" hidden="true" name="TextHeadingOne">
+        <field name="headingonefgcolor" type="color" initialvalue="#696a12"/>
+        <field name="headingonebgcolor" type="color" initialvalue="transparent"/>
+        <field name="headingonebgimage" allowfile="true" mediafoldername="Inbox_webfactory" type="imagecss"/>
+        <field name="headingonebgposition" initialvalue="0 0" type="dropdownlist" listid="modules_skin/bposition"/>
+        <field name="headingonebgrepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+        <field name="headingonebordercolor" type="color" initialvalue="#696a12"/>
+        <field name="headingoneborderstyle" initialvalue="solid" type="dropdownlist" listid="modules_skin/borderstyle"/>
+        <field name="headingoneborderwidth" type="size" allowunits="px" initialvalue="1px"/>
+        <field name="headingonemarginbottom" type="size" allowunits="em px %" initialvalue="16px"/>
+        <field name="headingonepaddingleft" type="size" allowunits="em px %" initialvalue="0"/>
+        <field name="headingonefontstyle" initialvalue="normal" type="dropdownlist" listid="modules_skin/fontstyle"/>
+        <field name="headingonefontweight" initialvalue="bold" type="dropdownlist" listid="modules_skin/fontweight"/>
+        <field name="headingonesize" type="size" allowunits="em px %" initialvalue="1.8em"/>
+        <field name="headingonefontfamily" initialvalue="&quot;Trebuchet MS&quot;, verdana, arial, helvetica, sans-serif" type="dropdownlist" listid="modules_skin/fontfamily"/>
+      </section>
+      <section class="toggle" hidden="true" name="TextHeadingTwo">
+        <field name="headingtwofgcolor" type="color" initialvalue="#696a12"/>
+        <field name="headingtwobgcolor" type="color" initialvalue="transparent"/>
+        <field name="headingtwobgimage" allowfile="true" mediafoldername="Inbox_webfactory" type="imagecss"/>
+        <field name="headingtwobgposition" initialvalue="0 0" type="dropdownlist" listid="modules_skin/bposition"/>
+        <field name="headingtwobgrepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+        <field name="headingtwobordercolor" type="color" initialvalue="#696a12"/>
+        <field name="headingtwoborderstyle" initialvalue="solid" type="dropdownlist" listid="modules_skin/borderstyle"/>
+        <field name="headingtwoborderwidth" type="size" allowunits="px" initialvalue="1px"/>
+        <field name="headingtwomarginbottom" type="size" allowunits="em px %" initialvalue="16px"/>
+        <field name="headingtwopaddingleft" type="size" allowunits="em px %" initialvalue="0"/>
+        <field name="headingtwofontstyle" initialvalue="normal" type="dropdownlist" listid="modules_skin/fontstyle"/>
+        <field name="headingtwofontweight" initialvalue="bold" type="dropdownlist" listid="modules_skin/fontweight"/>
+        <field name="headingtwosize" type="size" allowunits="em px %" initialvalue="1.6em"/>
+        <field name="headingtwofontfamily" initialvalue="&quot;Trebuchet MS&quot;, verdana, arial, helvetica, sans-serif" type="dropdownlist" listid="modules_skin/fontfamily"/>
+      </section>
+      <section class="toggle" hidden="true" name="TextHeadingThree">
+        <field name="headingthreefgcolor" type="color" initialvalue="#696a12"/>
+        <field name="headingthreebgcolor" type="color" initialvalue="transparent"/>
+        <field name="headingthreebgimage" allowfile="true" mediafoldername="Inbox_webfactory" type="imagecss"/>
+        <field name="headingthreebgposition" initialvalue="0 0" type="dropdownlist" listid="modules_skin/bposition"/>
+        <field name="headingthreebgrepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+        <field name="headingthreebordercolor" type="color" initialvalue="#696a12"/>
+        <field name="headingthreeborderstyle" initialvalue="solid" type="dropdownlist" listid="modules_skin/borderstyle"/>
+        <field name="headingthreeborderwidth" type="size" allowunits="px" initialvalue="1px"/>
+        <field name="headingthreemarginbottom" type="size" allowunits="em px %" initialvalue="16px"/>
+        <field name="headingthreepaddingleft" type="size" allowunits="em px %" initialvalue="0"/>
+        <field name="headingthreefontstyle" initialvalue="normal" type="dropdownlist" listid="modules_skin/fontstyle"/>
+        <field name="headingthreefontweight" initialvalue="bold" type="dropdownlist" listid="modules_skin/fontweight"/>
+        <field name="headingthreesize" type="size" allowunits="em px %" initialvalue="1.2em"/>
+        <field name="headingthreefontfamily" initialvalue="&quot;Trebuchet MS&quot;, verdana, arial, helvetica, sans-serif" type="dropdownlist" listid="modules_skin/fontfamily"/>
+      </section>
+      <section class="toggle" hidden="true" name="TextHeadingFour">
+        <field name="headingfourfgcolor" type="color" initialvalue="#696a12"/>
+        <field name="headingfourbgcolor" type="color" initialvalue="transparent"/>
+        <field name="headingfourbgimage" allowfile="true" mediafoldername="Inbox_webfactory" type="imagecss"/>
+        <field name="headingfourbgposition" initialvalue="0 0" type="dropdownlist" listid="modules_skin/bposition"/>
+        <field name="headingfourbgrepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+        <field name="headingfourbordercolor" type="color" initialvalue="#696a12"/>
+        <field name="headingfourborderstyle" initialvalue="solid" type="dropdownlist" listid="modules_skin/borderstyle"/>
+        <field name="headingfourborderwidth" type="size" allowunits="px" initialvalue="1px"/>
+        <field name="headingfourmarginbottom" type="size" allowunits="em px %" initialvalue="16px"/>
+        <field name="headingfourpaddingleft" type="size" allowunits="em px %" initialvalue="0"/>
+        <field name="headingfourfontstyle" initialvalue="normal" type="dropdownlist" listid="modules_skin/fontstyle"/>
+        <field name="headingfourfontweight" initialvalue="bold" type="dropdownlist" listid="modules_skin/fontweight"/>
+        <field name="headingfoursize" type="size" allowunits="em px %" initialvalue="1em"/>
+        <field name="headingfourfontfamily" initialvalue="&quot;Trebuchet MS&quot;, verdana, arial, helvetica, sans-serif" type="dropdownlist" listid="modules_skin/fontfamily"/>
+      </section>
+      <section class="toggle" hidden="true" name="TextHeadingFive">
+        <field name="headingfivefgcolor" type="color" initialvalue="#696a12"/>
+        <field name="headingfivebgcolor" type="color" initialvalue="transparent"/>
+        <field name="headingfivebgimage" allowfile="true" mediafoldername="Inbox_webfactory" type="imagecss"/>
+        <field name="headingfivebgposition" initialvalue="0 0" type="dropdownlist" listid="modules_skin/bposition"/>
+        <field name="headingfivebgrepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+        <field name="headingfivebordercolor" type="color" initialvalue="#696a12"/>
+        <field name="headingfiveborderstyle" initialvalue="none" type="dropdownlist" listid="modules_skin/borderstyle"/>
+        <field name="headingfiveborderwidth" type="size" allowunits="px" initialvalue="0px"/>
+        <field name="headingfivemarginbottom" type="size" allowunits="em px %" initialvalue="16px"/>
+        <field name="headingfivepaddingleft" type="size" allowunits="em px %" initialvalue="0"/>
+        <field name="headingfivefontstyle" initialvalue="normal" type="dropdownlist" listid="modules_skin/fontstyle"/>
+        <field name="headingfivefontweight" initialvalue="bold" type="dropdownlist" listid="modules_skin/fontweight"/>
+        <field name="headingfivesize" type="size" allowunits="em px %" initialvalue="0.9em"/>
+        <field name="headingfivefontfamily" initialvalue="&quot;Trebuchet MS&quot;, verdana, arial, helvetica, sans-serif" type="dropdownlist" listid="modules_skin/fontfamily"/>
+      </section>
+      <section class="toggle" hidden="true" name="TextHeadingSix">
+        <field name="headingsixfgcolor" type="color" initialvalue="#696a12"/>
+        <field name="headingsixbgcolor" type="color" initialvalue="transparent"/>
+        <field name="headingsixbgimage" allowfile="true" mediafoldername="Inbox_webfactory" type="imagecss"/>
+        <field name="headingsixbgposition" initialvalue="0 0" type="dropdownlist" listid="modules_skin/bposition"/>
+        <field name="headingsixbgrepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+        <field name="headingsixbordercolor" type="color" initialvalue="#696a12"/>
+        <field name="headingsixborderstyle" initialvalue="none" type="dropdownlist" listid="modules_skin/borderstyle"/>
+        <field name="headingsixborderwidth" type="size" allowunits="px" initialvalue="0px"/>
+        <field name="headingsixmarginbottom" type="size" allowunits="em px %" initialvalue="16px"/>
+        <field name="headingsixpaddingleft" type="size" allowunits="em px %" initialvalue="0"/>
+        <field name="headingsixfontstyle" initialvalue="normal" type="dropdownlist" listid="modules_skin/fontstyle"/>
+        <field name="headingsixfontweight" initialvalue="bold" type="dropdownlist" listid="modules_skin/fontweight"/>
+        <field name="headingsixsize" type="size" allowunits="em px %" initialvalue="0.8em"/>
+        <field name="headingsixfontfamily" initialvalue="&quot;Trebuchet MS&quot;, verdana, arial, helvetica, sans-serif" type="dropdownlist" listid="modules_skin/fontfamily"/>
+      </section>
+    </section>
+    <section class="toggle" hidden="true" name="LinkTab" image="{IconsBase}/small/richtext/link.png">
+      <field name="linkfgcolor" type="color" initialvalue="#696a12"/>
+      <field name="linkdecoration" initialvalue="underline" type="dropdownlist" listid="modules_skin/textdecoration"/>
+      <field name="linkhoverfgcolor" type="color" initialvalue="#696a12"/>
+      <field name="linkhoverdecoration" initialvalue="none" type="dropdownlist" listid="modules_skin/textdecoration"/>
+    </section>
+    <section class="toggle" hidden="true" name="ListTab" image="{IconsBase}/small/richtext/unordered-list.png">
+      <section name="PageListUlCaption">
+        <field name="ulmarginbottom" type="size" allowunits="em px %" initialvalue="16px"/>
+        <field name="ultype" initialvalue="disc" type="dropdownlist" listid="modules_skin/liststyletype"/>
+        <field name="ulpaddingtop" type="size" allowunits="em px %" initialvalue="4px"/>
+        <field name="ulpaddingright" type="size" allowunits="em px %" initialvalue="0px"/>
+        <field name="ulpaddingbottom" type="size" allowunits="em px %" initialvalue="4px"/>
+        <field name="ulpaddingleft" type="size" allowunits="em px %" initialvalue="26px"/>
+        <field name="ulbullet" allowfile="true" mediafoldername="Inbox_webfactory" initialvalue="none" type="imagecss"/>
+        <field name="ulbgposition" initialvalue="0 0" type="dropdownlist" listid="modules_skin/bposition"/>
+        <field name="ulbgrepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+        <field name="ululmarginbottom" type="size" allowunits="em px %" initialvalue="0px"/>
+      </section>
+      <section name="PageListOlCaption">
+        <field name="olmarginbottom" type="size" allowunits="em px %" initialvalue="16px"/>
+        <field name="oltype" initialvalue="decimal" type="dropdownlist" listid="modules_skin/liststyletype"/>
+        <field name="olpaddingtop" type="size" allowunits="em px %" initialvalue="4px"/>
+        <field name="olpaddingright" type="size" allowunits="em px %" initialvalue="0px"/>
+        <field name="olpaddingbottom" type="size" allowunits="em px %" initialvalue="4px"/>
+        <field name="olpaddingleft" type="size" allowunits="em px %" initialvalue="26px"/>
+        <field name="olbullet" allowfile="true" mediafoldername="Inbox_webfactory" initialvalue="none" type="imagecss"/>
+        <field name="olbgposition" initialvalue="0 0" type="dropdownlist" listid="modules_skin/bposition"/>
+        <field name="olbgrepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+        <field name="ololmarginbottom" type="size" allowunits="em px %" initialvalue="0px"/>
+      </section>
+    </section>
+    <section class="toggle" hidden="true" name="TableTab" image="{IconsBase}/small/richtext/table.png">
+      <section name="TableTableCaption">
+        <field name="tablemarginbottom" type="size" allowunits="em px %" initialvalue="16px"/>
+      </section>
+      <section name="TableTrCaption">
+        <field name="trevenbgcolor" type="color" initialvalue="#eee"/>
+        <field name="troddbgcolor" type="color" initialvalue="#fff"/>
+      </section>
+      <section name="TableThCaption">
+        <field name="thtextalign" initialvalue="left" type="dropdownlist" listid="modules_skin/halignment"/>
+        <field name="thfgcolor" type="color" initialvalue="#fff"/>
+        <field name="thbgcolor" type="color" initialvalue="#b9c101"/>
+      </section>
+      <section name="TableTdCaption">
+        <field name="tdtextalign" initialvalue="left" type="dropdownlist" listid="modules_skin/halignment"/>
+      </section>
+    </section>
+  </section>
+  <section class="toggle" hidden="true" name="FormTab" image="{IconsBase}/small/form.png">
+    <section class="toggle" hidden="true" name="FormLayoutTab" image="{IconsBase}/small/ui-group-box.png">
+      <section name="FormFieldsetCaption">
+        <field name="fieldsetmarginbottom" type="size" allowunits="em px %" initialvalue="16px"/>
+        <field name="fieldsetpadding" type="size" allowunits="em px %" initialvalue="12px"/>
+        <field name="fieldsetbordercolor" type="color" initialvalue="#b0c900"/>
+        <field name="fieldsetborderstyle" initialvalue="solid" type="dropdownlist" listid="modules_skin/borderstyle"/>
+        <field name="fieldsetborderwidth" type="size" allowunits="px" initialvalue="1px"/>
+      </section>
+      <section name="FormLegendCaption">
+        <field name="legendpaddingleft" type="size" allowunits="em px %" initialvalue="2px"/>
+        <field name="legendpaddingright" type="size" allowunits="em px %" initialvalue="2px"/>
+        <field name="legendfontsize" type="size" allowunits="em px %" initialvalue="1.2em"/>
+        <field name="legendfontstyle" initialvalue="normal" type="dropdownlist" listid="modules_skin/fontstyle"/>
+        <field name="legendfontweight" initialvalue="bold" type="dropdownlist" listid="modules_skin/fontweight"/>
+        <field name="legendcolor" type="color" initialvalue="#696a12"/>
+        <field name="legendfontfamily" initialvalue="&quot;Trebuchet MS&quot;, verdana, arial, helvetica, sans-serif" type="dropdownlist" listid="modules_skin/fontfamily"/>
+      </section>
+    </section>
+    <section class="toggle" hidden="true" name="FormInputsTab" image="{IconsBase}/small/ui-fields.png">
+      <section name="FormLabelCaption">
+        <field name="labellineheight" type="size" allowunits="em px %" initialvalue="1.6"/>
+        <field name="labeltextalign" initialvalue="right" type="dropdownlist" listid="modules_skin/halignment"/>
+        <field name="labelpaddingright" type="size" allowunits="em px %" initialvalue="12px"/>
+        <field name="labelwidth" type="size" allowunits="em px %" initialvalue="33%"/>
+      </section>
+      <section name="FormEmCaption">
+        <field name="emfontweight" initialvalue="bold" type="dropdownlist" listid="modules_skin/fontweight"/>
+        <field name="emfontstyle" initialvalue="normal" type="dropdownlist" listid="modules_skin/fontstyle"/>
+        <field name="emcolor" type="color" initialvalue="red"/>
+      </section>
+      <section name="FormFieldsCaption">
+        <field name="fieldsfontsize" type="size" allowunits="em px %" initialvalue="1em"/>
+        <field name="fieldsbordercolor" type="color" initialvalue="#ccc"/>
+        <field name="fieldsborderstyle" initialvalue="solid" type="dropdownlist" listid="modules_skin/borderstyle"/>
+        <field name="fieldsborderwidth" type="size" allowunits="px" initialvalue="1px"/>
+        <field name="fieldsbgcolor" type="color" initialvalue="#fff"/>
+        <field name="fieldshoverbgcolor" type="color" initialvalue="#ddd"/>
+      </section>
+      <section name="FormOptionCaption">
+        <field name="optionfgcolor" type="color" initialvalue="#000"/>
+        <field name="optionbgcolor" type="color" initialvalue="#fff"/>
+      </section>
+    </section>
+    <section class="toggle" hidden="true" name="FormButtonsTab" image="{IconsBase}/small/ui-buttons.png">
+      <section name="FormButtonsCaption">
+        <field name="buttonsfgcolor" type="color" initialvalue="#696a12"/>
+        <field name="buttonsbgcolor" type="color" initialvalue="#b9c101"/>
+        <field name="buttonsbordercolor" type="color" initialvalue="#ccc"/>
+        <field name="buttonsborderstyle" initialvalue="solid" type="dropdownlist" listid="modules_skin/borderstyle"/>
+        <field name="buttonsborderwidth" type="size" allowunits="px" initialvalue="1px"/>
+        <field name="buttonsfontweight" initialvalue="bold" type="dropdownlist" listid="modules_skin/fontweight"/>
+        <field name="buttonsbgimage" allowfile="true" mediafoldername="Inbox_webfactory" type="imagecss"/>
+        <field name="buttonsbgposition" initialvalue="0 0" type="dropdownlist" listid="modules_skin/bposition"/>
+        <field name="buttonsbgrepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+      </section>
+      <section name="FormLinkButtonCaption">
+        <field name="linkbuttonfontsize" type="size" allowunits="em px %" initialvalue="1em"/>
+        <field name="linkbuttonfontweight" initialvalue="bold" type="dropdownlist" listid="modules_skin/fontweight"/>
+        <field name="linkbuttonpaddingleft" type="size" allowunits="em px %" initialvalue="5px"/>
+        <field name="linkbuttonpaddingright" type="size" allowunits="em px %" initialvalue="5px"/>
+        <field name="linkbuttonbgcolor" type="color" initialvalue="#b9c101"/>
+        <field name="linkbuttonfgcolor" type="color" initialvalue="#696a12"/>
+        <field name="linkbuttonbordercolor" type="color" initialvalue="#ccc"/>
+        <field name="linkbuttonborderstyle" initialvalue="solid" type="dropdownlist" listid="modules_skin/borderstyle"/>
+        <field name="linkbuttonborderwidth" type="size" allowunits="px" initialvalue="1px"/>
+        <field name="linkbuttonbgimage" allowfile="true" mediafoldername="Inbox_webfactory" type="imagecss"/>
+        <field name="linkbuttonbgposition" initialvalue="0 0" type="dropdownlist" listid="modules_skin/bposition"/>
+        <field name="linkbuttonbgrepeat" initialvalue="no-repeat" type="dropdownlist" listid="modules_skin/brepetition"/>
+      </section>
+    </section>
+    <section class="toggle" hidden="true" name="FormTextTab" image="{IconsBase}/small/text.png">
+      <section name="FormSuccessCaption">
+        <field name="successcolor" type="color" initialvalue="green"/>
+      </section>
+      <section name="FormErrorsCaption">
+        <field name="errorscolor" type="color" initialvalue="red"/>
+        <field name="errorsliststyletype" initialvalue="disc" type="dropdownlist" listid="modules_skin/liststyletype"/>
+        <field name="errorspaddingleft" type="size" allowunits="em px %" initialvalue="26px"/>
+      </section>
+      <section name="FormTextCaption">
+        <field name="desclineheight" type="size" allowunits="em px %" initialvalue="1.4em"/>
+        <field name="descmarginbottom" type="size" allowunits="em px %" initialvalue="16px"/>
+      </section>
+    </section>
+  </section>
+  <section class="toggle" hidden="true" name="PrintTab" image="{IconsBase}/small/printer.png">
+    <section class="toggle" hidden="true" name="TextTab" image="{IconsBase}/small/text.png">
+      <field name="printfgcolor" type="color"/>
+      <field name="printfontfamily" listid="modules_skin/fontfamily" type="dropdownlist"/>
+      <field name="printfontsize" type="size" allowunits="em px pt %"/>
+      <field name="printlineheight" type="size" allowunits="em px pt %"/>
+      <field name="printwordspacing" type="size" allowunits="em px pt %"/>
+      <field name="printletterspacing" type="size" allowunits="em px pt %"/>
+    </section>
+    <section class="toggle" hidden="true" name="HeadingTab" image="{IconsBase}/small/richtext/heading.png">
+      <section class="toggle" hidden="true" name="TextHeadingOne">
+        <field name="printheadingonefgcolor" type="color"/>
+        <field name="printheadingonefontsize" type="size" allowunits="em px pt %"/>
+        <field name="printheadingonefontfamily" listid="modules_skin/fontfamily" type="dropdownlist"/>
+        <field name="printheadingonefontstyle" listid="modules_skin/fontstyle" type="dropdownlist"/>
+        <field name="printheadingonefontweight" listid="modules_skin/fontweight" type="dropdownlist"/>
+      </section>
+      <section class="toggle" hidden="true" name="TextHeadingTwo">
+        <field name="printheadingtwofgcolor" type="color"/>
+        <field name="printheadingtwofontsize" type="size" allowunits="em px pt %"/>
+        <field name="printheadingtwofontfamily" listid="modules_skin/fontfamily" type="dropdownlist"/>
+        <field name="printheadingtwofontstyle" listid="modules_skin/fontstyle" type="dropdownlist"/>
+        <field name="printheadingtwofontweight" listid="modules_skin/fontweight" type="dropdownlist"/>
+      </section>
+      <section class="toggle" hidden="true" name="TextHeadingThree">
+        <field name="printheadingthreefgcolor" type="color"/>
+        <field name="printheadingthreefontsize" type="size" allowunits="em px pt %"/>
+        <field name="printheadingthreefontfamily" listid="modules_skin/fontfamily" type="dropdownlist"/>
+        <field name="printheadingthreefontstyle" listid="modules_skin/fontstyle" type="dropdownlist"/>
+        <field name="printheadingthreefontweight" listid="modules_skin/fontweight" type="dropdownlist"/>
+      </section>
+      <section class="toggle" hidden="true" name="TextHeadingFour">
+        <field name="printheadingfourfgcolor" type="color"/>
+        <field name="printheadingfourfontsize" type="size" allowunits="em px pt %"/>
+        <field name="printheadingfourfontfamily" listid="modules_skin/fontfamily" type="dropdownlist"/>
+        <field name="printheadingfourfontstyle" listid="modules_skin/fontstyle" type="dropdownlist"/>
+        <field name="printheadingfourfontweight" listid="modules_skin/fontweight" type="dropdownlist"/>
+      </section>
+      <section class="toggle" hidden="true" name="TextHeadingFive">
+        <field name="printheadingfivefgcolor" type="color"/>
+        <field name="printheadingfivefontsize" type="size" allowunits="em px pt %"/>
+        <field name="printheadingfivefontfamily" listid="modules_skin/fontfamily" type="dropdownlist"/>
+        <field name="printheadingfivefontstyle" listid="modules_skin/fontstyle" type="dropdownlist"/>
+        <field name="printheadingfivefontweight" listid="modules_skin/fontweight" type="dropdownlist"/>
+      </section>
+      <section class="toggle" hidden="true" name="TextHeadingSix">
+        <field name="printheadingsixfgcolor" type="color"/>
+        <field name="printheadingsixfontsize" type="size" allowunits="em px pt %"/>
+        <field name="printheadingsixfontfamily" listid="modules_skin/fontfamily" type="dropdownlist"/>
+        <field name="printheadingsixfontstyle" listid="modules_skin/fontstyle" type="dropdownlist"/>
+        <field name="printheadingsixfontweight" listid="modules_skin/fontweight" type="dropdownlist"/>
+      </section>
+    </section>
+    <section class="toggle" hidden="true" name="LinkTab" image="{IconsBase}/small/richtext/link.png">
+      <field name="printlinkfgcolor" type="color"/>
+      <field name="printlinkdecoration" listid="modules_skin/textdecoration" type="dropdownlist"/>
+      <field name="printlinkfontweight" listid="modules_skin/fontweight" type="dropdownlist"/>
+      <field name="printlinkurl" listid="modules_skin/linkurl" type="dropdownlist"/>
+    </section>
+  </section>
+</sections>

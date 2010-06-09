@@ -19,10 +19,7 @@ class skin_PreviewAction extends f_action_BaseAction
 		$skin = DocumentHelper::getDocumentInstance($skinParams['cmpref']);	
 		$tmpskin = skin_SkinService::getInstance()->getNewDocumentInstance();
 		$skin->copyTo($tmpskin);
-		foreach ($skinParams as $name => $value) 
-		{
-			$tmpskin->setCSSValue($name, $value);
-		}
+		$tmpskin->setVariablesJSON($skinParams['variablesJSON']);
 		$page->setSkin($tmpskin);
 		website_PageService::getInstance()->render($page);
 	}

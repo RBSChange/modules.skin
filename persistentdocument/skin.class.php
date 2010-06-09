@@ -28,31 +28,134 @@ class skin_persistentdocument_skin extends skin_persistentdocument_skinbase  imp
 	}
 	
 	/**
+	 * @param string $actionType
+	 * @param array $formProperties
+	 */
+	public function addFormProperties($propertiesNames, &$formProperties)
+	{
+		if (in_array('variablesJSON', $propertiesNames))
+		{
+			$string = $this->getS18s();
+			if (f_util_StringUtils::isEmpty($string))
+			{
+				$data = array();
+			}
+			else
+			{
+				$data = unserialize($string);
+			}
+			$formProperties["variablesJSON"] = $data; 
+		}		
+	}
+	
+	/**
+	 * Return a identifier for the set of variable
+	 * @return string
+	 */
+	public function getIdentifier()
+	{
+		return $this->getId();
+	}
+	
+	/**
+	 * @var array
+	 */
+	private $varsInfos;
+	
+	/**
+	 * @return array
+	 */
+	private function getVarsInfos()
+	{
+		if ($this->varsInfos === null)
+		{
+			if ($this->getTheme())
+			{
+				$variablesPath = f_util_FileUtils::buildChangeBuildPath('themes', $this->getTheme(), 'variables.ser');
+				if (!is_readable($variablesPath))
+				{
+					throw new Exception('theme no compiled properly: ' . $this->getTheme());
+				}
+				$this->varsInfos = unserialize(file_get_contents($variablesPath));
+			}
+			else
+			{
+				$this->varsInfos = array();
+			}
+		}
+		return $this->varsInfos;
+	}
+	
+	/**
+	 * @param string $name
+	 * @return boolean
+	 */
+	private function isDefinedVar($name)
+	{
+		$vars = $this->getVarsInfos();
+		return isset($vars[$name]);
+	}
+	
+	private function getVarType($name)
+	{
+		$vars = $this->getVarsInfos();
+		if (isset($vars[$name]))
+		{
+			return $vars[$name]['type'];
+		}
+		return 'text';
+	}
+	
+	private function getVarDefaultValue($name)
+	{
+		$vars = $this->getVarsInfos();
+		if (isset($vars[$name]))
+		{
+			return $vars[$name]['ini'];
+		}
+		return '';
+	}	
+
+	/**
 	 * @param string $name
 	 * @param string $defaultValue
 	 * @return string | null
 	 */
-	function getCSSValue($name, $defaultValue = '')
+	public function getCSSValue($name, $defaultValue = '')
 	{
-		$property = $this->getPersistentModel()->getEditableProperty($name);
-		if ($property !== null)
+		$value = $this->getS18sProperty($name);
+		if ($this->isDefinedVar($name))
 		{
-			$value = $this->{'get' . ucfirst($name)}();
-			if ($value instanceof media_persistentdocument_media) 
+			$type = $this->getVarType($name);
+			if ($value === null)
 			{
-				return 'url('.$value->getDocumentService()->generateUrl($value).')';
-			} 
-			else if ($value !== null && $value !== '')
-			{
-				if (preg_match('/\|#[a-f0-9]{6}/i', $value))
-				{
-					$value = explode("|", $value);
-					$value = $value[1];
-				}
-				return $value;
+				return $this->getVarDefaultValue($name);
 			}
+			if ($type === 'imagecss' && is_numeric($value))
+			{
+				try 
+				{
+					$media = DocumentHelper::getDocumentInstance($value, "modules_media/media");
+					$value = 'url('.$media->getDocumentService()->generateUrl($media).')';
+				}
+				catch (Exception $e)
+				{
+					Framework::exception($e);
+					$value = 'none';
+				}
+			}
+			else if (preg_match('/\|#[a-f0-9]{6}/i', $value))
+			{
+				$value = explode("|", $value);
+				$value = $value[1];
+			}
+			return $value;
 		}
-		return $defaultValue;
+		else 
+		{
+			Framework::warn(__METHOD__ . ' undefined var:' . $name);
+		}
+		return $value === null ? $defaultValue : $value;
 	}
 	
 	/**
@@ -61,32 +164,68 @@ class skin_persistentdocument_skin extends skin_persistentdocument_skinbase  imp
 	 */
 	function setCSSValue($name, $value)
 	{
-		$property = $this->getPersistentModel()->getEditableProperty($name);
-		if ($property !== null)
+		if ($this->isDefinedVar($name))
 		{
-			if ($property->getType() === "modules_media/media")
-			{
-				$value = intval($value);
-				if ($value > 0)
-				{
-					$value = DocumentHelper::getDocumentInstance($value);
-				}
-				else
-				{
-					$value = null;
-				}
-			}
-			
-			$this->{'set' . ucfirst($name)}($value);
+			$this->setS18sProperty($name, $value);
+		}
+		else
+		{
+			Framework::warn(__METHOD__ . ' undefined var:' . $name);
+			$this->setS18sProperty($name, $value);
 		}
 	}
 	
 	/**
-	 * Return a identifier for the set of variable
+	 * @param array $data
+	 */
+	function setVariablesJSON($data)
+	{		
+		if (is_array($data))
+		{
+			foreach ($data as $name => $value) 
+			{
+				if ($this->isDefinedVar($name))
+				{
+					$this->setS18sProperty($name, $value);
+				}
+				else
+				{
+					Framework::warn(__METHOD__ . ' undefined var:' . $name);
+				}
+			}
+		}
+		else
+		{
+			Framework::warn(__METHOD__ . ' invalid data:' . var_export($data, true));
+		}
+	}
+	
+	/**
 	 * @return string
 	 */
-	function getIdentifier()
+	function getThemeid()
 	{
-		return $this->getId();
+		if ($this->getTheme())
+		{
+			$theme = theme_ThemeService::getInstance()->getByCodeName($this->getTheme());
+			return ($theme) ? $theme->getId() : null;
+		}
+		return null;
+	}
+	
+	/**
+	 * @param string $themeId
+	 */
+	function setThemeid($themeId)
+	{
+		if (intval($themeId))
+		{
+			$theme = DocumentHelper::getDocumentInstance(intval($themeId), "modules_theme/theme");
+			$this->setTheme($theme->getCodename());
+		}
+		else
+		{
+			$this->setTheme(null);
+		}
 	}
 }

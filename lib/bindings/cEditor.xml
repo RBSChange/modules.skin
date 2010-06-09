@@ -1,0 +1,457 @@
+<?xml version="1.0"?>
+<bindings xmlns="http://www.mozilla.org/xbl" 
+	xmlns:xbl="http://www.mozilla.org/xbl" 
+	xmlns:html="http://www.w3.org/1999/xhtml" 
+	xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<binding id="cVariablesPanel" extends="layout.cDocumentEditor#cDocumentEditorPanel">	
+		<content>
+			<xul:vbox flex="1">
+				<xul:cmessageinfo anonid="message"/>
+				<xul:hbox anonid="action-bar">
+					<xul:button anonid="save_properties" oncommand="saveProperties()" 
+						label="&amp;modules.uixul.bo.doceditor.button.Save;" 
+						image="{IconsBase}/small/save.png"
+						disabled="true" />
+					<xul:button anonid="reset_properties" oncommand="resetProperties()" 
+						label="&amp;modules.uixul.bo.doceditor.button.Canceledit;" 
+						image="{IconsBase}/small/undo.png"
+						disabled="true" />
+					<xul:button anonid="preview_properties" oncommand="onPreview()" label="&amp;modules.skin.bo.actions.Preview;" image="{IconsBase}/small/eye.png"/>
+				</xul:hbox>
+				<xul:scrollbox anonid="scrollctrl" flex="1" class="editordatacontainer" orient="vertical">
+					<xul:vbox flex="1" anonid="variableseditor">
+					</xul:vbox>						
+				</xul:scrollbox>					
+			</xul:vbox>
+		</content>
+			
+		<implementation>
+			<field name="mFieldNames">["theme", "variablesJSON"]</field>
+			<field name="mDocumentIdentifier">null</field>
+			<field name="mVariables">null</field>
+			<field name="mTheme">null</field>
+			
+			<property name="modified">
+				<getter><![CDATA[
+					return this.getAttribute("modified") === "true";
+				]]>
+				</getter>
+				<setter><![CDATA[
+					var oldval = this.modified;
+					if (val) {
+						this.setAttribute("modified", "true");
+					} else {
+						this.removeAttribute("modified");
+					}
+					if (val != oldval) {
+						this.updateCommandsUI();
+					}
+				]]>
+				</setter>
+			</property>
+			
+			<method name="updateCommandsUI">
+				<body><![CDATA[
+
+					//wCore.debug("updateCommandsUI");		
+					this.getElementByAnonId('save_properties').disabled = !this.modified;
+					this.getElementByAnonId('reset_properties').disabled = !this.modified;
+					this.documentEditor.lockTabs(this.modified);
+				]]>
+				</body>
+			</method>
+	
+			<method name="resetProperties">
+				<body><![CDATA[
+					this.getElementByAnonId('variableseditor').reset();
+					this.modified = false;
+					this.gotoTop();
+				]]>
+				</body>
+			</method>
+					
+			<method name="getInitializeParameters">
+				<body><![CDATA[
+					return {
+						action : "LoadJSON",
+						cmpref : this.documentEditor.documentid,
+						lang : this.documentEditor.vo,
+						documentproperties : this.mFieldNames.join(',')
+					};
+				]]>
+				</body>
+			</method>
+			
+			<method name="updateEditorBinding">
+				<parameter name="theme" />
+				<body><![CDATA[
+					wCore.debug("updateEditorBinding:" + theme);	
+					var old = this.getElementByAnonId('variableseditor');
+					var variablesEditor = document.createElement('vbox');
+					variablesEditor.setAttribute("flex", "1");
+					old.parentNode.replaceChild(variablesEditor, old);
+					variablesEditor.setAttribute("anonid", "variableseditor");
+					if (theme)
+					{
+						var bindingurl = Context.CHROME_BASEURL
+								+ '/module=theme&action=GetBinding&binding='
+								+ theme + '&uilang=' + Context.W_UILANG;		
+						variablesEditor.style.MozBinding = 'url(' + bindingurl + '#cTheme)';
+					}
+				]]>
+				</body>
+			</method>			
+			
+			<method name="fireInitializeComplete">
+				<parameter name="result" />
+				<body><![CDATA[
+					if (result.status != "OK") {
+						this.showErrorMessage(result.contents.errorMessage);
+						this.mDocumentIdentifier = null;
+						this.mTheme = null;
+						this.mVariables = {};	
+						this.updateEditorBinding(this.mTheme);
+						this.collapseContentZone(true);
+					} else {
+						var datas = result.contents;
+						this.mDocumentIdentifier = {
+							id : datas.id,
+							lang : datas.lang,
+							documentversion : datas.documentversion
+						};
+						this.mTheme = datas.theme;
+						this.mVariables = datas.variablesJSON;
+						this.updateEditorBinding(this.mTheme);
+						this.modified = false;
+						this.collapseContentZone(false);
+					}
+					this.mFlattenContent = null;
+					this.mInitialized = true;
+					this.gotoTop();
+				]]>
+				</body>
+			</method>
+			
+			<method name="saveProperties">
+				<body><![CDATA[
+					this.documentEditor.executeServerAction('variables', 'Update');
+				]]>
+				</body>
+			</method>			
+					
+			<method name="getUpdateParameters">
+				<body><![CDATA[
+					var variablesEditor = this.getElementByAnonId('variableseditor');				
+					var attributes = {
+						action : 'UpdateJSON',
+						cmpref : this.mDocumentIdentifier.id,
+						lang : this.mDocumentIdentifier.lang,
+						documentversion : this.mDocumentIdentifier.documentversion,
+						documentproperties : this.mFieldNames.join(','),
+						theme : this.mTheme,
+						variablesJSON: variablesEditor.getValues()
+					};
+					return attributes;
+				]]>
+				</body>
+			</method>
+			
+			<method name="fireUpdateComplete">
+				<parameter name="result" />
+				<body><![CDATA[
+					if (result.status == "OK") {
+						this.modified = false;
+						this.documentEditor.clearTabs();
+						var datas = result.contents;
+						this.mDocumentIdentifier = {
+							id : datas.id,
+							lang : datas.lang,
+							documentversion : datas.documentversion
+						};
+						this.mTheme = datas.theme;
+						this.mVariables = datas.variablesJSON;			
+						var variablesEditor = this.getElementByAnonId('variableseditor');
+						variablesEditor.setInitialValues(this.mVariables);
+						this.showTextMessage("&modules.uixul.bo.doceditor.message.Document-updated;");
+					} 
+					else 
+					{
+						this.showErrorMessage(result.contents.errorMessage);
+					}
+				]]>
+				</body>
+			</method>
+			
+			<method name="onPreview">
+				<parameter name="event" />
+				<body><![CDATA[
+					this.documentEditor.executeServerAction('variables', 'RefreshPreview');
+				]]>
+				</body>
+			</method>
+			
+			<method name="getRefreshPreviewParameters">
+				<body><![CDATA[
+					var variablesEditor = this.getElementByAnonId('variableseditor');
+					var attributes = {
+						action : 'GetMd5',
+						cmpref : this.mDocumentIdentifier.id,
+						lang : this.mDocumentIdentifier.lang,
+						theme : this.mTheme,
+						variablesJSON: variablesEditor.getValues()
+					};
+					return attributes;
+				]]>
+				</body>
+			</method>
+
+			<method name="fireRefreshPreviewComplete">
+				<parameter name="result" />
+				<body><![CDATA[
+					if (result.status == "OK") {
+						var md5 = result.contents.md5;
+						this.documentEditor.module.showPreview(md5);
+					} else {
+						this.showErrorMessage(result.contents.errorMessage);
+					}
+					return null;
+				]]>
+				</body>
+			</method>
+			
+			<method name="clear">
+				<body><![CDATA[
+					wCore.debug("clear cVariablesPanel");
+					this.showTextMessage('');
+					this.mInitialized = false;
+				]]>
+				</body>
+			</method>
+			
+			<method name="onCloseEditor">
+				<body><![CDATA[
+					wCore.debug("onCloseEditor cVariablesPanel");
+					try {
+						this.updateEditorBinding(null);
+					} catch (e) {
+						wCore.error("onCloseEditor", [], e);
+					}
+				]]>
+				</body>
+			</method>
+		</implementation>
+	</binding>
+	
+	<binding id="cVariableSections">
+		<implementation>						
+			<method name="setInitialValues">
+				<parameter name="initialValues" />
+				<body><![CDATA[
+					wCore.debug('cVariableSections.setInitialValues');
+					for (var i = 0; i < this.mVariables.length; i++) {
+						var name = this.mVariables[i];
+						var field = document.getAnonymousElementByAttribute(this, "name", name);
+						if (name in initialValues && initialValues[name] !== null) {
+							if ('setInitialValue' in field) {
+								field.setInitialValue(initialValues[name]);
+							} else {
+								field.setAttribute('initialvalue', initialValues[name]);
+							}
+						} 
+						else 
+						{
+							if ('setInitialValue' in field) 
+							{
+								field.setInitialValue(field.getAttribute('defaultvalue'));
+							} else {
+								field.setAttribute('initialvalue', field.getAttribute('defaultvalue'));
+							}
+						}
+					}
+				]]>
+				</body>
+			</method>	
+			
+			<method name="getValues">
+				<body><![CDATA[
+					var datas = {};
+					for (var i = 0; i < this.mVariables.length; i++) {
+						var name = this.mVariables[i];
+						var field = document.getAnonymousElementByAttribute(this, "name", name);
+						if (field.modified)
+						{
+							datas[name] = field.value;
+						}
+					}
+					return datas;
+				]]>
+				</body>
+			</method>	
+						
+			<method name="reset">
+				<body><![CDATA[
+					for (var i = 0; i < this.mVariables.length; i++) {
+						var name = this.mVariables[i];
+						var field = document.getAnonymousElementByAttribute(this, "name", name);
+						if ('reset' in field) {
+							field.reset();
+						}
+					}
+				]]>
+				</body>
+			</method>	
+			
+			<method name="refreshModifiedState">
+				<body><![CDATA[
+					for (var i = 0; i < this.mVariables.length; i++) {
+						var name = this.mVariables[i];
+						var field = document.getAnonymousElementByAttribute(this, "name", name);
+						if (field.modified) 
+						{
+							this.mPanel.modified = true; 
+							return;
+						}
+					}
+					this.mPanel.modified = false;
+				]]></body>
+			</method>
+		</implementation>
+		
+		<handlers> 			
+			<handler event="fieldModified"><![CDATA[
+				if (!this.mPanel) {return;}
+				if (!this.mPanel.modified) {this.mPanel.modified = true;}
+			]]></handler>
+
+			<handler event="fieldRestored"><![CDATA[
+				if (!this.mPanel) {return;}
+				if (this.mPanel.modified) {this.refreshModifiedState();}
+			]]></handler>
+		</handlers>	
+	</binding>
+		
+	<binding id="cImageCssField" extends="form.cField#cDocumentField">
+		<content>
+			<xul:hbox xbl:inherits="context" flex="1">
+				<xul:checkbox anonid="imagetype" label="Statique" xbl:inherits="disabled" /> 
+				<xul:menulist anonid="statiqueimage" hidden="true" seltype="single" oncommand="document.getBindingParent(this).selectStatic();"
+					rows="1" xbl:inherits="disabled">
+					<xul:menupopup>
+					</xul:menupopup>
+				</xul:menulist>
+				<xul:listbox anonid="internalcontrol" rows="1" seltype="single" xbl:inherits="disabled,tabindex,accesskey" 
+					ondragenter="document.getBindingParent(this).dragEnter(event)"
+					ondragover="document.getBindingParent(this).dragOver(event)"				
+					ondrop="document.getBindingParent(this).drop(event)" />  				
+				<xul:toolbar anonid="mediatoolbar">
+					<xul:toolbarbutton anonid="deletebutton" image="chrome://global/skin/icons/error-16.png" disabled="true" xbl:inherits="disabled" 
+						tooltiptext="&amp;modules.uixul.bo.doceditor.Remove-item-single;"
+						oncommand="document.getBindingParent(this).removeItem();"/>					
+													
+					<xul:toolbarbutton anonid="selectorbutton" image="{IconsBase}/small/folder.png" xbl:inherits="disabled" 
+						tooltiptext="&amp;modules.uixul.bo.doceditor.Open-ressource-dialog;"
+						oncommand="document.getBindingParent(this).openRessourceDialog();"/>	
+					
+					<xul:toolbarbutton anonid="uploadbutton" hidden="true" xbl:inherits="disabled"
+						image="{IconsBase}/small/upload.png" 
+						tooltiptext="&amp;modules.uixul.bo.doceditor.Upload-file-from-disk;"
+						oncommand="document.getBindingParent(this).openFilePicker()" />	
+													
+					<xul:toolbarbutton anonid="helpbutton" image="chrome://global/skin/icons/question-16.png"
+						tooltiptext="&amp;modules.uixul.bo.doceditor.Show-help;" xbl:inherits="hidden=hidehelp" 
+						oncommand="dispatchFieldEvent('fieldHelp');"/>
+				</xul:toolbar>
+			</xul:hbox>
+			<children/>
+		</content>
+		
+		<implementation>
+			<constructor><![CDATA[
+				var theme = this.getAttribute('mediafoldername').split('_')[1];
+				var attributes = {
+					theme : theme
+				};
+				var imgstatic = wCore.executeJSON("theme", "GetStaticImage", attributes);
+
+				var list = this.getElementByAnonId('statiqueimage');
+				for (var i = 0; i < imgstatic.contents.length; i++) {
+					var item = imgstatic.contents[i];
+					list.appendItem(item.label, item.value);
+				}
+			]]>
+			</constructor>
+			
+			<method name="updateUI">
+				<body><![CDATA[
+					this.mUpdatingUI = true;
+					var showStatic = (this.mCurrentValue.length > 0) && (isNaN(parseInt(this.mCurrentValue)));
+					if (showStatic) {
+						var list = this.getElementByAnonId('statiqueimage');
+						this.getElementByAnonId('imagetype').checked = true;
+						list.hidden = false;
+						this.internalControl.hidden = true;
+						this.getElementByAnonId('mediatoolbar').hidden = true;
+						list.value = this.mCurrentValue;
+					} else {
+						this.getElementByAnonId('imagetype').checked = false;
+						this.getElementByAnonId('statiqueimage').hidden = true;
+						this.internalControl.hidden = false;
+						this.getElementByAnonId('mediatoolbar').hidden = false;
+
+						this.updateButtons();
+						var item = this.internalControl.getItemAtIndex(0);
+						if (this.mCurrentValue.length == 0) {
+							if (item !== null) {
+								this.internalControl.removeItemAt(0);
+							}
+						} else {
+							if (item && item.value == this.mCurrentValue) {
+								return;
+							}
+							if (item !== null) {
+								this.internalControl.removeItemAt(0);
+							}
+							var listitem = this.appendItem("",
+									this.mCurrentValue, "");
+							var attributes = {
+								cmpref : this.mCurrentValue,
+								lang : Context.W_LANG
+							};
+							var me = this;
+							var callBack = function(result) {
+								me.onDocumentInfo(result, listitem);
+							};
+							wCore.executeJSON("generic", "Info", attributes,
+									callBack);
+						}
+					}
+					this.mUpdatingUI = false;
+				]]>
+				</body>
+			</method>
+			
+			<method name="selectStatic">
+				<body><![CDATA[
+					var list = this.getElementByAnonId('statiqueimage');
+					wCore.debug('selectStatic:' + list.value);
+					this.value = list.value;
+				]]>
+				</body>
+			</method>				
+			
+			
+		</implementation>
+		<handlers>
+			<handler event="CheckboxStateChange"><![CDATA[
+				if (!this.mUpdatingUI) {
+					if (this.getElementByAnonId('imagetype').checked) {
+						this.value = 'none';
+					} else {
+						this.value = '';
+					}
+				}
+			]]>
+			</handler>		
+		</handlers>	
+	</binding>
+</bindings>

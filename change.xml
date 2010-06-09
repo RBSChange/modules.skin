@@ -25,6 +25,12 @@
         <version>3.0.3</version>
       </versions>
     </dependency>
+    <dependency>
+      <name>change-module/theme</name>
+      <versions>
+        <version>3.0.3</version>
+      </versions>
+    </dependency>
     <dependency optionnal="true">
       <name>extension/zip</name>
       <versions>

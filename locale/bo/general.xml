@@ -100,4 +100,8 @@
 	<entity id="column.endpublicationdate">
 		<locale lang="fr">fin de publication</locale>
 	</entity>
+	<entity id="tab.variables">
+		<locale lang="fr">variables</locale>
+		<locale lang="en">variables</locale>
+	</entity>
 </localization>

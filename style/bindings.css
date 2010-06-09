@@ -1,6 +1,15 @@
 wdialog[template="ImportSkin"]{
 	-moz-binding: url(binding:modules.skin.importSkinDialog#importSkinDialog);
 }
+
+cdocumenteditor#edt_skin_skin cvariablespanel{
+	-moz-binding: url(binding:modules.skin.cEditor#cVariablesPanel);
+}
+
 cfield[fieldtype="border"]{
 	-moz-binding: url(binding:modules.skin.cField#cBorderField);
+}
+
+cfield[fieldtype="imagecss"]{
+	-moz-binding: url(binding:modules.skin.cEditor#cImageCssField);
 }

@@ -151,4 +151,12 @@
 			   wToolkit.printFrame(this.getElementByAnonId("previewFrame"));
 		]]></body>
 	</action>
+	
+	<handler event="registerDocumentEditor"><![CDATA[
+		var editor = event.originalTarget;
+		if (editor.documentname === 'skin')
+		{
+			editor.addTab('variables', "&modules.skin.bo.general.tab.Variables;", 'skin');
+		}
+	]]></handler>
 </actions>
