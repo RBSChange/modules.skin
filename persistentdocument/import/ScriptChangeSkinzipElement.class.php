@@ -1,4 +1,6 @@
 <?php
+require_once WEBEDIT_HOME . '/modules/skin/tools/pclzip.lib.php';
+
 class skin_ScriptChangeSkinzipElement extends import_ScriptObjectElement
 {
 	private $document = null;
@@ -14,12 +16,16 @@ class skin_ScriptChangeSkinzipElement extends import_ScriptObjectElement
 	public function endProcess()
 	{
 		$zipPath = f_util_FileUtils::buildWebeditPath($this->getComputedAttribute('zipPath'));
-		$zipName = basename($zipPath);
+		$zip = new PclZip($zipPath);
+		$tmpFileDir = TMP_PATH . '/skin_import';
+		f_util_FileUtils::rmdir($tmpFileDir);
+		$zip->extract(PCLZIP_OPT_PATH, $tmpFileDir);
+		
 		$skinFolderId = $this->getSkinFolderId();
 		$mediaFolder = $this->getComputedAttribute('mediaFolder');
 		try 
 		{
-			$result = skin_SkinService::getInstance()->importSkinZip($zipPath, $zipName, $skinFolderId, $mediaFolder);
+			$result = skin_SkinService::getInstance()->importSkinZip($tmpFileDir, $skinFolderId, $mediaFolder);
 			$this->document = $result['skin'];
 		}
 		catch (Exception $e)

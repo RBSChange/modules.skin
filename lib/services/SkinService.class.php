@@ -292,119 +292,61 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 	// Importation.
 	
 	/**
-	 * @param String $zipPath
-	 * @param String $zipName
+	 * @param String $tmpDir
 	 * @param Integer $skinFolderId
 	 * @param generic_persistentdocument_folder $mediaFolder
 	 * @return skin_persistentdocument_skin
 	 */
-	public function importSkinZip($zipPath, $zipName, $skinFolderId, $mediaFolder = null)
+	public function importSkinZip($tmpDir, $skinFolderId, $mediaFolder = null)
 	{		
 		$warnings = array();
-		$zip = new ZipArchive();
-		if ($zip->open($zipPath) !== true)
-		{
-			throw new BaseException('Bad archive: '.$zipPath);
-		}
-		$ext = f_util_FileUtils::getFileExtension($zipName, true);
-		$zipContent = $zip->getFromName(substr($zipName, 0, - strlen($ext)));
-		if ($zipContent === false)
-		{
-			throw new BaseException('No content for skin: '.$zipName);
-		}
-		$skinContent = unserialize(gzuncompress($zipContent));
-		
-		if (! is_array($skinContent))
-		{
-			throw new BaseException('Bad content for skin: '.$zipName);
-		}
-		
-		$tmpDir = f_util_FileUtils::buildChangeCachePath('tmp', 'skin-'.mt_rand());
-		f_util_FileUtils::mkdir($tmpDir);
-		$zip->extractTo($tmpDir);
-		$allMedias = array();
+		$skinContent = unserialize(file_get_contents($tmpDir .'/skindata.ser'));	
 		try
 		{
-			$propertyInfo = null;
-			
 			$skin = skin_SkinService::getInstance()->getNewDocumentInstance();
-			$model = $skin->getPersistentModel();
 			foreach ($skinContent as $name => $value)
 			{
-				$propertyInfo = $model->getEditableProperty($name);
-				if ($propertyInfo !== null)
+				if (is_array($value))
 				{
-					$method = 'set' . ucfirst($name);
-					if (is_array($value))
+					$mediaPath = $tmpDir . $value['zippath'];
+					if (file_exists($mediaPath))
 					{
-						if (!isset($allMedias[$value['id']]))
+						$media = media_MediaService::getInstance()->getNewDocumentInstance();
+						foreach ($value as $mediaName => $mediaValue)
 						{
-							$mediaPath = $tmpDir . DIRECTORY_SEPARATOR . $value['id'] . f_util_FileUtils::getFileExtension($value['filename'], true);
-							if (file_exists($mediaPath))
+							if ($mediaName != 'id' && $mediaName != 'zippath')
 							{
-								$media = media_MediaService::getInstance()->getNewDocumentInstance();
-								foreach ($value as $mediaName => $mediaValue)
-								{
-									if ($mediaName != 'id')
-									{
-										$mediaMethod = 'set' . ucfirst($mediaName);
-										$media->$mediaMethod($mediaValue);
-									}
-								}
-								$media->setNewFileName($mediaPath);
-								$media->save($this->getMediaFolderId($skinContent['label'], $mediaFolder));
-								$allMedias[$value['id']] = $media;
-								$skin->$method($media);
-							}
-							else
-							{
-								if (Framework::isDebugEnabled())
-								{
-									Framework::debug(__METHOD__ . ' invalid media path: "' . $mediaPath . '"');
-								}
-								if (!in_array('modules.skin.bo.general.Import-warning'))
-								{
-									$warnings[] = 'modules.skin.bo.general.Import-warning';
-								}
+								$mediaMethod = 'set' . ucfirst($mediaName);
+								$media->$mediaMethod($mediaValue);
 							}
 						}
-						else
-						{
-							$skin->$method($allMedias[$value['id']]);
-						}
-					}
-					else if (is_string($value))
-					{
-						if (preg_match('/\|#[a-f0-9]{6}/i', $value))
-						{
-							$value = explode("|", $value);
-							$value = $value[1];
-						}						
-						$skin->$method($value);
+						$media->setNewFileName($mediaPath);
+						$media->save($this->getMediaFolderId($skinContent['__label'], $mediaFolder));
+						$skinContent[$name] = $media->getId();
 					}
 					else
 					{
-						$skin->$method($value);
-					}
-				}
-				else
-				{
-					if (Framework::isDebugEnabled())
-					{
-						Framework::debug(__METHOD__ . ' unknown property: "' . $name . '"');
-					}
-					if (!in_array('modules.skin.bo.general.Import-warning2'))
-					{
-						$warnings[] = 'modules.skin.bo.general.Import-warning2';
-					}
+						if (Framework::isDebugEnabled())
+						{
+							Framework::debug(__METHOD__ . ' invalid media path: "' . $mediaPath . '"');
+						}
+						if (!in_array('modules.skin.bo.general.Import-warning'))
+						{
+							$warnings[] = 'modules.skin.bo.general.Import-warning';
+						}
+						$skinContent[$name] = null;
+					}					
 				}
 			}
+			
+			$skin->setImportInfos($skinContent);
+
 			$skin->save($skinFolderId);
 			f_util_FileUtils::rmdir($tmpDir);
 		}
 		catch (Exception $e)
 		{
-			Framework::warn(__METHOD__ . ' failed to import zipped skin: "' . $zipPath . '"');
+			Framework::warn(__METHOD__ . ' failed to import skin: "' . $tmpDir . '"');
 			Framework::exception($e);
 			f_util_FileUtils::rmdir($tmpDir);
 			throw new BaseException('An error occured during import: '.$e->getMessage());

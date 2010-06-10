@@ -87,6 +87,84 @@ class skin_persistentdocument_skin extends skin_persistentdocument_skinbase  imp
 	}
 	
 	/**
+	 * @return array
+	 */
+	public function getExportInfos()
+	{
+		$result = array('__theme' => $this->getTheme(), '__label' => $this->getLabel(), 
+						'__description' => $this->getDescription());
+		
+		$vars = $this->getVarsInfos();
+		foreach ($vars as $name => $infos) 
+		{
+			$value = $this->getS18sProperty($name);
+			if ($value !== null)
+			{
+				if ($infos['type'] === 'imagecss' && is_numeric($value))
+				{
+					$media = $this->getMediaById($value);
+					if ($media === null)
+					{
+						continue;
+					}
+					$value = array('id' => $media->getId(), 'label' => $media->getLabel(), 'title' => $media->getTitle(), 
+						'description' => $media->getDescription(), 'credit' => $media->getCredit(), 
+						'mediatype' => $media->getMediatype(), 'filename' => $media->getFilename());
+				}
+				$result[$name] = $value;
+			}
+		}
+		return $result;
+	}
+	
+	/**
+	 * @param array $vars
+	 */
+	public function setImportInfos($vars)
+	{
+		foreach ($vars as $name => $value)
+		{
+			if ($value === null)
+			{
+				continue;
+			}
+			
+			switch ($name) 
+			{
+				case '__theme':
+					$this->setTheme($value);
+					break;
+				case '__label':
+					$this->setLabel($value);
+					break;	
+				case '__description':
+					$this->setDescription($value);
+					break;				
+				default:
+					$this->setS18sProperty($name, $value);
+					break;
+			}
+		}
+	}
+	
+	/**
+	 * @param integer $id
+	 * @return media_persistentdocument_media
+	 */
+	private function getMediaById($id)
+	{
+		try 
+		{
+			return DocumentHelper::getDocumentInstance($id, 'modules_media/media');
+		}
+		catch (Exception $e)
+		{
+			Framework::exception($e);
+		}
+		return null;
+	}
+	
+	/**
 	 * @param string $name
 	 * @return boolean
 	 */
