@@ -1,5 +1,8 @@
 <?php
-require_once WEBEDIT_HOME . '/modules/skin/tools/pclzip.lib.php';
+if (!class_exists('PclZip', false))
+{
+	require_once WEBEDIT_HOME . '/modules/skin/tools/pclzip.lib.php';
+}
 
 /**
  * skin_ImportAction
