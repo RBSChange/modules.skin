@@ -12,7 +12,7 @@
 
 			<method name="onInitialize">
 				<body><![CDATA[
-					this.resizeTo(400, 150);
+					this.autoResize(400, 150);
 				]]></body>
 			</method>
 
