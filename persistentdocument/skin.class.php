@@ -221,6 +221,26 @@ class skin_persistentdocument_skin extends skin_persistentdocument_skinbase  imp
 					Framework::exception($e);
 					$value = 'none';
 				}
+			} 
+			else if  ($type === 'document' && intval($value) > 0)
+			{
+				try 
+				{
+					$document = DocumentHelper::getDocumentInstance($value);
+					if ($document instanceof media_persistentdocument_media) 
+					{
+						$value = 'url('.$document->getDocumentService()->generateUrl($document).')';
+					}
+					else
+					{
+						$value = 'url('.LinkHelper::getDocumentUrl($document).')';
+					}
+				}
+				catch (Exception $e)
+				{
+					Framework::exception($e);
+					$value = 'none';
+				}
 			}
 			else if (preg_match('/\|#[a-f0-9]{6}/i', $value))
 			{
