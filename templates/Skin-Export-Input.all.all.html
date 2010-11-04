@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
-<head>
-<title i18n:translate="&modules.skin.bo.general.export.Title;">Export skin</title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta http-equiv="content-language" content="en" />
-<meta name="language" content="en" />
-<span tal:replace="styles" />
-</head>
-<body>
-<h1 style="text-align: center;" i18n:translate="&modules.skin.bo.general.export.Title;">Export Skin</h1>
-<h2 style="margin: 15px auto; text-align: center;"><span i18n:translate="&modules.skin.bo.general.export.From;">From</span> <span tal:content="portalname" style="text-decoration: underline;" /> <span i18n:translate="&modules.skin.bo.general.export.toLabel;">to</span></h2>
-<div style="margin-top: 15px; width: 100%; text-align: center;">
-<form action="#" method="post">
-<select name="destination" size="7" style="width: 90%;" onchange="document.getElementById('button').removeAttribute('disabled');">
-<option tal:repeat="item portals" tal:attributes="value item/value" tal:content="item/name"/>
-</select>
-<input type="hidden" name="skins" tal:attributes="value skins"/>
-<input type="submit" value="Export" i18n:attributes="value &modules.skin.bo.general.export.Export;" disabled="true" id="button" style="margin-top: 15px;"/>
-</form>
-</div>
-</body>
+	<head>
+		<title change:translate="modules.skin.bo.general.export.Title"></title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="content-language" content="en" />
+		<meta name="language" content="en" />
+		<tal:block tal:replace="styles" />
+	</head>
+	<body>
+		<h1 style="text-align: center;" change:translate="modules.skin.bo.general.export.Title"></h1>
+		<h2 style="margin: 15px auto; text-align: center;"><span change:translate="modules.skin.bo.general.export.From"></span> <span style="text-decoration: underline;">${portalname}</span> <span change:translate="modules.skin.bo.general.export.toLabel"></span></h2>
+		<form action="#" method="post">
+			<div style="margin-top: 15px; width: 100%; text-align: center;">
+				<select name="destination" size="7" style="width: 90%;" onchange="document.getElementById('button').removeAttribute('disabled');">
+					<option tal:repeat="item portals" tal:attributes="value item/value" tal:content="item/name"/>
+				</select>
+				<input type="hidden" name="skins" value="${skins}" />
+				<input type="submit" value="Export" i18n:attributes="value &modules.skin.bo.general.export.Export;" disabled="disabled" id="button" style="margin-top: 15px;"/>
+			</div>
+		</form>
+	</body>
 </html>
