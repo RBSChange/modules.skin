@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.skin.list.valignment" lcid="fr_FR">
+  <key id="baseline">base de l'élément alignée avec celle de son parent</key>
+  <key id="sub">base de l'élément alignée avec la ligne de base indice de son parent</key>
+  <key id="super">base de l'élément alignée avec la ligne de base exposant de son parent</key>
+  <key id="texttop">haut de l'élément aligné avec le haut de fonte de l'élément parent</key>
+  <key id="textbottom">bas de l'élément aligné avec le bas de fonte de l'élément parent</key>
+  <key id="middle">milieu de l'élément aligné avec le milieu de bas de casse de son parent</key>
+  <key id="top">haut de l'élément aligné avec le haut de la ligne entière</key>
+  <key id="bottom">bas de l'élément aligné avec le bas de la ligne entière</key>
+</i18n>

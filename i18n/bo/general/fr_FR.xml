@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.skin.bo.general" lcid="fr_FR">
+  <key id="module-name">habillage</key>
+  <key id="tree-root-name">habillage</key>
+  <key id="system-folder-name">habillage</key>
+  <key id="skin">habillage</key>
+  <key id="label">label</key>
+  <key id="description">description</key>
+  <key id="import-title">import d'un Habillage</key>
+  <key id="import-error">une erreur s'est produite, votre Habillage n'a pas pu être importé.</key>
+  <key id="import-close">fermer</key>
+  <key id="import-retry">réessayer</key>
+  <key id="import-file">sélectionner votre fichier zip à importer</key>
+  <key id="import-import">importer !</key>
+  <key id="import-other">importer un autre Habillage</key>
+  <key id="import-success">habillage importé !</key>
+  <key id="import-warning">un ou plusieurs médias sont manquants, votre habillage ne sera pas complet.</key>
+  <key id="import-warning2">votre habillage n'est pas totalement compatible avec cette version du module, il ne sera pas complet.</key>
+  <key id="importing">importation en cours</key>
+  <key id="skin-imported">l'habillage a bien été importé.</key>
+  <key id="import-other-skin">importer un autre habillage</key>
+  <key id="skin-imported-with-warnings">l'habillage a bien été importé mais avec les avertissement suivants</key>
+  <key id="no-preview-title">Veuillez sélectionner une page à prévisualiser</key>
+  <key id="no-preview-text">Sélectionnez une page dans le sélecteur des ressources du champ situé dans la barre d'outils ci-dessus.&lt;br /&gt;Puis cliquez sur le bouton ″Actualiser″ à côté du champ.</key>
+  <key id="page-to-preview">page à prévisualiser</key>
+</i18n>

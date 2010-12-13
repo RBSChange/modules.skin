@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.skin.errors" lcid="de_DE">
+  <key id="modules-skin-getpreferencesdocument">Sie besitzen nicht die Rechte folgende Aktion auszuführen: ″Präferenzen öffnen″</key>
+  <key id="modules-skin-order">Sie besitzen nicht die Rechte folgende Aktion auszuführen: ″Reihenfolge der Elemente ändern″</key>
+  <key id="modules-skin-activate-skin">Sie besitzen nicht die Rechte folgende Aktion auszuführen: ″Skin aktivieren″</key>
+  <key id="modules-skin-cancel-skin">Sie besitzen nicht die Rechte folgende Aktion auszuführen: ″Skin abbrechen″</key>
+  <key id="modules-skin-enabled">Sie besitzen nicht die Rechte folgende Aktion auszuführen: ″Zugang zum Modul″</key>
+</i18n>

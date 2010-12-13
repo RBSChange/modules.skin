@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.skin.list.brepetition" lcid="en_GB">
+  <key id="repeat">repeat horizontally and vertically</key>
+  <key id="repeatx">repeat horizontally</key>
+  <key id="repeaty">repeat vertically</key>
+  <key id="norepeat">no repeat</key>
+</i18n>

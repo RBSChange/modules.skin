@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.skin.bo.general" lcid="en_GB">
+  <key id="module-name">skin</key>
+  <key id="tree-root-name">skin</key>
+  <key id="system-folder-name">skin</key>
+  <key id="skin">skin</key>
+  <key id="label">label</key>
+  <key id="description">description</key>
+  <key id="import-title">import skin</key>
+  <key id="import-error">an error has occured, your skin was not imported.</key>
+  <key id="import-close">close</key>
+  <key id="import-retry">retry</key>
+  <key id="import-file">select your zip file to import</key>
+  <key id="import-import">import !</key>
+  <key id="import-other">import another skin</key>
+  <key id="import-success">skin imported!</key>
+  <key id="import-warning">one or many pictures are missing, your skin content won't be full.</key>
+  <key id="import-warning2">your skin is not fully compatible with this version of the module, it won't be full.</key>
+  <key id="no-preview-title">Please select a page to preview</key>
+  <key id="no-preview-text">Select a page in the resources selector of the field in the toolbar above.&lt;br/&gt;Then click on the ″Refresh″ button next to the field.</key>
+  <key id="page-to-preview">page to preview</key>
+</i18n>

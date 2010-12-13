@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.skin.document.skin" lcid="en_GB">
+  <key id="document-name">skin</key>
+  <key id="label">name</key>
+  <key id="label-help">skin name</key>
+  <key id="description">description</key>
+  <key id="description-help">skin description</key>
+  <key id="startpublicationdate">start publication date</key>
+  <key id="startpublicationdate-help">start publication date</key>
+  <key id="endpublicationdate">end publication date</key>
+  <key id="endpublicationdate-help">end publication date</key>
+  <key id="default-version-label">version #{count} of {label}</key>
+  <key id="theme">theme variables</key>
+</i18n>

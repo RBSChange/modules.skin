@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.skin.bo.actions" lcid="en_GB">
+  <key id="create_">create...</key>
+  <key id="create-skin">create skin</key>
+  <key id="create-subskin">create skin version</key>
+  <key id="export-skin">export skin</key>
+  <key id="import-skin">import skin</key>
+  <key id="preview-skin">preview skin</key>
+  <key id="preview">preview</key>
+  <key id="togglepreview">thumbnail</key>
+  <key id="nopreview">No preview available.</key>
+  <key id="backtoform">back to form</key>
+  <key id="backtolist">back to list</key>
+</i18n>

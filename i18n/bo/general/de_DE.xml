@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.skin.bo.general" lcid="de_DE">
+  <key id="module-name">Skin</key>
+  <key id="tree-root-name">Skin</key>
+  <key id="system-folder-name">Skin</key>
+  <key id="skin">Skin</key>
+  <key id="label">Name</key>
+  <key id="description">Beschreibung</key>
+</i18n>

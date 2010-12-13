@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.skin.errors" lcid="en_GB">
+  <key id="modules-skin-getpreferencesdocument">you don't have the appropriate permission to perform this operation : ″Open preferences window″</key>
+  <key id="modules-skin-order">you don't have the appropriate permission to perform this operation : ″Sort out the elements″</key>
+  <key id="modules-skin-activate-skin">you don't have the appropriate permission to perform this operation : ″Activate a skin″</key>
+  <key id="modules-skin-cancel-skin">you don't have the appropriate permission to perform this operation : ″Cancel a skin″</key>
+  <key id="modules-skin-enabled">you don't have the appropriate permission to perform this operation : ″Access to the module″</key>
+</i18n>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.skin.list.fontfamily" lcid="de_DE">
+  <key id="serif">Police mit Achsabstand (serif)</key>
+  <key id="sansserif">Balkenpolice (sans serif)</key>
+  <key id="monospace">Police mit fixem Abstand (monospace)</key>
+  <key id="cursive">Kursivpolice</key>
+  <key id="fantasy">Phantasiepolice</key>
+</i18n>

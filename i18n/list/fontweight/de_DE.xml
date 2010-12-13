@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.skin.list.fontweight" lcid="de_DE">
+  <key id="normal">normal</key>
+  <key id="bold">fett</key>
+  <key id="bolder">fetter</key>
+  <key id="lighter">leichter</key>
+</i18n>

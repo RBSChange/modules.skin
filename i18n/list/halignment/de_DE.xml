@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.skin.list.halignment" lcid="de_DE">
+  <key id="left">links</key>
+  <key id="center">zentriert</key>
+  <key id="right">rechts</key>
+  <key id="justify">Blocksatz</key>
+</i18n>

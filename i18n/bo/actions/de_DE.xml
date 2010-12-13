@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.skin.bo.actions" lcid="de_DE">
+  <key id="create-skin">neuen Skin erzeugen</key>
+  <key id="export-skin">einen Skin exportieren</key>
+  <key id="preview-skin">Skin Vorschau</key>
+  <key id="preview">Vorschau</key>
+  <key id="togglepreview">Miniatur</key>
+  <key id="nopreview">Keine Vorschau verfügbar.</key>
+</i18n>

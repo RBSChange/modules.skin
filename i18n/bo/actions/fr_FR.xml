@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.skin.bo.actions" lcid="fr_FR">
+  <key id="create_">créer...</key>
+  <key id="create-skin">créer un habillage</key>
+  <key id="create-subskin">créer une version d'habillage</key>
+  <key id="export-skin">exporter un habillage</key>
+  <key id="import-skin">importer un habillage</key>
+  <key id="preview-skin">prévisualiser l'habillage</key>
+  <key id="preview">prévisualisation</key>
+  <key id="togglepreview">miniature</key>
+  <key id="nopreview">Aucune prévisualisation disponible.</key>
+  <key id="backtoform">retour au formulaire</key>
+  <key id="backtolist">retour à la liste</key>
+</i18n>
