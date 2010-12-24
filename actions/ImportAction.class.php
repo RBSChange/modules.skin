@@ -50,7 +50,7 @@ class skin_ImportAction extends f_action_BaseJSONAction
 		$warnings = array();
 		foreach ($result['warnings'] as $warning)
 		{
-			$warnings[] = f_locale::translateUI('&'.$warning.';'); 
+			$warnings[] = f_Locale::translateUI('&'.$warning.';'); 
 		}		
 		return $this->sendJSON(array('warnings' => $result['warnings']));
 	}
