@@ -20,6 +20,7 @@ class skin_PreviewAction extends f_action_BaseAction
 		$tmpskin = skin_SkinService::getInstance()->getNewDocumentInstance();
 		$skin->copyTo($tmpskin);
 		$tmpskin->setVariablesJSON($skinParams['variablesJSON']);
+		$tmpskin->setPublicationstatus(f_persistentdocument_PersistentDocument::STATUS_PUBLISHED);
 		$page->setSkin($tmpskin);
 		website_PageService::getInstance()->render($page);
 	}
