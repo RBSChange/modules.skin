@@ -5,49 +5,6 @@
  */
 class skin_persistentdocument_skin extends skin_persistentdocument_skinbase  implements f_web_CSSVariables
 {
-	
-	/**
-	 * @see f_persistentdocument_PersistentDocumentImpl::addTreeAttributes()
-	 *
-	 * @param string $moduleName
-	 * @param string $treeType
-	 * @param array $nodeAttributes
-	 */
-	protected function addTreeAttributes($moduleName, $treeType, &$nodeAttributes)
-	{
-		
-		$nodeAttributes['subskinidof'] = $this->getSubskinidof();
-		$nodeAttributes['currentsubskinid'] = $this->getCurrentsubskinid();
-		
-		if ($treeType == 'wlist')
-		{
-			$lang = RequestContext::getInstance()->getUILang();
-			$nodeAttributes['startpublicationdate'] = date_DateFormat::format($this->getUIStartpublicationdate(), null, $lang);
-			$nodeAttributes['endpublicationdate'] = date_DateFormat::format($this->getUIEndpublicationdate(), null, $lang);
-		}
-	}
-	
-	/**
-	 * @param string $actionType
-	 * @param array $formProperties
-	 */
-	public function addFormProperties($propertiesNames, &$formProperties)
-	{
-		if (in_array('variablesJSON', $propertiesNames))
-		{
-			$string = $this->getS18s();
-			if (f_util_StringUtils::isEmpty($string))
-			{
-				$data = array();
-			}
-			else
-			{
-				$data = unserialize($string);
-			}
-			$formProperties["variablesJSON"] = $data; 
-		}		
-	}
-	
 	/**
 	 * Return a identifier for the set of variable
 	 * @return string

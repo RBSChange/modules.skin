@@ -6,7 +6,6 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 	 */
 	private static $instance;
 	
-
 	/**
 	 * @return skin_SkinService
 	 */
@@ -387,5 +386,45 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 			$this->mediaFolderId[$skinName] = $folder->getId();
 		}
 		return $this->mediaFolderId[$skinName];
+	}
+	
+	/**
+	 * @param skin_persistentdocument_skin $document
+	 * @param string $moduleName
+	 * @param string $treeType
+	 * @param array $nodeAttributes
+	 */
+	public function addTreeAttributes($document, $moduleName, $treeType, &$nodeAttributes)
+	{
+		$nodeAttributes['subskinidof'] = $document->getSubskinidof();
+		$nodeAttributes['currentsubskinid'] = $document->getCurrentsubskinid();
+		if ($treeType == 'wlist')
+		{
+			$lang = RequestContext::getInstance()->getUILang();
+			$nodeAttributes['startpublicationdate'] = date_DateFormat::format($document->getUIStartpublicationdate(), null, $lang);
+			$nodeAttributes['endpublicationdate'] = date_DateFormat::format($document->getUIEndpublicationdate(), null, $lang);
+		}
+	}
+	
+	/**
+	 * @param skin_persistentdocument_skin $document
+	 * @param string $actionType
+	 * @param array $formProperties
+	 */
+	public function addFormProperties($document, $propertiesNames, &$formProperties)
+	{
+		if (in_array('variablesJSON', $propertiesNames))
+		{
+			$string = $document->getS18s();
+			if (f_util_StringUtils::isEmpty($string))
+			{
+				$data = array();
+			}
+			else
+			{
+				$data = unserialize($string);
+			}
+			$formProperties["variablesJSON"] = $data; 
+		}		
 	}
 }
