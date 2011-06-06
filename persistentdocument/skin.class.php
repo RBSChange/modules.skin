@@ -166,32 +166,12 @@ class skin_persistentdocument_skin extends skin_persistentdocument_skinbase  imp
 			{
 				return $this->getVarDefaultValue($name);
 			}
-			if ($type === 'imagecss' && is_numeric($value))
-			{
-				try 
-				{
-					$media = DocumentHelper::getDocumentInstance($value, "modules_media/media");
-					$value = 'url('.$media->getDocumentService()->generateUrl($media).')';
-				}
-				catch (Exception $e)
-				{
-					Framework::exception($e);
-					$value = 'none';
-				}
-			} 
-			else if  ($type === 'document' && intval($value) > 0)
+			if (is_numeric($value) && ($type === 'document' || $type === 'imagecss'))
 			{
 				try 
 				{
 					$document = DocumentHelper::getDocumentInstance($value);
-					if ($document instanceof media_persistentdocument_media) 
-					{
-						$value = 'url('.$document->getDocumentService()->generateUrl($document).')';
-					}
-					else
-					{
-						$value = 'url('.LinkHelper::getDocumentUrl($document).')';
-					}
+					$value = 'url('.LinkHelper::getDocumentUrl($document).')';
 				}
 				catch (Exception $e)
 				{
