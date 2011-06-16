@@ -4,4 +4,6 @@
   <key id="log-update-skin">log-update-skin</key>
   <key id="insert-skin">insert.skin {documentlabel}</key>
   <key id="log-insert-skin">log-insert-skin</key>
+  <key id="deactivated-skin">deactivated.skin {documentlabel}</key>
+  <key id="log-deactivated-skin">log deactivated skin</key>
 </i18n>
