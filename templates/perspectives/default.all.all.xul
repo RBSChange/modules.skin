@@ -17,25 +17,25 @@
 			<toolbox>
 				<toolbar class="change-toolbar">
 					<hbox>
-						<toolbarbutton change:icon="arrow_left_blue/small" 
-							i18n:attributes="label &amp;modules.skin.bo.actions.Backtoform;" oncommand="showForm()" />
+						<toolbarbutton change:icon="arrow_left_blue/small" label="${transui:m.skin.bo.actions.backtoform,ucf,attr}"
+							oncommand="showForm()" />
 						<toolbarseparator/>
 					</hbox>
 					<spacer flex="1" />
 					<hbox>
 						<vbox flex="1" pack="center">
-							<label i18n:attributes="label &amp;modules.skin.bo.general.Page-to-previewLabel;"/>
+							<label>${transui:m.skin.bo.general.page-to-previewLabel,ucf,attr}</label>
 						</vbox>
 						<cfield fieldtype="document" width="220" moduleselector="website" allow="modules_website_page" 
-								name="templatePreview" anonid="templatePreview" label="Template" hidehelp="true"/>
-						<toolbarbutton change:icon="refresh/small" 
-							i18n:attributes="label &amp;modules.uixul.bo.actions.Refresh;" oncommand="refreshPreview()" />
+							name="templatePreview" anonid="templatePreview" label="Template" hidehelp="true"/>
+						<toolbarbutton change:icon="refresh/small" label="${transui:m.uixul.bo.actions.refresh,ucf,attr}"
+							oncommand="refreshPreview()" />
 					</hbox>
 					<spacer flex="1" />
 					<hbox>
 						<toolbarseparator/>
-						<toolbarbutton change:icon="printer/small" 
-							i18n:attributes="label &amp;modules.uixul.bo.layout.Print;" oncommand="printPreview()" />
+						<toolbarbutton change:icon="printer/small" label="${transui:m.uixul.bo.layout.print,ucf,attr}"
+							oncommand="printPreview()" />
 					</hbox>
 				</toolbar>
 			</toolbox>
