@@ -104,7 +104,7 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 		try 
 		{
 			$rc->beginI18nWork($masterSkin->getLang());
-			$masterSkin->copyTo($initialSubSkin, true);
+			$masterSkin->copyPropertiesTo($initialSubSkin, true);
 			$initialSubSkin->setSubskinidof($masterSkin->getId());			
 			$initialSubSkin->setStartpublicationdate(null);
 			$initialSubSkin->setEndpublicationdate(null);
@@ -136,7 +136,7 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 		try 
 		{
 			$rc->beginI18nWork($fromSkin->getLang());
-			$fromSkin->copyTo($subSkin, true);
+			$fromSkin->copyPropertiesTo($subSkin, true);
 			$subSkin->setSubskinidof($masterSkinId);
 			$subSkin->setCurrentsubskinid(null);
 			
@@ -179,7 +179,7 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 		try 
 		{
 			$rc->beginI18nWork($subSkin->getLang());
-			$subSkin->copyTo($masterSkin, true);
+			$subSkin->copyPropertiesTo($masterSkin, true);
 			$masterSkin->setSubskinidof(null);
 			$masterSkin->setCurrentsubskinid($subSkin->getId());			
 			$masterSkin->setPublicationstatus('ACTIVE');
