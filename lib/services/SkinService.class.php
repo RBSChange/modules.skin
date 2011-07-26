@@ -400,9 +400,8 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 		$nodeAttributes['currentsubskinid'] = $document->getCurrentsubskinid();
 		if ($treeType == 'wlist')
 		{
-			$lang = RequestContext::getInstance()->getUILang();
-			$nodeAttributes['startpublicationdate'] = date_DateFormat::format($document->getUIStartpublicationdate(), null, $lang);
-			$nodeAttributes['endpublicationdate'] = date_DateFormat::format($document->getUIEndpublicationdate(), null, $lang);
+			$nodeAttributes['startpublicationdate'] = date_Formatter::toDefaultDateTimeBO($document->getUIStartpublicationdate());
+			$nodeAttributes['endpublicationdate'] = date_Formatter::toDefaultDateTimeBO($document->getUIEndpublicationdate());
 		}
 	}
 	
