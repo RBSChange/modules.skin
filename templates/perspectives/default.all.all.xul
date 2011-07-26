@@ -17,7 +17,7 @@
 			<toolbox>
 				<toolbar class="change-toolbar">
 					<hbox>
-						<toolbarbutton change:icon="arrow_left_blue/small" label="${transui:m.skin.bo.actions.backtoform,ucf,attr}"
+						<toolbarbutton change:img="icon/small/arrow_left_blue.png" label="${transui:m.skin.bo.actions.backtoform,ucf,attr}"
 							oncommand="showForm()" />
 						<toolbarseparator/>
 					</hbox>
@@ -28,13 +28,13 @@
 						</vbox>
 						<cfield fieldtype="document" width="220" moduleselector="website" allow="modules_website_page" 
 							name="templatePreview" anonid="templatePreview" label="Template" hidehelp="true"/>
-						<toolbarbutton change:icon="refresh/small" label="${transui:m.uixul.bo.actions.refresh,ucf,attr}"
+						<toolbarbutton change:img="icon/small/refresh.png" label="${transui:m.uixul.bo.actions.refresh,ucf,attr}"
 							oncommand="refreshPreview()" />
 					</hbox>
 					<spacer flex="1" />
 					<hbox>
 						<toolbarseparator/>
-						<toolbarbutton change:icon="printer/small" label="${transui:m.uixul.bo.layout.print,ucf,attr}"
+						<toolbarbutton change:img="icon/small/printer.png" label="${transui:m.uixul.bo.layout.print,ucf,attr}"
 							oncommand="printPreview()" />
 					</hbox>
 				</toolbar>
