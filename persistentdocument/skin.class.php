@@ -3,7 +3,7 @@
  * skin_persistentdocument_skin
  * @package skin
  */
-class skin_persistentdocument_skin extends skin_persistentdocument_skinbase  implements f_web_CSSVariables
+class skin_persistentdocument_skin extends skin_persistentdocument_skinbase implements website_CSSVariables
 {
 	/**
 	 * Return a identifier for the set of variable
