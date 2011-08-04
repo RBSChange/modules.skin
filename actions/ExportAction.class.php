@@ -1,17 +1,17 @@
 <?php
 if (!class_exists('PclZip', false))
 {
-	require_once WEBEDIT_HOME . '/modules/skin/tools/pclzip.lib.php';
+	require_once PROJECT_HOME . '/modules/skin/tools/pclzip.lib.php';
 }
 
 /**
  * skin_ExportAction
  * @package modules.skin.actions
  */
-class skin_ExportAction extends f_action_BaseAction
+class skin_ExportAction extends change_Action
 {
 	/**
-	 * @param Request $request
+	 * @param change_Request $request
 	 * @return skin_persistentdocument_skin
 	 */
 	private function getSkinFromRequest($request)
@@ -20,8 +20,8 @@ class skin_ExportAction extends f_action_BaseAction
 	}
 	
 	/**
-	 * @param Context $context
-	 * @param Request $request
+	 * @param change_Context $context
+	 * @param change_Request $request
 	 */
 	public function _execute($context, $request)
 	{
@@ -55,7 +55,7 @@ class skin_ExportAction extends f_action_BaseAction
 		readfile($zipFile);
 		@unlink($zipFile);
 		f_util_FileUtils::rmdir($tmpFileDir);
-		return View::NONE;
+		return change_View::NONE;
 	}
 	
 	public function isSecure()

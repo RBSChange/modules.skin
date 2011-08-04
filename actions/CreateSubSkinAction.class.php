@@ -3,11 +3,11 @@
  * skin_CreateSubSkinAction
  * @package modules.skin.actions
  */
-class skin_CreateSubSkinAction extends f_action_BaseJSONAction
+class skin_CreateSubSkinAction extends change_JSONAction
 {
 	/**
-	 * @param Context $context
-	 * @param Request $request
+	 * @param change_Context $context
+	 * @param change_Request $request
 	 */
 	public function _execute($context, $request)
 	{
@@ -17,7 +17,7 @@ class skin_CreateSubSkinAction extends f_action_BaseJSONAction
 	}
 	
 	/**
-	 * @param Request $request
+	 * @param change_Request $request
 	 * @return skin_persistentdocument_skin
 	 */
 	private function getCurrentSkin($request)

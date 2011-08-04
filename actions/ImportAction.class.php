@@ -1,20 +1,20 @@
 <?php
 if (!class_exists('PclZip', false))
 {
-	require_once WEBEDIT_HOME . '/modules/skin/tools/pclzip.lib.php';
+	require_once PROJECT_HOME . '/modules/skin/tools/pclzip.lib.php';
 }
 
 /**
  * skin_ImportAction
  * @package modules.skin.actions
  */
-class skin_ImportAction extends f_action_BaseJSONAction
+class skin_ImportAction extends change_JSONAction
 {
 	private $mediaFolderId = array();
 	
 	/**
-	 * @param Context $context
-	 * @param Request $request
+	 * @param change_Context $context
+	 * @param change_Request $request
 	 */
 	public function _execute($context, $request)
 	{

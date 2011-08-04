@@ -3,15 +3,15 @@
  * skin_NoPreviewAction
  * @package modules.skin.actions
  */
-class skin_NoPreviewAction extends f_action_BaseAction
+class skin_NoPreviewAction extends change_Action
 {
 	/**
-	 * @param Context $context
-	 * @param Request $request
+	 * @param change_Context $context
+	 * @param change_Request $request
 	 */
 	public function _execute($context, $request)
 	{
-		return View::SUCCESS;
+		return change_View::SUCCESS;
 	}
 	
 	public function isSecure()

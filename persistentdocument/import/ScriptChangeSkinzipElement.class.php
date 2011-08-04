@@ -1,7 +1,7 @@
 <?php
 if (!class_exists('PclZip', false))
 {
-	require_once WEBEDIT_HOME . '/modules/skin/tools/pclzip.lib.php';
+	require_once PROJECT_HOME . '/modules/skin/tools/pclzip.lib.php';
 }
 
 class skin_ScriptChangeSkinzipElement extends import_ScriptObjectElement
