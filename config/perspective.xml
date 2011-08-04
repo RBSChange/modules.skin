@@ -47,8 +47,8 @@
 			</children>
 			<styles properties="block actualtype"/>
 			<columns>
-				<column name="startpublicationdate" label="Startpublicationdate" flex="1"/>
-				<column name="endpublicationdate" label="Endpublicationdate" flex="1"/>
+				<column name="startpublicationdate" flex="1"/>
+				<column name="endpublicationdate" flex="1"/>
 			</columns>
 			<contextactions>
 				<contextaction name="edit"/>
