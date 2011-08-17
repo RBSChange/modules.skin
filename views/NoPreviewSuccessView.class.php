@@ -8,6 +8,6 @@ class skin_NoPreviewSuccessView extends change_View
 	 */
 	public function _execute($context, $request)
 	{
-		$this->setTemplateName('Skin-NoPreview-Success', K::HTML);
+		$this->setTemplateName('Skin-NoPreview-Success', 'html');
 	}
 }
