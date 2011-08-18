@@ -11,8 +11,8 @@ class skin_PreviewAction extends change_Action
 	 */
 	public function _execute($context, $request)
 	{
-		$session = $context->getUser()->getAttribute('skinPreview');
-		$skinParams = $session[$request->getParameter('md5')];
+		$context->getUser()->setUserNamespace(change_User::BACKEND_NAMESPACE);
+		$skinParams = change_Controller::getInstance()->getStorage()->readForUser($request->getParameter('md5'));
 		$pageId = $request->getParameter('pageid');		
 		$page = DocumentHelper::getDocumentInstance($pageId);
 			

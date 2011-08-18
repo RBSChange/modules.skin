@@ -13,8 +13,9 @@ class skin_GetMd5Action extends change_JSONAction
 	{	
 		$finalParams = $request->getParameters();
 		$md5 = md5(serialize($finalParams));
-		$context->getUser()->removeAttribute('skinPreview');
-		$context->getUser()->setAttribute('skinPreview', array($md5 => $finalParams));
+		$context->getUser()->setUserNamespace(change_User::BACKEND_NAMESPACE);
+		$sp = array($md5 => $finalParams);
+		$skinParams = change_Controller::getInstance()->getStorage()->writeForUser('skinPreview', $sp);
 		return $this->sendJSON(array('md5' => $md5));
 	}
 	
