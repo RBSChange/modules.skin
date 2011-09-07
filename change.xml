@@ -2,40 +2,9 @@
 <change xmlns="http://www.rbs.fr/schema/change-component/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rbs.fr/schema/change-component/1.0 http://www.rbschange.fr/static/schema/change-component/1.0.xsd">
   <name>skin</name>
   <type>change-module</type>
-  <version>3.5.0</version>
+  <version>3.5.1</version>
   <description>Habillage</description>
   <license>os</license>
   <repository>public</repository>
-  <dependencies>
-    <dependency>
-      <name>change-lib/framework</name>
-      <versions>
-        <version>3.5.0</version>
-      </versions>
-    </dependency>
-    <dependency>
-      <name>change-module/uixul</name>
-      <versions>
-        <version>3.5.0</version>
-      </versions>
-    </dependency>
-    <dependency>
-      <name>change-module/website</name>
-      <versions>
-        <version>3.5.0</version>
-      </versions>
-    </dependency>
-    <dependency>
-      <name>change-module/theme</name>
-      <versions>
-        <version>3.5.0</version>
-      </versions>
-    </dependency>
-    <dependency optionnal="true">
-      <name>extension/zip</name>
-      <versions>
-        <version>1.8.10</version>
-      </versions>
-    </dependency>
-  </dependencies>
+  <dependencies></dependencies>
 </change>
