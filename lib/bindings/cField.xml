@@ -17,7 +17,7 @@
 	            
 					<xul:toolbar>
 						<xul:toolbarbutton anonid="helpbutton" image="chrome://global/skin/icons/question-16.png"
-							tooltiptext="&amp;modules.uixul.bo.doceditor.Show-help;" xbl:inherits="hidden=hidehelp" 
+							tooltiptext="${transui:m.uixul.bo.doceditor.Show-help,ucf,attr}" xbl:inherits="hidden=hidehelp" 
 							oncommand="dispatchFieldEvent('fieldHelp');"/>
 					</xul:toolbar>
 				</xul:hbox>

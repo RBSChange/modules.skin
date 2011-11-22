@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <panel>
-	<section class="toggle" label="&amp;modules.skin.document.skin.MainTab;">
+	<section class="toggle" labeli18n="modules.uixul.bo.doceditor.fieldsgroup.Title">
 		<field name="label"/>
 		<field name="themeid" type="document" 
 			allow="modules_theme_theme" moduleselector="theme" required="true"

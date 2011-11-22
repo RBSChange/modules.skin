@@ -2,6 +2,6 @@
 <i18n baseKey="m.skin.list.textdecoration" lcid="en_GB">
   <key id="none">none</key>
   <key id="underline">underline</key>
-  <key id="overline">overline</key>
-  <key id="strike">strike</key>
+  <key id="overline">highlighted</key>
+  <key id="strike">strike through</key>
 </i18n>

@@ -5,8 +5,8 @@
   <key id="circle">circle</key>
   <key id="square">square</key>
   <key id="decimal">decimal</key>
-  <key id="lower-roman">lower roman number</key>
-  <key id="upper-roman">upper roman number</key>
-  <key id="lower-alpha">lower letter</key>
-  <key id="upper-alpha">upper letter</key>
+  <key id="lower-roman">lowercase roman numeral</key>
+  <key id="upper-roman">uppercase roman numeral</key>
+  <key id="lower-alpha">lowercase letter</key>
+  <key id="upper-alpha">uppercase letter</key>
 </i18n>

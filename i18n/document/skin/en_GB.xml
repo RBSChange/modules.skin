@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <i18n baseKey="m.skin.document.skin" lcid="en_GB">
   <key id="document-name">skin</key>
-  <key id="label">name</key>
-  <key id="label-help">skin name</key>
+  <key id="label">label</key>
+  <key id="label-help">name identifying the skin</key>
   <key id="description">description</key>
   <key id="description-help">skin description</key>
-  <key id="startpublicationdate">start publication date</key>
-  <key id="startpublicationdate-help">start publication date</key>
-  <key id="endpublicationdate">end publication date</key>
-  <key id="endpublicationdate-help">end publication date</key>
-  <key id="default-version-label">version #{count} of {label}</key>
+  <key id="startpublicationdate">publication start date</key>
+  <key id="startpublicationdate-help">publication start date</key>
+  <key id="endpublicationdate">publication end date</key>
+  <key id="endpublicationdate-help">publication end date</key>
+  <key id="default-version-label">version No.{count} of {label}</key>
   <key id="theme">theme variables</key>
 </i18n>

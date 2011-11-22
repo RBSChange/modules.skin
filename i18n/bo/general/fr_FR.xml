@@ -21,6 +21,6 @@
   <key id="import-other-skin">importer un autre habillage</key>
   <key id="skin-imported-with-warnings">l'habillage a bien été importé mais avec les avertissement suivants</key>
   <key id="no-preview-title">Veuillez sélectionner une page à prévisualiser</key>
-  <key id="no-preview-text">Sélectionnez une page dans le sélecteur des ressources du champ situé dans la barre d'outils ci-dessus.&lt;br /&gt;Puis cliquez sur le bouton ″Actualiser″ à côté du champ.</key>
+  <key id="no-preview-text" format="html">Sélectionnez une page dans le sélecteur des ressources du champ situé dans la barre d'outils ci-dessus.&lt;br /&gt;Puis cliquez sur le bouton ″Actualiser″ à côté du champ.</key>
   <key id="page-to-preview">page à prévisualiser</key>
 </i18n>
