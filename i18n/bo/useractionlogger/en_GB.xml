@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.skin.bo.useractionlogger" lcid="en_GB">
+  <key id="deactivated-skin">deactivated.skin {documentlabel}</key>
+  <key id="insert-skin">insert.skin {documentlabel}</key>
+  <key id="log-deactivated-skin">log deactivated skin</key>
+  <key id="log-insert-skin">log-insert-skin</key>
+  <key id="log-update-skin">log-update-skin</key>
+  <key id="update-skin">update.skin {documentlabel}</key>
+</i18n>
