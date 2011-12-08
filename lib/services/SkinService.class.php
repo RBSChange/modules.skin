@@ -397,8 +397,6 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 	 */
 	public function buildFileUsage($document, $usagesArray)
 	{
-		$temp = media_MediaUsageHelper::getByArray($document->getMediaDocuments(), $document->getId(), $usagesArray);
-		Framework::fatal(var_export($temp, true));
-		return $temp;
+		return media_MediaUsageHelper::getByArray($document->getMediaDocuments(), $document->getId(), $usagesArray);
 	}
 }
