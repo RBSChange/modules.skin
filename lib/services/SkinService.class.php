@@ -388,4 +388,17 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 		}
 		return $this->mediaFolderId[$skinName];
 	}
+	
+	/**
+	 * @param skin_persistentdocument_skin $document
+	 * @param array $usagesArray
+	 * @return array
+	 * @see media_FileusageService
+	 */
+	public function buildFileUsage($document, $usagesArray)
+	{
+		$temp = media_MediaUsageHelper::getByArray($document->getMediaDocuments(), $document->getId(), $usagesArray);
+		Framework::fatal(var_export($temp, true));
+		return $temp;
+	}
 }
