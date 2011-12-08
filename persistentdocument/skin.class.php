@@ -186,11 +186,39 @@ class skin_persistentdocument_skin extends skin_persistentdocument_skinbase  imp
 			}
 			return $value;
 		}
-		else 
+		elseif (Framework::isInfoEnabled())
 		{
-			Framework::warn(__METHOD__ . ' undefined var:' . $name);
+			Framework::info(__METHOD__ . ' undefined var:' . $name);
 		}
 		return $value === null ? $defaultValue : $value;
+	}
+	
+	/**
+	 * @return media_persistentdocument_file[]
+	 */
+	public function getMediaDocuments()
+	{
+		$result = array();
+		foreach ($this->getVarsInfos() as $name => $array)
+		{
+			if ($array['type'] === 'imagecss' || $array['type'] === 'document')
+			{
+				$value = $this->getS18sProperty($name);
+				if (is_numeric($value))
+				{
+					$modelName =f_persistentdocument_PersistentProvider::getInstance()->getDocumentModelName($value);
+					if ($modelName !== false)
+					{
+						$object = f_persistentdocument_PersistentProvider::getInstance()->getDocumentInstance($value, $modelName);
+						if ($object instanceof media_persistentdocument_file) 
+						{
+							$result[] = $object;
+						}
+					}
+				}
+			}
+		}
+		return $result;		
 	}
 	
 	/**
