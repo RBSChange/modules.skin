@@ -390,19 +390,14 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 	
 	/**
 	 * @param skin_persistentdocument_skin $document
+	 * @param array<string, string> $attributes
+	 * @param integer $mode
 	 * @param string $moduleName
-	 * @param string $treeType
-	 * @param array $nodeAttributes
 	 */
-	public function addTreeAttributes($document, $moduleName, $treeType, &$nodeAttributes)
+	public function completeBOAttributes($document, &$attributes, $mode, $moduleName)
 	{
-		$nodeAttributes['subskinidof'] = $document->getSubskinidof();
-		$nodeAttributes['currentsubskinid'] = $document->getCurrentsubskinid();
-		if ($treeType == 'wlist')
-		{
-			$nodeAttributes['startpublicationdate'] = date_Formatter::toDefaultDateTimeBO($document->getUIStartpublicationdate());
-			$nodeAttributes['endpublicationdate'] = date_Formatter::toDefaultDateTimeBO($document->getUIEndpublicationdate());
-		}
+		$attributes['subskinidof'] = $document->getSubskinidof();
+		$attributes['currentsubskinid'] = $document->getCurrentsubskinid();
 	}
 	
 	/**

@@ -10,6 +10,10 @@
 				<drop model="modules_skin/skin" action="move"/>
 				<drop model="modules_generic/folder" action="move"/>
 			</drops>
+			<columns>
+				<column name="startpublicationdate" flex="1"/>
+				<column name="endpublicationdate" flex="1"/>
+			</columns>
 			<contextactions>
 				<contextaction name="edit"/>
 				<contextaction name="openTreeNodeOrder"/>
@@ -29,6 +33,10 @@
 				<drop model="modules_skin/skin" action="move"/>
 				<drop model="modules_generic/folder" action="move"/>
 			</drops>
+			<columns>
+				<column name="startpublicationdate" flex="1"/>
+				<column name="endpublicationdate" flex="1"/>
+			</columns>
 			<contextactions>
 				<contextaction name="edit"/>
 				<contextaction name="delete"/>							
@@ -45,7 +53,6 @@
 			<children>
 				<child model="modules_skin/skin"/>
 			</children>
-			<styles properties="block actualtype"/>
 			<columns>
 				<column name="startpublicationdate" flex="1"/>
 				<column name="endpublicationdate" flex="1"/>
