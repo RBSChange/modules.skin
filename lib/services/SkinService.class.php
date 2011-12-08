@@ -421,4 +421,15 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 			$formProperties["variablesJSON"] = $data; 
 		}		
 	}
+	
+	/**
+	 * @param skin_persistentdocument_skin $document
+	 * @param array $usagesArray
+	 * @return array
+	 * @see media_FileusageService
+	 */
+	public function buildFileUsage($document, $usagesArray)
+	{
+		return media_MediaUsageHelper::getByArray($document->getMediaDocuments(), $document->getId(), $usagesArray);
+	}
 }
