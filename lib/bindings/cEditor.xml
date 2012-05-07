@@ -16,7 +16,7 @@
 						label="${transui:m.uixul.bo.doceditor.button.Canceledit,ucf,attr}" 
 						image="{IconsBase}/small/undo.png"
 						disabled="true" />
-					<xul:button anonid="preview_properties" oncommand="onPreview()" label="${transui:m.skin.bo.actions.Preview,ucf,attr}" image="{IconsBase}/small/eye.png"/>
+					<xul:button anonid="preview_properties" oncommand="onPreview()" label="${transui:m.skin.bo.actions.Preview,ucf,attr}" image="{IconsBase}/small/preview.png"/>
 				</xul:hbox>
 				<xul:scrollbox anonid="scrollctrl" flex="1" class="editordatacontainer" orient="vertical">
 					<xul:vbox flex="1" anonid="variableseditor">
@@ -93,6 +93,7 @@
 					variablesEditor.setAttribute("anonid", "variableseditor");
 					if (theme)
 					{
+						variablesEditor.setAttribute('themecode', theme);
 						var bindingurl = Context.CHROME_BASEURL
 								+ '/module=theme&action=GetBinding&binding='
 								+ theme + '&uilang=' + Context.W_UILANG;		
@@ -336,8 +337,7 @@
 				<xul:checkbox anonid="imagetype" label="Statique" xbl:inherits="disabled" /> 
 				<xul:menulist anonid="statiqueimage" hidden="true" seltype="single" oncommand="document.getBindingParent(this).selectStatic();"
 					rows="1" xbl:inherits="disabled">
-					<xul:menupopup>
-					</xul:menupopup>
+					<xul:menupopup />
 				</xul:menulist>
 				<xul:listbox anonid="internalcontrol" rows="1" seltype="single" xbl:inherits="disabled,tabindex,accesskey" 
 					ondragenter="document.getBindingParent(this).dragEnter(event)"
@@ -346,20 +346,21 @@
 				<xul:toolbar anonid="mediatoolbar">
 					<xul:toolbarbutton anonid="deletebutton" image="chrome://global/skin/icons/error-16.png" disabled="true" xbl:inherits="disabled" 
 						tooltiptext="${transui:m.uixul.bo.doceditor.Remove-item-single,ucf,attr}"
-						oncommand="document.getBindingParent(this).removeItem();"/>					
+						oncommand="document.getBindingParent(this).removeItem();" />					
 													
 					<xul:toolbarbutton anonid="selectorbutton" image="{IconsBase}/small/folder.png" xbl:inherits="disabled" 
 						tooltiptext="${transui:m.uixul.bo.doceditor.Open-ressource-dialog,ucf,attr}"
-						oncommand="document.getBindingParent(this).openRessourceDialog();"/>	
+						oncommand="document.getBindingParent(this).openRessourceDialog();" />	
 					
 					<xul:toolbarbutton anonid="uploadbutton" hidden="true" xbl:inherits="disabled"
 						image="{IconsBase}/small/upload.png" 
 						tooltiptext="${transui:m.uixul.bo.doceditor.Upload-file-from-disk,ucf,attr}"
-						oncommand="document.getBindingParent(this).openFilePicker()" />	
-													
+						oncommand="document.getBindingParent(this).openFilePicker();" />
+				</xul:toolbar>
+				<xul:toolbar>
 					<xul:toolbarbutton anonid="helpbutton" image="chrome://global/skin/icons/question-16.png"
 						tooltiptext="${transui:m.uixul.bo.doceditor.Show-help,ucf,attr}" xbl:inherits="hidden=hidehelp" 
-						oncommand="dispatchFieldEvent('fieldHelp');"/>
+						oncommand="dispatchFieldEvent('fieldHelp');" />
 				</xul:toolbar>
 			</xul:hbox>
 			<children/>
@@ -367,9 +368,9 @@
 		
 		<implementation>
 			<constructor><![CDATA[
-				var theme = this.getAttribute('mediafoldername').split('_')[1];
+				var theme = this.getThemeCode();
 				var attributes = {
-					theme : theme
+					theme: theme
 				};
 				var imgstatic = wCore.executeJSON("theme", "GetStaticImage", attributes);
 
@@ -378,8 +379,22 @@
 					var item = imgstatic.contents[i];
 					list.appendItem(item.label, item.value);
 				}
-			]]>
-			</constructor>
+			]]></constructor>
+			
+			<method name="getThemeCode">
+				<body><![CDATA[
+					var pn = this.parentNode;
+					while (pn && pn.nodeType == this.ELEMENT_NODE)
+					{
+						if (pn.hasAttribute('themecode'))
+						{
+							return pn.getAttribute('themecode')
+						}
+						pn = pn.parentNode;
+					}					
+					return 'default';
+				]]></body>
+			</method>
 			
 			<method name="updateUI">
 				<body><![CDATA[
@@ -426,8 +441,7 @@
 						}
 					}
 					this.mUpdatingUI = false;
-				]]>
-				</body>
+				]]></body>
 			</method>
 			
 			<method name="selectStatic">
@@ -435,11 +449,8 @@
 					var list = this.getElementByAnonId('statiqueimage');
 					wCore.debug('selectStatic:' + list.value);
 					this.value = list.value;
-				]]>
-				</body>
-			</method>				
-			
-			
+				]]></body>
+			</method>
 		</implementation>
 		<handlers>
 			<handler event="CheckboxStateChange"><![CDATA[
@@ -450,8 +461,7 @@
 						this.value = '';
 					}
 				}
-			]]>
-			</handler>		
+			]]></handler>		
 		</handlers>	
 	</binding>
 </bindings>
