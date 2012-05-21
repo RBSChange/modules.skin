@@ -325,13 +325,9 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 					}
 					else
 					{
-						if (Framework::isDebugEnabled())
+						if (!in_array('m.skin.bo.general.import-warning'))
 						{
-							Framework::debug(__METHOD__ . ' invalid media path: "' . $mediaPath . '"');
-						}
-						if (!in_array('modules.skin.bo.general.Import-warning'))
-						{
-							$warnings[] = 'modules.skin.bo.general.Import-warning';
+							$warnings[] = 'm.skin.bo.general.import-warning';
 						}
 						$skinContent[$name] = null;
 					}					
