@@ -1,9 +1,4 @@
 <?php
-if (!class_exists('PclZip', false))
-{
-	require_once PROJECT_HOME . '/modules/skin/tools/pclzip.lib.php';
-}
-
 /**
  * skin_ExportAction
  * @package modules.skin.actions
@@ -26,7 +21,10 @@ class skin_ExportAction extends change_Action
 	public function _execute($context, $request)
 	{
 		$document = $this->getSkinFromRequest($request);
-		$tmpFileDir = TMP_PATH . '/skin_' . $document->getId();
+		$tmpFileDir = TMP_PATH . DIRECTORY_SEPARATOR . 'skin_' . $document->getId();
+		f_util_FileUtils::mkdir($tmpFileDir);
+		$tmpFileDir = realpath($tmpFileDir);
+
 		$skinDefContent = $document->getExportInfos();
 		foreach ($skinDefContent as $name => $value) 
 		{
@@ -41,8 +39,22 @@ class skin_ExportAction extends change_Action
 		f_util_FileUtils::writeAndCreateContainer($tmpFileDir .'/skindata.ser', serialize($skinDefContent), f_util_FileUtils::OVERRIDE);
 		
 		$zipFile = f_util_FileUtils::getTmpFile('zipskin');
-		$zip = new PclZip($zipFile);
-		$zip->add($tmpFileDir, PCLZIP_OPT_REMOVE_PATH, $tmpFileDir);
+		
+		$archive = new ZipArchive();
+		$archive->open($zipFile, ZipArchive::CREATE);
+		$basePathLength = strlen($tmpFileDir) + 1;
+		foreach (new RecursiveIteratorIterator(
+			new RecursiveDirectoryIterator($tmpFileDir, RecursiveDirectoryIterator::KEY_AS_PATHNAME), RecursiveIteratorIterator::SELF_FIRST) 
+				as $file => $info)
+		{
+			if ($info->isFile())
+			{
+				$newPath = substr($file, $basePathLength);
+				$archive->addFile($file, $newPath);
+			}
+			
+		}
+		$archive->close();
 		
 		$headers[] = 'Cache-Control: public, must-revalidate';
 		$headers[] = 'Pragma: hack';
