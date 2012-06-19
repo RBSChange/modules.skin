@@ -14,12 +14,12 @@ class skin_ImportAction extends change_JSONAction
 	{
 		if (!count($_FILES))
 		{
-			return $this->sendJSONError(LocaleService::getInstance()->transBO('m.skin.bo.general.import-file', array('ucf')));
+			return $this->sendJSONError(LocaleService::getInstance()->trans('m.skin.bo.general.import-file', array('ucf')));
 		}
 		
 		if ($_FILES['filename']['error'] != UPLOAD_ERR_OK || substr($_FILES['filename']['name'], - strlen('.skindata.zip')) != '.skindata.zip')
 		{
-			return $this->sendJSONError(LocaleService::getInstance()->transBO('m.skin.bo.general.import-error', array('ucf')));
+			return $this->sendJSONError(LocaleService::getInstance()->trans('m.skin.bo.general.import-error', array('ucf')));
 		}
 		
 		$zipPath = $_FILES['filename']['tmp_name'];
@@ -42,14 +42,14 @@ class skin_ImportAction extends change_JSONAction
 		{
 			Framework::exception($e);
 			f_util_FileUtils::rmdir($tmpFileDir);
-			return $this->sendJSONError(LocaleService::getInstance()->transBO('m.skin.bo.general.import-error;', array('ucf')));
+			return $this->sendJSONError(LocaleService::getInstance()->trans('m.skin.bo.general.import-error;', array('ucf')));
 		}
 		
 		f_util_FileUtils::rmdir($tmpFileDir);	
 		$warnings = array();
 		foreach ($result['warnings'] as $warning)
 		{
-			$warnings[] = LocaleService::getInstance()->transBO($warning, array('ucf')); 
+			$warnings[] = LocaleService::getInstance()->trans($warning, array('ucf')); 
 		}		
 		return $this->sendJSON(array('warnings' => $result['warnings']));
 	}

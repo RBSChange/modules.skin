@@ -1,23 +1,10 @@
 <?php
+/**
+ * @package modules.skin
+ * @method skin_SkinService getInstance()
+ */
 class skin_SkinService extends f_persistentdocument_DocumentService
 {
-	/**
-	 * @var skin_SkinService
-	 */
-	private static $instance;
-	
-	/**
-	 * @return skin_SkinService
-	 */
-	public static function getInstance()
-	{
-		if (self::$instance === null)
-		{
-			self::$instance = new self();
-		}
-		return self::$instance;
-	}
-	
 	/**
 	 * @return skin_persistentdocument_skin
 	 */
@@ -32,12 +19,12 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 	 */
 	public function createQuery()
 	{
-		return $this->pp->createQuery('modules_skin/skin');
+		return $this->getPersistentProvider()->createQuery('modules_skin/skin');
 	}
 	
 	/**
 	 * @param skin_persistentdocument_skin $document
-	 * @param Integer $parentNodeId
+	 * @param integer $parentNodeId
 	 */
 	protected function postSave($document, $parentNodeId = null)
 	{		
@@ -61,7 +48,7 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 	{
 		try 
 		{
-			$this->tm->beginTransaction();
+			$this->getTransactionManager()->beginTransaction();
 			$masterSkin = $this->getMasterSkin($skin);
 			$currentSkinId = $masterSkin->getCurrentsubskinid();
 			if ($currentSkinId === null)
@@ -70,11 +57,11 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 			}
 			$subSkin = $this->createSubSkin($skin, $masterSkin->getId());
 			$subSkin->save($masterSkin->getId());
-			$this->tm->commit();
+			$this->getTransactionManager()->commit();
 		}
 		catch (Exception $e)
 		{
-			$this->tm->rollBack($e);
+			$this->getTransactionManager()->rollBack($e);
 		}
 		return $subSkin;
 	}
@@ -113,7 +100,7 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 			$this->save($initialSubSkin, $masterSkin->getId());
 			$masterSkin->setCurrentsubskinid($initialSubSkin->getId());
 			
-			$this->pp->updateDocument($masterSkin);
+			$this->getPersistentProvider()->updateDocument($masterSkin);
 			$rc->endI18nWork();
 		}
 		catch (Exception $e)
@@ -214,7 +201,7 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 				$masterSkin->setCurrentsubskinid(null);
 				if ($masterSkin->isModified())
 				{
-					$this->pp->updateDocument($masterSkin);
+					$this->getPersistentProvider()->updateDocument($masterSkin);
 				}
 			} 
 			else if ($masterSkin->getCurrentsubskinid() == $document->getId())
@@ -230,7 +217,7 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 	 * @see f_persistentdocument_DocumentService::publicationStatusChanged()
 	 *
 	 * @param skin_persistentdocument_skin $document
-	 * @param String $oldPublicationStatus
+	 * @param string $oldPublicationStatus
 	 * @param array $params
 	 */
 	protected function publicationStatusChanged($document, $oldPublicationStatus, $params)
@@ -242,7 +229,7 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 			{
 				try 
 				{
-					$this->tm->beginTransaction();
+					$this->getTransactionManager()->beginTransaction();
 					$masterSkin = $this->getMasterSkin($document);
 					$subSkin = $this->retrieveCurrentSubSkin($masterSkin->getId());
 					if ($subSkin !== null)
@@ -252,18 +239,18 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 							$this->transfertToMaster($subSkin);
 						}			
 					}
-					$this->tm->commit();
+					$this->getTransactionManager()->commit();
 				}
 				catch (Exception $e)
 				{
-					$this->tm->rollBack($e);
+					$this->getTransactionManager()->rollBack($e);
 				}
 			}
 		}
 	}
 	
 	/**
-	 * @param Integer $masterSkinId
+	 * @param integer $masterSkinId
 	 * @return skin_persistentdocument_skin
 	 */
 	private function retrieveFirstSubSkin($masterSkinId)
@@ -273,7 +260,7 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 	}
 	
 	/**
-	 * @param Integer $masterSkinId
+	 * @param integer $masterSkinId
 	 * @return skin_persistentdocument_skin
 	 */
 	private function retrieveCurrentSubSkin($masterSkinId)
@@ -291,8 +278,8 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 	// Importation.
 	
 	/**
-	 * @param String $tmpDir
-	 * @param Integer $skinFolderId
+	 * @param string $tmpDir
+	 * @param integer $skinFolderId
 	 * @param generic_persistentdocument_folder $mediaFolder
 	 * @return skin_persistentdocument_skin
 	 */
@@ -355,8 +342,8 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 	private $mediaFolderId = array();
 	
 	/**
-	 * @param String $skinName
-	 * @return Integer
+	 * @param string $skinName
+	 * @return integer
 	 */
 	private function getMediaFolderId($skinName, $mediaFolder)
 	{

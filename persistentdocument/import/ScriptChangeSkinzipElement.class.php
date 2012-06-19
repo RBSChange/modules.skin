@@ -1,9 +1,4 @@
 <?php
-if (!class_exists('PclZip', false))
-{
-	require_once PROJECT_HOME . '/modules/skin/tools/pclzip.lib.php';
-}
-
 class skin_ScriptChangeSkinzipElement extends import_ScriptObjectElement
 {
 	private $document = null;
@@ -38,7 +33,7 @@ class skin_ScriptChangeSkinzipElement extends import_ScriptObjectElement
 	}
 		
 	/**
-	 * @return Integer
+	 * @return integer
 	 */
 	private function getSkinFolderId()
 	{

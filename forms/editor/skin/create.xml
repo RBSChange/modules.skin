@@ -2,10 +2,8 @@
 <panel>
 	<section labeli18n="m.uixul.bo.doceditor.fieldsgroup.title">
 		<field name="label" />
-		<field name="themeid" type="document" 
-			allow="modules_theme_theme" moduleselector="theme" required="true"
-			labeli18n="m.skin.document.skin.theme" />
-		<field name="startpublicationdate"/>
-		<field name="endpublicationdate"/>
+		<field name="themeid" type="document" allow="modules_theme_theme" moduleselector="theme" required="true" labeli18n="m.skin.document.skin.theme" />
+		<field name="startpublicationdate" />
+		<field name="endpublicationdate" />
 	</section>
 </panel>

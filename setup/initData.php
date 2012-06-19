@@ -6,7 +6,7 @@ class skin_Setup extends object_InitDataSetup
 		try
 		{
 			$scriptReader = import_ScriptReader::getInstance();
-       	 	$scriptReader->executeModuleScript('skin', 'init.xml');
+			$scriptReader->executeModuleScript('skin', 'init.xml');
 		}
 		catch (Exception $e)
 		{
