@@ -131,7 +131,7 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 			$subSkin->setStartpublicationdate(null);
 			$subSkin->setEndpublicationdate(null);
 			$countSubSkin = $this->countSubSkin($masterSkinId) + 1;
-			$subSkin->setLabel(f_Locale::translate('&modules.skin.document.skin.Default-version-label;', 
+			$subSkin->setLabel(LocaleService::getInstance()->trans('m.skin.document.skin.default-version-label', array('ucf'), 
 				array('count' => $countSubSkin, 'label' => $fromSkin->getLabel())));			
 			$rc->endI18nWork();
 		}

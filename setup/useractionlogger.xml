@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-  <binding fileName="modules/useractionlogger/persistentdocument/import/useractionlogger_binding.xml"/>
-  <actiondef modulename="skin" actionname="update.skin" label="modules.skin.bo.useractionlogger.update-skin"/>
-  <actiondef modulename="skin" actionname="insert.skin" label="modules.skin.bo.useractionlogger.insert-skin"/>
-  <actiondef modulename="skin" actionname="deactivated.skin" label="m.skin.bo.useractionlogger.deactivated-skin"/>
+	<binding fileName="modules/useractionlogger/persistentdocument/import/useractionlogger_binding.xml" />
+	<actiondef modulename="skin" actionname="update.skin" label="modules.skin.bo.useractionlogger.update-skin" />
+	<actiondef modulename="skin" actionname="insert.skin" label="modules.skin.bo.useractionlogger.insert-skin" />
+	<actiondef modulename="skin" actionname="deactivated.skin" label="m.skin.bo.useractionlogger.deactivated-skin" />
 </script>

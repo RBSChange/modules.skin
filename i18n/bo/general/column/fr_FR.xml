@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.skin.bo.general.column" lcid="fr_FR">
-  <key id="startpublicationdate">début de publication</key>
-  <key id="endpublicationdate">fin de publication</key>
+	<key id="startpublicationdate">début de publication</key>
+	<key id="endpublicationdate">fin de publication</key>
 </i18n>

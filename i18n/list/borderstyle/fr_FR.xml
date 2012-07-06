@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.skin.list.borderstyle" lcid="fr_FR">
-  <key id="none">aucun</key>
-  <key id="dotted">pointillés</key>
-  <key id="dashed">traits</key>
-  <key id="solid">plein</key>
-  <key id="double">double</key>
-  <key id="groove">rainure</key>
-  <key id="inset">intérieur</key>
-  <key id="outset">extérieur</key>
+	<key id="none">aucun</key>
+	<key id="dotted">pointillés</key>
+	<key id="dashed">traits</key>
+	<key id="solid">plein</key>
+	<key id="double">double</key>
+	<key id="groove">rainure</key>
+	<key id="inset">intérieur</key>
+	<key id="outset">extérieur</key>
 </i18n>

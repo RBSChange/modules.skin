@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.skin.errors" lcid="fr_FR">
-  <key id="modules-skin-getpreferencesdocument">vous n'avez pas les permissions suffisantes pour effectuer l'action suivante : ″Ouvrir les préférences″</key>
-  <key id="modules-skin-order">vous n'avez pas les permissions suffisantes pour effectuer l'action suivante : ″Modifier l'ordre des éléments″</key>
-  <key id="modules-skin-activate-skin">vous n'avez pas les permissions suffisantes pour effectuer l'action suivante : ″Activer l'habillage″</key>
-  <key id="modules-skin-cancel-skin">vous n'avez pas les permissions suffisantes pour effectuer l'action suivante : ″Annuler l'habillage″</key>
-  <key id="modules-skin-enabled">vous n'avez pas les permissions suffisantes pour effectuer l'action suivante : ″Accès au module″</key>
-  <key id="invalid-skin">Impossible de créer une nouvelle version de skin</key>
+	<key id="modules-skin-getpreferencesdocument">vous n'avez pas les permissions suffisantes pour effectuer l'action suivante : ″Ouvrir les préférences″</key>
+	<key id="modules-skin-order">vous n'avez pas les permissions suffisantes pour effectuer l'action suivante : ″Modifier l'ordre des éléments″</key>
+	<key id="modules-skin-activate-skin">vous n'avez pas les permissions suffisantes pour effectuer l'action suivante : ″Activer l'habillage″</key>
+	<key id="modules-skin-cancel-skin">vous n'avez pas les permissions suffisantes pour effectuer l'action suivante : ″Annuler l'habillage″</key>
+	<key id="modules-skin-enabled">vous n'avez pas les permissions suffisantes pour effectuer l'action suivante : ″Accès au module″</key>
+	<key id="invalid-skin">Impossible de créer une nouvelle version de skin</key>
 </i18n>

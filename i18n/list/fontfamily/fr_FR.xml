@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.skin.list.fontfamily" lcid="fr_FR">
-  <key id="serif">Times New Roman (serif)</key>
-  <key id="serif2">Georgia (serif)</key>
-  <key id="serif3">Garamond (serif)</key>
-  <key id="sansserif">Arial (sans serif)</key>
-  <key id="sansserif2">Verdana (sans serif)</key>
-  <key id="sansserif3">Impact (sans serif)</key>
-  <key id="sansserif4">Trebuchet MS (sans serif)</key>
-  <key id="monospace">Courier New (monospace)</key>
-  <key id="cursive">Comic Sans MS (cursive)</key>
-  <key id="fantasy">Webdings (fantaisie)</key>
+	<key id="serif">Times New Roman (serif)</key>
+	<key id="serif2">Georgia (serif)</key>
+	<key id="serif3">Garamond (serif)</key>
+	<key id="sansserif">Arial (sans serif)</key>
+	<key id="sansserif2">Verdana (sans serif)</key>
+	<key id="sansserif3">Impact (sans serif)</key>
+	<key id="sansserif4">Trebuchet MS (sans serif)</key>
+	<key id="monospace">Courier New (monospace)</key>
+	<key id="cursive">Comic Sans MS (cursive)</key>
+	<key id="fantasy">Webdings (fantaisie)</key>
 </i18n>

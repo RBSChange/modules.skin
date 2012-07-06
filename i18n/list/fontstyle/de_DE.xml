@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.skin.list.fontstyle" lcid="de_DE">
-  <key id="normal">normal</key>
-  <key id="italic">kursiv</key>
+	<key id="normal">normal</key>
+	<key id="italic">kursiv</key>
 </i18n>

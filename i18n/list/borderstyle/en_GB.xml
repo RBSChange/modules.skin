@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.skin.list.borderstyle" lcid="en_GB">
-  <key id="none">none</key>
-  <key id="dotted">dotted</key>
-  <key id="dashed">dashed</key>
-  <key id="solid">solid</key>
-  <key id="double">double</key>
-  <key id="groove">groove</key>
-  <key id="inset">inset</key>
-  <key id="outset">outset</key>
+	<key id="none">none</key>
+	<key id="dotted">dotted</key>
+	<key id="dashed">dashed</key>
+	<key id="solid">solid</key>
+	<key id="double">double</key>
+	<key id="groove">groove</key>
+	<key id="inset">inset</key>
+	<key id="outset">outset</key>
 </i18n>

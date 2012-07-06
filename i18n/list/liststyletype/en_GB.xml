@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.skin.list.liststyletype" lcid="en_GB">
-  <key id="none">none</key>
-  <key id="disc">disc</key>
-  <key id="circle">circle</key>
-  <key id="square">square</key>
-  <key id="decimal">decimal</key>
-  <key id="lower-roman">lowercase roman numeral</key>
-  <key id="upper-roman">uppercase roman numeral</key>
-  <key id="lower-alpha">lowercase letter</key>
-  <key id="upper-alpha">uppercase letter</key>
+	<key id="none">none</key>
+	<key id="disc">disc</key>
+	<key id="circle">circle</key>
+	<key id="square">square</key>
+	<key id="decimal">decimal</key>
+	<key id="lower-roman">lowercase roman numeral</key>
+	<key id="upper-roman">uppercase roman numeral</key>
+	<key id="lower-alpha">lowercase letter</key>
+	<key id="upper-alpha">uppercase letter</key>
 </i18n>

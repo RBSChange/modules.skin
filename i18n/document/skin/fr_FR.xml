@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.skin.document.skin" lcid="fr_FR">
-  <key id="document-name">habillage</key>
-  <key id="label">nom</key>
-  <key id="label-help">nom identifiant l'Habillage</key>
-  <key id="description">description</key>
-  <key id="description-help">description de l'Habillage</key>
-  <key id="startpublicationdate">date de début de publication</key>
-  <key id="startpublicationdate-help">date de début de publication</key>
-  <key id="endpublicationdate">date de fin de publication</key>
-  <key id="endpublicationdate-help">date de fin de publication</key>
-  <key id="default-version-label">version n°{count} de {label}</key>
-  <key id="theme">variables du thème</key>
+	<key id="document-name">habillage</key>
+	<key id="label">nom</key>
+	<key id="label-help">nom identifiant l'Habillage</key>
+	<key id="description">description</key>
+	<key id="description-help">description de l'Habillage</key>
+	<key id="startpublicationdate">date de début de publication</key>
+	<key id="startpublicationdate-help">date de début de publication</key>
+	<key id="endpublicationdate">date de fin de publication</key>
+	<key id="endpublicationdate-help">date de fin de publication</key>
+	<key id="default-version-label">version n°{count} de {label}</key>
+	<key id="theme">variables du thème</key>
 </i18n>

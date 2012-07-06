@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.skin.list.valignment" lcid="de_DE">
-  <key id="baseline">Elementenbasis mit der seiner Mutter abgeglichen</key>
-  <key id="sub">Elementenbasis mit der Tiefsatz Basiszeile seiner Mutter abgeglichen</key>
-  <key id="super">Elementenbasis mit der Exponenten Basiszeile seiner Mutter abgeglichen</key>
-  <key id="texttop">Elementoberteil mit dem Fontoberteil des Mutterelements abgeglichen</key>
-  <key id="textbottom">Elementunterteil mit dem Fontunterteil des Mutterelements abgeglichen</key>
-  <key id="middle">Elementmitte mit der Mitte des unteren Bruchs seiner Mutter abgeglichen</key>
-  <key id="top">Elementoberteil mit dem Oberteil der kompletten Zeile abgeglichen</key>
-  <key id="bottom">Elementunterteil mit dem Unterteil der kompletten Zeile abgeglichen</key>
+	<key id="baseline">Elementenbasis mit der seiner Mutter abgeglichen</key>
+	<key id="sub">Elementenbasis mit der Tiefsatz Basiszeile seiner Mutter abgeglichen</key>
+	<key id="super">Elementenbasis mit der Exponenten Basiszeile seiner Mutter abgeglichen</key>
+	<key id="texttop">Elementoberteil mit dem Fontoberteil des Mutterelements abgeglichen</key>
+	<key id="textbottom">Elementunterteil mit dem Fontunterteil des Mutterelements abgeglichen</key>
+	<key id="middle">Elementmitte mit der Mitte des unteren Bruchs seiner Mutter abgeglichen</key>
+	<key id="top">Elementoberteil mit dem Oberteil der kompletten Zeile abgeglichen</key>
+	<key id="bottom">Elementunterteil mit dem Unterteil der kompletten Zeile abgeglichen</key>
 </i18n>

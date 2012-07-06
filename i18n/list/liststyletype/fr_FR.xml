@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.skin.list.liststyletype" lcid="fr_FR">
-  <key id="none">aucune</key>
-  <key id="disc">disque</key>
-  <key id="circle">cercle</key>
-  <key id="square">carré</key>
-  <key id="decimal">décimal</key>
-  <key id="lower-roman">chiffre romain minuscule</key>
-  <key id="upper-roman">chiffre romain majuscule</key>
-  <key id="lower-alpha">lettre minuscule</key>
-  <key id="upper-alpha">lettre majuscule</key>
+	<key id="none">aucune</key>
+	<key id="disc">disque</key>
+	<key id="circle">cercle</key>
+	<key id="square">carré</key>
+	<key id="decimal">décimal</key>
+	<key id="lower-roman">chiffre romain minuscule</key>
+	<key id="upper-roman">chiffre romain majuscule</key>
+	<key id="lower-alpha">lettre minuscule</key>
+	<key id="upper-alpha">lettre majuscule</key>
 </i18n>

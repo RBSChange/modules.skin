@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.skin.list.bposition" lcid="en_GB">
-  <key id="topleft">top left</key>
-  <key id="top">top</key>
-  <key id="topcenter">top centre</key>
-  <key id="topright">top right</key>
-  <key id="left">on the left</key>
-  <key id="leftcenter">centre left</key>
-  <key id="center">centre</key>
-  <key id="right">on the right</key>
-  <key id="rightcenter">centre right</key>
-  <key id="bottomleft">bottom left</key>
-  <key id="bottom">bottom</key>
-  <key id="bottomcenter">bottom centre</key>
-  <key id="bottomright">bottom right</key>
+	<key id="topleft">top left</key>
+	<key id="top">top</key>
+	<key id="topcenter">top centre</key>
+	<key id="topright">top right</key>
+	<key id="left">on the left</key>
+	<key id="leftcenter">centre left</key>
+	<key id="center">centre</key>
+	<key id="right">on the right</key>
+	<key id="rightcenter">centre right</key>
+	<key id="bottomleft">bottom left</key>
+	<key id="bottom">bottom</key>
+	<key id="bottomcenter">bottom centre</key>
+	<key id="bottomright">bottom right</key>
 </i18n>

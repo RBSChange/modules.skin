@@ -156,7 +156,7 @@
 		var editor = event.originalTarget;
 		if (editor.documentname === 'skin')
 		{
-			editor.addTab('variables', "&modules.skin.bo.general.tab.Variables;", 'skin');
+			editor.addTab('variables', "${trans:m.skin.bo.general.tab.variables,ucf,js}", 'skin');
 		}
 	]]></handler>
 </actions>

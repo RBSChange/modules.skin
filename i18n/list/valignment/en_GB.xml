@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.skin.list.valignment" lcid="en_GB">
-  <key id="baseline">baseline of the element aligned with the baseline of its parent</key>
-  <key id="sub">baseline of the element aligned with the subscript-baseline of its parent</key>
-  <key id="super">baseline of the element aligned with the superscript-baseline of its parent</key>
-  <key id="texttop">top of the element aligned with the top of the parent element's font</key>
-  <key id="textbottom">bottom of the element aligned with the bottom of the parent element's font</key>
-  <key id="middle">middle of the element aligned with the middle of the lowercase letters in the parent</key>
-  <key id="top">top of the element aligned with the top of the entire line</key>
-  <key id="bottom">bottom of the element aligned with the bottom of the entire line</key>
+	<key id="baseline">baseline of the element aligned with the baseline of its parent</key>
+	<key id="sub">baseline of the element aligned with the subscript-baseline of its parent</key>
+	<key id="super">baseline of the element aligned with the superscript-baseline of its parent</key>
+	<key id="texttop">top of the element aligned with the top of the parent element's font</key>
+	<key id="textbottom">bottom of the element aligned with the bottom of the parent element's font</key>
+	<key id="middle">middle of the element aligned with the middle of the lowercase letters in the parent</key>
+	<key id="top">top of the element aligned with the top of the entire line</key>
+	<key id="bottom">bottom of the element aligned with the bottom of the entire line</key>
 </i18n>

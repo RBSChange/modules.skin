@@ -13,7 +13,7 @@ class skin_ScriptChangeSkinzipElement extends import_ScriptObjectElement
 	
 	public function endProcess()
 	{
-		$zipPath = f_util_FileUtils::buildWebeditPath($this->getComputedAttribute('zipPath'));
+		$zipPath = f_util_FileUtils::buildProjectPath($this->getComputedAttribute('zipPath'));
 		$zip = new PclZip($zipPath);
 		$tmpFileDir = TMP_PATH . '/skin_import';
 		f_util_FileUtils::rmdir($tmpFileDir);

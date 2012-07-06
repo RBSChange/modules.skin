@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.skin.list.brepetition" lcid="de_DE">
-  <key id="repeat">horizontale und vertikale Wiederholung</key>
-  <key id="repeatx">horizontale Wiederholung</key>
-  <key id="repeaty">vertikale Wiederholung</key>
-  <key id="norepeat">keine Wiederholung</key>
+	<key id="repeat">horizontale und vertikale Wiederholung</key>
+	<key id="repeatx">horizontale Wiederholung</key>
+	<key id="repeaty">vertikale Wiederholung</key>
+	<key id="norepeat">keine Wiederholung</key>
 </i18n>

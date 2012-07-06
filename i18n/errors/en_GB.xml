@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.skin.errors" lcid="en_GB">
-  <key id="modules-skin-getpreferencesdocument">you do not have the appropriate permissions to perform the following operation: "Open preferences"</key>
-  <key id="modules-skin-order">you do not have the appropriate permissions to perform the following operation: "Reorder the elements"</key>
-  <key id="modules-skin-activate-skin">you do not have the appropriate permissions to perform this operation: "Activate skin"</key>
-  <key id="modules-skin-cancel-skin">you do not have the appropriate permissions to perform this operation: "Cancel skin"</key>
-  <key id="modules-skin-enabled">you do not have the appropriate permissions to perform the following operation: "Access the module"</key>
-  <key id="invalid-skin">Could not create a new version of the skin.</key>
+	<key id="modules-skin-getpreferencesdocument">you do not have the appropriate permissions to perform the following operation: "Open preferences"</key>
+	<key id="modules-skin-order">you do not have the appropriate permissions to perform the following operation: "Reorder the elements"</key>
+	<key id="modules-skin-activate-skin">you do not have the appropriate permissions to perform this operation: "Activate skin"</key>
+	<key id="modules-skin-cancel-skin">you do not have the appropriate permissions to perform this operation: "Cancel skin"</key>
+	<key id="modules-skin-enabled">you do not have the appropriate permissions to perform the following operation: "Access the module"</key>
+	<key id="invalid-skin">Could not create a new version of the skin.</key>
 </i18n>

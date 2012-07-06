@@ -14,10 +14,10 @@
 					<xul:cfield fieldtype="color" anonid="colorfield" xbl:inherits="disabled,tabindex,accesskey,palettename" hidehelp="true"/>
 					<xul:cfield fieldtype="dropdownlist" anonid="stylefield" editwidth="50px" xbl:inherits="disabled,listid" listid="modules_skin/borderstyle" hidehelp="true"/>
 					<xul:cfield fieldtype="size" anonid="widthfield" xbl:inherits="disabled,allowunits" hidehelp="true"/>
-	            
+				
 					<xul:toolbar>
 						<xul:toolbarbutton anonid="helpbutton" image="chrome://global/skin/icons/question-16.png"
-							tooltiptext="${trans:m.uixul.bo.doceditor.Show-help,ucf,attr}" xbl:inherits="hidden=hidehelp" 
+							tooltiptext="${trans:m.uixul.bo.doceditor.show-help,ucf,attr}" xbl:inherits="hidden=hidehelp" 
 							oncommand="dispatchFieldEvent('fieldHelp');"/>
 					</xul:toolbar>
 				</xul:hbox>
@@ -130,7 +130,7 @@
 					this.colorfield.setInitialValue(values.color);
 					this.stylefield.setInitialValue(values.style);
 					this.widthfield.setInitialValue(values.width);
-	          		this.updatePreview();
+			  		this.updatePreview();
 					
 					if (this.modified)
 					{
@@ -236,7 +236,7 @@
 			<method name="valueChanged">
 				<body><![CDATA[
 					this.fireValidate(this);
-	          		this.updatePreview();
+			  		this.updatePreview();
 				]]></body>
 			</method>
 			
@@ -245,7 +245,7 @@
 					var colors = this.colorfield.getCurrentRGB();
 					var y = 0.299*colors.r + 0.587*colors.g + 0.114*colors.b;
 					this.preview.className = (y > 127) ? 'borderInputPreviewDark' : 'borderInputPreview';
-	          		this.previewcontent.style.borderTop = this.value;
+			  		this.previewcontent.style.borderTop = this.value;
 				]]></body>
 			</method>
 			

@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.skin.list.textdecoration" lcid="en_GB">
-  <key id="none">none</key>
-  <key id="underline">underline</key>
-  <key id="overline">highlighted</key>
-  <key id="strike">strike through</key>
+	<key id="none">none</key>
+	<key id="underline">underline</key>
+	<key id="overline">highlighted</key>
+	<key id="strike">strike through</key>
 </i18n>

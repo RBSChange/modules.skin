@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.skin.list.rcenable" lcid="de_DE">
-  <key id="enable">akitviert</key>
-  <key id="disable">deaktiviert</key>
+	<key id="enable">akitviert</key>
+	<key id="disable">deaktiviert</key>
 </i18n>

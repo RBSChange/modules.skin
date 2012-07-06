@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.skin.document.skin" lcid="de_DE">
-  <key id="document-name">Skin</key>
-  <key id="label">Name</key>
-  <key id="label-help">Skinname zur Identifizierung</key>
-  <key id="description">Beschreibung</key>
-  <key id="description-help">Skin Beschreibung</key>
+	<key id="document-name">Skin</key>
+	<key id="label">Name</key>
+	<key id="label-help">Skinname zur Identifizierung</key>
+	<key id="description">Beschreibung</key>
+	<key id="description-help">Skin Beschreibung</key>
 </i18n>

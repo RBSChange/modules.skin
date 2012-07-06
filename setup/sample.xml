@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
 	<binding fileName="modules/skin/persistentdocument/import/skin_binding.xml" />
-	
 	<rootfolder module="media">
 		<folder byLabel="Médias pour les exemples d'habillages" id="mediaFolder" />
 	</rootfolder>
-	
 	<rootfolder module="skin">
 		<folder byLabel="Exemples d'habillages">
-				<skinzip zipPath="modules/skin/setup/sample/Corporate.skin.zip" mediaFolder-refid="mediaFolder" />
+			<skinzip zipPath="modules/skin/setup/sample/Corporate.skin.zip" mediaFolder-refid="mediaFolder" />
 		</folder>
 	</rootfolder>
 </script>

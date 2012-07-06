@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.skin.list.linkurl" lcid="fr_FR">
-  <key id="yes">oui</key>
-  <key id="no">non</key>
+	<key id="yes">oui</key>
+	<key id="no">non</key>
 </i18n>

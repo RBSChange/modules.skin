@@ -1,26 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.skin.bo.general" lcid="en_GB">
-  <key id="module-name">skin</key>
-  <key id="tree-root-name">skin</key>
-  <key id="system-folder-name">skin</key>
-  <key id="skin">skin</key>
-  <key id="label">label</key>
-  <key id="description">description</key>
-  <key id="import-title">skin import</key>
-  <key id="import-error">an error occurred, your skin could not be imported.</key>
-  <key id="import-close">close</key>
-  <key id="import-retry">try again</key>
-  <key id="import-file">select your zip file to import</key>
-  <key id="import-import">import!</key>
-  <key id="import-other">import another skin</key>
-  <key id="import-success">skin imported!</key>
-  <key id="import-warning">one or more media are missing. your skin will not be complete.</key>
-  <key id="import-warning2">your skin is not fully compatible with this version of the module, it will not be complete.</key>
-  <key id="no-preview-title">Please select a page to preview</key>
-  <key id="no-preview-text">Select a page in the resource selector of the field in the toolbar above.&lt;br/&gt;Next, click on the "Refresh" button next to the field.</key>
-  <key id="page-to-preview">page to preview</key>
-  <key id="import-other-skin">import another skin</key>
-  <key id="importing">import in progress…</key>
-  <key id="skin-imported">the skin was imported successfully.</key>
-  <key id="skin-imported-with-warnings">the skin was imported successfully but with the following warnings</key>
+	<key id="module-name">skin</key>
+	<key id="tree-root-name">skin</key>
+	<key id="system-folder-name">skin</key>
+	<key id="skin">skin</key>
+	<key id="label">label</key>
+	<key id="description">description</key>
+	<key id="import-title">skin import</key>
+	<key id="import-error">an error occurred, your skin could not be imported.</key>
+	<key id="import-close">close</key>
+	<key id="import-retry">try again</key>
+	<key id="import-file">select your zip file to import</key>
+	<key id="import-import">import!</key>
+	<key id="import-other">import another skin</key>
+	<key id="import-success">skin imported!</key>
+	<key id="import-warning">one or more media are missing. your skin will not be complete.</key>
+	<key id="import-warning2">your skin is not fully compatible with this version of the module, it will not be complete.</key>
+	<key id="no-preview-title">Please select a page to preview</key>
+	<key id="no-preview-text">Select a page in the resource selector of the field in the toolbar above.&lt;br/&gt;Next, click on the "Refresh" button next to the field.</key>
+	<key id="page-to-preview">page to preview</key>
+	<key id="import-other-skin">import another skin</key>
+	<key id="importing">import in progress…</key>
+	<key id="skin-imported">the skin was imported successfully.</key>
+	<key id="skin-imported-with-warnings">the skin was imported successfully but with the following warnings</key>
 </i18n>

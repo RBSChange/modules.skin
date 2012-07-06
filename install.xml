@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<install type="modules" name="skin" version="4.0.0">
-  <package type="modules" name="uixul"/>
-  <package type="modules" name="website"/>
-  <package type="modules" name="theme"/>
-</install>
+<install type="modules" name="skin" version="4.0.0" />

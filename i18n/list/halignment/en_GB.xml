@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.skin.list.halignment" lcid="en_GB">
-  <key id="left">on the left</key>
-  <key id="center">centre</key>
-  <key id="right">on the right</key>
-  <key id="justify">justified</key>
+	<key id="left">on the left</key>
+	<key id="center">centre</key>
+	<key id="right">on the right</key>
+	<key id="justify">justified</key>
 </i18n>
