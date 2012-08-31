@@ -385,10 +385,11 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 	
 	/**
 	 * @param skin_persistentdocument_skin $document
-	 * @param string $actionType
+	 * @param string[] $propertiesNames
 	 * @param array $formProperties
+	 * @param integer $parentId
 	 */
-	public function addFormProperties($document, $propertiesNames, &$formProperties)
+	public function addFormProperties($document, $propertiesNames, &$formProperties, $parentId = null)
 	{
 		if (in_array('variablesJSON', $propertiesNames))
 		{
