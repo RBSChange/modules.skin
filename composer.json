@@ -1,0 +1,6 @@
+{
+	"name": "rbschange/skin",
+	"description": "RBS Change Skin module",
+	"type": "rbschange-compatibility-module",
+	"license":"AGPL-3.0"
+}
