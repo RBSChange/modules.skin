@@ -225,7 +225,7 @@ class skin_SkinService extends f_persistentdocument_DocumentService
 		//Version de skin
 		if ($document->getSubskinidof() !== null)
 		{
-			if ($oldPublicationStatus == 'PUBLICATED' || $document->isPublished())
+			if ($oldPublicationStatus == 'PUBLISHED' || $document->isPublished())
 			{
 				try 
 				{
